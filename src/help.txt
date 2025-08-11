@@ -1,0 +1,24 @@
+Description of the files:
+
+MATLAB
+    - simCooperativeTransport.mlx:
+        Dynamics of the robot
+        Algorithm parameters: leader, follower
+        Obstacles parameters
+            It is the main file to setup and start the simulation
+
+    FUNCTIONS
+        - constraints.m: get the contraints of the robot wrt the obstacles 
+        - costWeights.M: weights for the MPC
+        
+        - followerCostGradientHessian.m
+        - followerMPCandUpdate.m: generate the optimal path for the FOLLOWER
+        - followerMPCandUpdateNC.m: same as the prevous but with NL constraints
+        - followerNC.m: defines NL constraints for the follower
+        
+        - getObstacleInfo.m: define the distance and minimum distance from the obstacle and the robot
+        - getqiFromShape.m: tries to construct the distance and position of the line tangent to the shape and perpendicular to x0
+        - getSbar.m
+        - getSdbar.m
+        - getTbar.m
+        - getTdbar.m
