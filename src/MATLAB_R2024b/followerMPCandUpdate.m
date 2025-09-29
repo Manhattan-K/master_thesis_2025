@@ -15,7 +15,8 @@ function [p_tp1, X_F, qi, error, u_opt] = followerMPCandUpdate(XL, x0, N, params
         'Display', 'none'); 
     [u_opt] = fmincon(...
          @(U) followerCost(reshape(U,2,N), x0, h, pe, Ts, N, leader_pos),...
-         U_f_old, [], [], [], [], [], [], [], options);
+         U_f_old, [], [], [], [], [], [], ...
+         @(U) nonLinearConst(U, x0, qi, N, params.robotShape, Ts), options);
     u_opt_reshaped = reshape(u_opt,[2,N]);
 
     % model dynamics update, needed to give path intention to plotter

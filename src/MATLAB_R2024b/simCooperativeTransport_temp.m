@@ -90,7 +90,7 @@ followerParams.robotShape =followerParams.initRobotShape;
 %% Obstacle parameters
 
 % type of environment for papers
-[x0, obstacles] = setupEnvironment("two_obs");
+[x0, obstacles] = setupEnvironment("one_obs");
 % can be overrridden, eventually set value for x0, and cell array obstacles
 %% Precompiled stuff for optimization
 % Not really that effective unless we compile the whole script

@@ -16,7 +16,7 @@ function [p_tp1, X_L, qi, error, u_opt] = leaderMPCandUpdate(p_t, N, optParams, 
     
     % Nonlinear optimization
     options = optimoptions('fmincon','Algorithm','interior-point','Display','none');
-    [u_opt, ~, exitflag, output] = fmincon(costFun, U_l_old(:), [], [], [], [], lb, ub, [], options);
+    [u_opt, ~, exitflag, output] = fmincon(costFun, U_l_old(:), [], [], [], [], lb, ub, @(U) nonLinearConst(U, p_t, qi, N, optParams.robotShape, Ts), options);
     u_opt_reshaped = reshape(u_opt, [2, N]);
     
     error.exitflag = exitflag;
