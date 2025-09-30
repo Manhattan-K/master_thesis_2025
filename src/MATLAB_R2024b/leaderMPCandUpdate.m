@@ -19,7 +19,8 @@ function [p_tp1, X_L, qi, error, u_opt] = leaderMPCandUpdate(...
     costF = @(U) leaderCost(U, x0, sys, W, W_hat, R_hat, N);
 
         % Get constraints function
-    constraintsF = @(U) constraints(U, x0, qi, N, robotParams.robotShape, sys);
+    [A_bar, B_bar] = constMatrices(x0, qi, N, robotParams.robotShape, sys);
+    constraintsF = @(U) constraints(U, x0, qi, N, robotParams.robotShape, sys, A_bar, B_bar);
 
         % Get input bounds
     v_max = robotParams.v_max;
