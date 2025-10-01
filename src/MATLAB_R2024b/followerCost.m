@@ -1,0 +1,39 @@
+function [cost] = followerCost(U, x0_f, sys, N, X_L_stacked, robotParams)
+
+    % FOLLOWER COST FUNCTION as 
+    %   J = c*J_1 + J_2
+
+%% J_1 checks the distance between the two robots
+
+        % q_L - q_F
+    X_F_stacked = stateEvolution(U, x0_f, sys, N);
+    stateDiff_stacked = X_L_stacked - X_F_stacked;
+    stateDiff = reshape(stateDiff_stacked, [sys.n, N]);
+
+        % Px * stateDiff
+    projDiff = robotParams.Px * stateDiff;
+
+        % Cost evaluation
+    % J_1 = sum((robotParams.beta_N) .* (sum(projDiff.^2, 1) - robotParams.d_FL_sq) .^ 2);
+    J_1 = robotParams.beta_N * ((sum(projDiff.^2, 1) - robotParams.d_FL_sq) .^ 2)';
+    
+
+%% J_2 accounts for the minimization of the travelled distance
+
+        % q_F(1:N) - q_F(0:N-1)
+    X_F_N_1 = [x0_f; X_F_stacked(1:(sys.n * (N-1)))];
+    distDiff_stacked = X_F_stacked - X_F_N_1;
+    distDiff = reshape(distDiff_stacked, [sys.n, N]);
+
+        % Px * distDiff
+    projDiff = robotParams.Px * distDiff;
+
+        % Cost evaluation
+    J_2 = sum(sum(projDiff.^2, 1));
+
+%% Final cost
+
+    cost = robotParams.C * J_1 + J_2;
+    
+end
+

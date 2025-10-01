@@ -1,4 +1,4 @@
-function [p_tp1, X_L, X_L_stacked, qi, error, u_opt] = leaderMPCandUpdate(...
+function [p_tp1, X_L, X_L_stacked, qi, error, u_opt] = leaderMPCandUpdateHalt(...
                                           sys, x0, N, robotParams, obstacles, U_l_old)
 %% Variables definitions
 
@@ -7,16 +7,8 @@ function [p_tp1, X_L, X_L_stacked, qi, error, u_opt] = leaderMPCandUpdate(...
         % Get q points from obstacles
     [qi, ~] = getObstacleInfo(obstacles, x0(1:2));
     
-        % Get optimization params
-    W = robotParams.W;
-    R = robotParams.R;
-    Z = robotParams.Z;
-    
-        % Get cost weights matrices
-    [W_hat, R_hat] = costWeights(sys, W, R, Z, N);
-    
         % Get cost function
-    costF = @(U) leaderCost(U, x0, sys, W, W_hat, R_hat, N);
+    costF = @(U) leaderCostHalt(U, x0, sys, N, robotParams);
 
         % Get constraints function
     [A_bar, B_bar] = constMatrices(x0, qi, N, robotParams.robotShape, sys);
