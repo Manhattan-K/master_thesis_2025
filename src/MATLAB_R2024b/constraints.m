@@ -1,7 +1,4 @@
-function [c, ceq] = constraints(U, x0, q_points, N, robotShape, sys, A_bar, B_bar)
-
-        % Obtain the number of constraints
-    [~,M] = size(q_points);
+function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys)
     
         % Obtain the number of vertices
     [~, L] = size(robotShape);
