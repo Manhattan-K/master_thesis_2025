@@ -1,0 +1,153 @@
+# CompilerName=msvc170
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root\build\win64
+matlabdir = C:\Program Files\MATLAB\R2024b
+startdir = C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b
+
+# Toolchain information
+cc = cl
+cxx = cl
+linker = link
+linkerxx = link
+
+cflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=evaluateObstacles_mex -arch:AVX2 
+
+cxxflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=evaluateObstacles_mex -arch:AVX2 
+
+ldflags =  /nologo    /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  /out:"evaluateObstacles_mex.mexw64" /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmwblas.lib libmwlapack.lib libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib  /export:mexFunction /export:mexfilerequiredapiversion /export:emlrtMexFcnProperties /export:evaluateObstacles /export:followerMPCandUpdate /export:leaderMPCandUpdate /export:leaderMPCandUpdateHalt /export:Rmat /export:evaluateObstacles_mex_initialize /export:evaluateObstacles_mex_terminate /export:evaluateObstacles_mex_atexit /export:emxInitStruct_struct4_T /export:emxFreeStruct_struct4_T /export:u_emxInitStruct_coder_internal_ /export:v_emxInitStruct_coder_internal_ /export:w_emxInitStruct_coder_internal_ /export:x_emxInitStruct_coder_internal_ /export:y_emxInitStruct_coder_internal_ /export:ab_emxInitStruct_coder_internal /export:bb_emxInitStruct_coder_internal /export:cb_emxInitStruct_coder_internal /export:db_emxInitStruct_coder_internal /export:emxInitStruct_struct_T12 /export:g_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T11 /export:emxFreeStruct_struct_T9 /export:ab_emxFreeStruct_coder_internal /export:y_emxFreeStruct_coder_internal_ /export:x_emxFreeStruct_coder_internal_ /export:w_emxFreeStruct_coder_internal_ /export:v_emxFreeStruct_coder_internal_ /export:u_emxFreeStruct_coder_internal_ /export:t_emxFreeStruct_coder_internal_ /export:s_emxFreeStruct_coder_internal_ /export:l_emxInitStruct_coder_internal_ /export:m_emxInitStruct_coder_internal_ /export:n_emxInitStruct_coder_internal_ /export:o_emxInitStruct_coder_internal_ /export:p_emxInitStruct_coder_internal_ /export:q_emxInitStruct_coder_internal_ /export:r_emxInitStruct_coder_internal_ /export:s_emxInitStruct_coder_internal_ /export:t_emxInitStruct_coder_internal_ /export:emxInitStruct_struct_T10 /export:e_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T9 /export:f_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T8 /export:emxInitStruct_struct1_T /export:emxFreeStruct_struct_T8 /export:r_emxFreeStruct_coder_internal_ /export:q_emxFreeStruct_coder_internal_ /export:p_emxFreeStruct_coder_internal_ /export:o_emxFreeStruct_coder_internal_ /export:n_emxFreeStruct_coder_internal_ /export:m_emxFreeStruct_coder_internal_ /export:l_emxFreeStruct_coder_internal_ /export:k_emxFreeStruct_coder_internal_ /export:d_emxFreeStruct_anonymous_funct /export:emxFreeStruct_struct_T7 /export:emxInitStruct_struct_T1 /export:c_emxInitStruct_coder_internal_ /export:d_emxInitStruct_coder_internal_ /export:e_emxInitStruct_coder_internal_ /export:f_emxInitStruct_coder_internal_ /export:g_emxInitStruct_coder_internal_ /export:h_emxInitStruct_coder_internal_ /export:i_emxInitStruct_coder_internal_ /export:j_emxInitStruct_coder_internal_ /export:k_emxInitStruct_coder_internal_ /export:emxInitStruct_struct_T4 /export:d_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T3 /export:c_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T2 /export:emxInitStruct_struct5_T /export:emxInitStruct_struct2_T /export:emxCopyStruct_struct5_T /export:emxCopy_real_T_800 /export:emxInitStruct_struct_T5 /export:emxInitStruct_struct_T6 /export:emxInitStruct_struct_T7 /export:emxFreeStruct_struct_T6 /export:emxFreeStruct_struct_T5 /export:emxFreeStruct_struct_T4 /export:emxFreeStruct_struct_T3 /export:j_emxFreeStruct_coder_internal_ /export:i_emxFreeStruct_coder_internal_ /export:h_emxFreeStruct_coder_internal_ /export:g_emxFreeStruct_coder_internal_ /export:f_emxFreeStruct_coder_internal_ /export:e_emxFreeStruct_coder_internal_ /export:d_emxFreeStruct_coder_internal_ /export:c_emxFreeStruct_coder_internal_ /export:c_emxFreeStruct_anonymous_funct /export:emxFreeStruct_struct_T2 /export:emxFreeStruct_struct5_T /export:emxFreeStruct_struct_T1 /export:emxInit_ptrdiff_t /export:emxEnsureCapacity_ptrdiff_t /export:emxFree_ptrdiff_t /export:emxInitStruct_struct_T /export:emxInit_real_T /export:emxCopyStruct_struct_T /export:emxCopy_real_T_4200 /export:emxCopy_real_T_0 /export:emxCopy_real_T_4241 /export:emxCopy_int32_T_4241 /export:emxCopy_real_T /export:emxEnsureCapacity_real_T /export:emxCopyMatrix_int32_T2 /export:emxCopy_boolean_T_14801 /export:emxCopy_int32_T_14801 /export:emxCopyMatrix_int32_T1 /export:emxFreeStruct_struct_T /export:emxFree_real_T
+
+ldxxflags =  /nologo    /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib libMatlabDataArray.lib libMatlabEngine.lib  /out:"evaluateObstacles_mex.mexw64" /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmwblas.lib libmwlapack.lib libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib  /export:mexFunction /export:mexfilerequiredapiversion /export:emlrtMexFcnProperties /export:evaluateObstacles /export:followerMPCandUpdate /export:leaderMPCandUpdate /export:leaderMPCandUpdateHalt /export:Rmat /export:evaluateObstacles_mex_initialize /export:evaluateObstacles_mex_terminate /export:evaluateObstacles_mex_atexit /export:emxInitStruct_struct4_T /export:emxFreeStruct_struct4_T /export:u_emxInitStruct_coder_internal_ /export:v_emxInitStruct_coder_internal_ /export:w_emxInitStruct_coder_internal_ /export:x_emxInitStruct_coder_internal_ /export:y_emxInitStruct_coder_internal_ /export:ab_emxInitStruct_coder_internal /export:bb_emxInitStruct_coder_internal /export:cb_emxInitStruct_coder_internal /export:db_emxInitStruct_coder_internal /export:emxInitStruct_struct_T12 /export:g_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T11 /export:emxFreeStruct_struct_T9 /export:ab_emxFreeStruct_coder_internal /export:y_emxFreeStruct_coder_internal_ /export:x_emxFreeStruct_coder_internal_ /export:w_emxFreeStruct_coder_internal_ /export:v_emxFreeStruct_coder_internal_ /export:u_emxFreeStruct_coder_internal_ /export:t_emxFreeStruct_coder_internal_ /export:s_emxFreeStruct_coder_internal_ /export:l_emxInitStruct_coder_internal_ /export:m_emxInitStruct_coder_internal_ /export:n_emxInitStruct_coder_internal_ /export:o_emxInitStruct_coder_internal_ /export:p_emxInitStruct_coder_internal_ /export:q_emxInitStruct_coder_internal_ /export:r_emxInitStruct_coder_internal_ /export:s_emxInitStruct_coder_internal_ /export:t_emxInitStruct_coder_internal_ /export:emxInitStruct_struct_T10 /export:e_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T9 /export:f_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T8 /export:emxInitStruct_struct1_T /export:emxFreeStruct_struct_T8 /export:r_emxFreeStruct_coder_internal_ /export:q_emxFreeStruct_coder_internal_ /export:p_emxFreeStruct_coder_internal_ /export:o_emxFreeStruct_coder_internal_ /export:n_emxFreeStruct_coder_internal_ /export:m_emxFreeStruct_coder_internal_ /export:l_emxFreeStruct_coder_internal_ /export:k_emxFreeStruct_coder_internal_ /export:d_emxFreeStruct_anonymous_funct /export:emxFreeStruct_struct_T7 /export:emxInitStruct_struct_T1 /export:c_emxInitStruct_coder_internal_ /export:d_emxInitStruct_coder_internal_ /export:e_emxInitStruct_coder_internal_ /export:f_emxInitStruct_coder_internal_ /export:g_emxInitStruct_coder_internal_ /export:h_emxInitStruct_coder_internal_ /export:i_emxInitStruct_coder_internal_ /export:j_emxInitStruct_coder_internal_ /export:k_emxInitStruct_coder_internal_ /export:emxInitStruct_struct_T4 /export:d_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T3 /export:c_emxInitStruct_anonymous_funct /export:emxInitStruct_struct_T2 /export:emxInitStruct_struct5_T /export:emxInitStruct_struct2_T /export:emxCopyStruct_struct5_T /export:emxCopy_real_T_800 /export:emxInitStruct_struct_T5 /export:emxInitStruct_struct_T6 /export:emxInitStruct_struct_T7 /export:emxFreeStruct_struct_T6 /export:emxFreeStruct_struct_T5 /export:emxFreeStruct_struct_T4 /export:emxFreeStruct_struct_T3 /export:j_emxFreeStruct_coder_internal_ /export:i_emxFreeStruct_coder_internal_ /export:h_emxFreeStruct_coder_internal_ /export:g_emxFreeStruct_coder_internal_ /export:f_emxFreeStruct_coder_internal_ /export:e_emxFreeStruct_coder_internal_ /export:d_emxFreeStruct_coder_internal_ /export:c_emxFreeStruct_coder_internal_ /export:c_emxFreeStruct_anonymous_funct /export:emxFreeStruct_struct_T2 /export:emxFreeStruct_struct5_T /export:emxFreeStruct_struct_T1 /export:emxInit_ptrdiff_t /export:emxEnsureCapacity_ptrdiff_t /export:emxFree_ptrdiff_t /export:emxInitStruct_struct_T /export:emxInit_real_T /export:emxCopyStruct_struct_T /export:emxCopy_real_T_4200 /export:emxCopy_real_T_0 /export:emxCopy_real_T_4241 /export:emxCopy_int32_T_4241 /export:emxCopy_real_T /export:emxEnsureCapacity_real_T /export:emxCopyMatrix_int32_T2 /export:emxCopy_boolean_T_14801 /export:emxCopy_int32_T_14801 /export:emxCopyMatrix_int32_T1 /export:emxFreeStruct_struct_T /export:emxFree_real_T
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in /Fo$out
+
+rule cxx
+    command = $cxx $cxxflags $in /Fo$out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldxxflags
+
+# Build
+build $builddir\evaluateObstacles_mex_data.obj : cc $root\evaluateObstacles_mex_data.c
+build $builddir\rt_nonfinite.obj : cc $root\rt_nonfinite.c
+build $builddir\evaluateObstacles_mex_initialize.obj : cc $root\evaluateObstacles_mex_initialize.c
+build $builddir\evaluateObstacles_mex_terminate.obj : cc $root\evaluateObstacles_mex_terminate.c
+build $builddir\evaluateObstacles.obj : cc $root\evaluateObstacles.c
+build $builddir\getObstacleInfo.obj : cc $root\getObstacleInfo.c
+build $builddir\kron.obj : cc $root\kron.c
+build $builddir\repmat.obj : cc $root\repmat.c
+build $builddir\followerMPCandUpdate.obj : cc $root\followerMPCandUpdate.c
+build $builddir\checkLinearInputs.obj : cc $root\checkLinearInputs.c
+build $builddir\stateEvolution.obj : cc $root\stateEvolution.c
+build $builddir\modelDynamics.obj : cc $root\modelDynamics.c
+build $builddir\mtimes.obj : cc $root\mtimes.c
+build $builddir\factoryConstruct.obj : cc $root\factoryConstruct.c
+build $builddir\factoryConstruct1.obj : cc $root\factoryConstruct1.c
+build $builddir\factoryConstruct2.obj : cc $root\factoryConstruct2.c
+build $builddir\sumMatrixIncludeNaN.obj : cc $root\sumMatrixIncludeNaN.c
+build $builddir\sum.obj : cc $root\sum.c
+build $builddir\checkVectorNonFinite.obj : cc $root\checkVectorNonFinite.c
+build $builddir\computeDualFeasError.obj : cc $root\computeDualFeasError.c
+build $builddir\computeComplError.obj : cc $root\computeComplError.c
+build $builddir\xdot.obj : cc $root\xdot.c
+build $builddir\xnrm2.obj : cc $root\xnrm2.c
+build $builddir\maxConstraintViolation.obj : cc $root\maxConstraintViolation.c
+build $builddir\xasum.obj : cc $root\xasum.c
+build $builddir\fillOutputStruct.obj : cc $root\fillOutputStruct.c
+build $builddir\leaderMPCandUpdate.obj : cc $root\leaderMPCandUpdate.c
+build $builddir\constraints.obj : cc $root\constraints.c
+build $builddir\leaderMPCandUpdateHalt.obj : cc $root\leaderMPCandUpdateHalt.c
+build $builddir\Rmat.obj : cc $root\Rmat.c
+build $builddir\_coder_evaluateObstacles_mex_api.obj : cc $root\interface\_coder_evaluateObstacles_mex_api.c
+build $builddir\_coder_evaluateObstacles_mex_mex.obj : cc $root\interface\_coder_evaluateObstacles_mex_mex.c
+build $builddir\factoryConstruct3.obj : cc $root\factoryConstruct3.c
+build $builddir\computePrimalFeasError.obj : cc $root\computePrimalFeasError.c
+build $builddir\strcmp.obj : cc $root\strcmp.c
+build $builddir\fmincon.obj : cc $root\fmincon.c
+build $builddir\loadProblem.obj : cc $root\loadProblem.c
+build $builddir\fwdFinDiffInsideBnds.obj : cc $root\fwdFinDiffInsideBnds.c
+build $builddir\finDiffEvalAndChkErr.obj : cc $root\finDiffEvalAndChkErr.c
+build $builddir\setProblemType.obj : cc $root\setProblemType.c
+build $builddir\modifyOverheadPhaseOne_.obj : cc $root\modifyOverheadPhaseOne_.c
+build $builddir\xcopy.obj : cc $root\xcopy.c
+build $builddir\driver.obj : cc $root\driver.c
+build $builddir\test_exit.obj : cc $root\test_exit.c
+build $builddir\factorQRE.obj : cc $root\factorQRE.c
+build $builddir\xgeqp3.obj : cc $root\xgeqp3.c
+build $builddir\computeQ_.obj : cc $root\computeQ_.c
+build $builddir\sortLambdaQP.obj : cc $root\sortLambdaQP.c
+build $builddir\saveState.obj : cc $root\saveState.c
+build $builddir\step.obj : cc $root\step.c
+build $builddir\normal.obj : cc $root\normal.c
+build $builddir\driver1.obj : cc $root\driver1.c
+build $builddir\PresolveWorkingSet.obj : cc $root\PresolveWorkingSet.c
+build $builddir\RemoveDependentEq_.obj : cc $root\RemoveDependentEq_.c
+build $builddir\countsort.obj : cc $root\countsort.c
+build $builddir\removeConstr.obj : cc $root\removeConstr.c
+build $builddir\RemoveDependentIneq_.obj : cc $root\RemoveDependentIneq_.c
+build $builddir\feasibleX0ForWorkingSet.obj : cc $root\feasibleX0ForWorkingSet.c
+build $builddir\xgemv.obj : cc $root\xgemv.c
+build $builddir\xgemm.obj : cc $root\xgemm.c
+build $builddir\xtrsm.obj : cc $root\xtrsm.c
+build $builddir\maxConstraintViolation_AMats_regularized_.obj : cc $root\maxConstraintViolation_AMats_regularized_.c
+build $builddir\maxConstraintViolation_AMats_nonregularized_.obj : cc $root\maxConstraintViolation_AMats_nonregularized_.c
+build $builddir\phaseone.obj : cc $root\phaseone.c
+build $builddir\iterate.obj : cc $root\iterate.c
+build $builddir\computeGrad_StoreHx.obj : cc $root\computeGrad_StoreHx.c
+build $builddir\xaxpy.obj : cc $root\xaxpy.c
+build $builddir\computeFval_ReuseHx.obj : cc $root\computeFval_ReuseHx.c
+build $builddir\squareQ_appendCol.obj : cc $root\squareQ_appendCol.c
+build $builddir\deleteColMoveEnd.obj : cc $root\deleteColMoveEnd.c
+build $builddir\factorQR.obj : cc $root\factorQR.c
+build $builddir\compute_deltax.obj : cc $root\compute_deltax.c
+build $builddir\factor.obj : cc $root\factor.c
+build $builddir\solve.obj : cc $root\solve.c
+build $builddir\compute_lambda.obj : cc $root\compute_lambda.c
+build $builddir\addBoundToActiveSetMatrix_.obj : cc $root\addBoundToActiveSetMatrix_.c
+build $builddir\checkUnboundedOrIllPosed.obj : cc $root\checkUnboundedOrIllPosed.c
+build $builddir\computeFval.obj : cc $root\computeFval.c
+build $builddir\linearForm_.obj : cc $root\linearForm_.c
+build $builddir\relaxed.obj : cc $root\relaxed.c
+build $builddir\assignResidualsToXSlack.obj : cc $root\assignResidualsToXSlack.c
+build $builddir\updatePenaltyParam.obj : cc $root\updatePenaltyParam.c
+build $builddir\soc.obj : cc $root\soc.c
+build $builddir\updateWorkingSet.obj : cc $root\updateWorkingSet.c
+build $builddir\linesearch.obj : cc $root\linesearch.c
+build $builddir\revertSolution.obj : cc $root\revertSolution.c
+build $builddir\BFGSUpdate.obj : cc $root\BFGSUpdate.c
+build $builddir\compressBounds.obj : cc $root\compressBounds.c
+build $builddir\computeFiniteDifferences.obj : cc $root\computeFiniteDifferences.c
+build $builddir\updateWorkingSetForNewQP.obj : cc $root\updateWorkingSetForNewQP.c
+build $builddir\initActiveSet.obj : cc $root\initActiveSet.c
+build $builddir\computeConstraints_.obj : cc $root\computeConstraints_.c
+build $builddir\hasFiniteBounds.obj : cc $root\hasFiniteBounds.c
+build $builddir\saveJacobian.obj : cc $root\saveJacobian.c
+build $builddir\computeLinearResiduals.obj : cc $root\computeLinearResiduals.c
+build $builddir\computeDeltaLag.obj : cc $root\computeDeltaLag.c
+build $builddir\computeGradLag.obj : cc $root\computeGradLag.c
+build $builddir\checkStoppingAndUpdateFval.obj : cc $root\checkStoppingAndUpdateFval.c
+build $builddir\feasibleratiotest.obj : cc $root\feasibleratiotest.c
+build $builddir\partialColLDL3_.obj : cc $root\partialColLDL3_.c
+build $builddir\fullColLDL2_.obj : cc $root\fullColLDL2_.c
+build $builddir\evalObjAndConstrAndDerivatives.obj : cc $root\evalObjAndConstrAndDerivatives.c
+build $builddir\computeForwardDifferences.obj : cc $root\computeForwardDifferences.c
+build $builddir\eml_mtimes_helper.obj : cc $root\eml_mtimes_helper.c
+build $builddir\followerCost.obj : cc $root\followerCost.c
+build $builddir\evaluateObstacles_mex_emxutil.obj : cc $root\evaluateObstacles_mex_emxutil.c
+build $builddir\_coder_evaluateObstacles_mex_info.obj : cc $root\interface\_coder_evaluateObstacles_mex_info.c
+build $builddir\c_mexapi_version.obj : cc $matlabdir\extern\version\c_mexapi_version.c
+
+# Link
+build $root\evaluateObstacles_mex.mexw64 : link $builddir\evaluateObstacles_mex_data.obj $builddir\rt_nonfinite.obj $builddir\evaluateObstacles_mex_initialize.obj $builddir\evaluateObstacles_mex_terminate.obj $builddir\evaluateObstacles.obj $builddir\getObstacleInfo.obj $builddir\kron.obj $builddir\repmat.obj $builddir\followerMPCandUpdate.obj $builddir\checkLinearInputs.obj $builddir\stateEvolution.obj $builddir\modelDynamics.obj $builddir\mtimes.obj $builddir\factoryConstruct.obj $builddir\factoryConstruct1.obj $builddir\factoryConstruct2.obj $builddir\sumMatrixIncludeNaN.obj $builddir\sum.obj $builddir\checkVectorNonFinite.obj $builddir\computeDualFeasError.obj $builddir\computeComplError.obj $builddir\xdot.obj $builddir\xnrm2.obj $builddir\maxConstraintViolation.obj $builddir\xasum.obj $builddir\fillOutputStruct.obj $builddir\leaderMPCandUpdate.obj $builddir\constraints.obj $builddir\leaderMPCandUpdateHalt.obj $builddir\Rmat.obj $builddir\_coder_evaluateObstacles_mex_api.obj $builddir\_coder_evaluateObstacles_mex_mex.obj $builddir\factoryConstruct3.obj $builddir\computePrimalFeasError.obj $builddir\strcmp.obj $builddir\fmincon.obj $builddir\loadProblem.obj $builddir\fwdFinDiffInsideBnds.obj $builddir\finDiffEvalAndChkErr.obj $builddir\setProblemType.obj $builddir\modifyOverheadPhaseOne_.obj $builddir\xcopy.obj $builddir\driver.obj $builddir\test_exit.obj $builddir\factorQRE.obj $builddir\xgeqp3.obj $builddir\computeQ_.obj $builddir\sortLambdaQP.obj $builddir\saveState.obj $builddir\step.obj $builddir\normal.obj $builddir\driver1.obj $builddir\PresolveWorkingSet.obj $builddir\RemoveDependentEq_.obj $builddir\countsort.obj $builddir\removeConstr.obj $builddir\RemoveDependentIneq_.obj $builddir\feasibleX0ForWorkingSet.obj $builddir\xgemv.obj $builddir\xgemm.obj $builddir\xtrsm.obj $builddir\maxConstraintViolation_AMats_regularized_.obj $builddir\maxConstraintViolation_AMats_nonregularized_.obj $builddir\phaseone.obj $builddir\iterate.obj $builddir\computeGrad_StoreHx.obj $builddir\xaxpy.obj $builddir\computeFval_ReuseHx.obj $builddir\squareQ_appendCol.obj $builddir\deleteColMoveEnd.obj $builddir\factorQR.obj $builddir\compute_deltax.obj $builddir\factor.obj $builddir\solve.obj $builddir\compute_lambda.obj $builddir\addBoundToActiveSetMatrix_.obj $builddir\checkUnboundedOrIllPosed.obj $builddir\computeFval.obj $builddir\linearForm_.obj $builddir\relaxed.obj $builddir\assignResidualsToXSlack.obj $builddir\updatePenaltyParam.obj $builddir\soc.obj $builddir\updateWorkingSet.obj $builddir\linesearch.obj $builddir\revertSolution.obj $builddir\BFGSUpdate.obj $builddir\compressBounds.obj $builddir\computeFiniteDifferences.obj $builddir\updateWorkingSetForNewQP.obj $builddir\initActiveSet.obj $builddir\computeConstraints_.obj $builddir\hasFiniteBounds.obj $builddir\saveJacobian.obj $builddir\computeLinearResiduals.obj $builddir\computeDeltaLag.obj $builddir\computeGradLag.obj $builddir\checkStoppingAndUpdateFval.obj $builddir\feasibleratiotest.obj $builddir\partialColLDL3_.obj $builddir\fullColLDL2_.obj $builddir\evalObjAndConstrAndDerivatives.obj $builddir\computeForwardDifferences.obj $builddir\eml_mtimes_helper.obj $builddir\followerCost.obj $builddir\evaluateObstacles_mex_emxutil.obj $builddir\_coder_evaluateObstacles_mex_info.obj $builddir\c_mexapi_version.obj 

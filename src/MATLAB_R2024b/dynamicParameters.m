@@ -25,7 +25,7 @@ leaderParams.R = diag([opt.R_lin, opt.R_ang]);
 
     % Linear and angular velocities limits
 [leaderParams.lb, leaderParams.ub] = inputBounds( ...
-    leaderParams.v_max, leaderParams.w_max, sys, N);
+    leaderParams.v_max, leaderParams.w_max, N);
 
 %% FOLLOWER PARAMETERS
 
@@ -40,14 +40,14 @@ followerParams.beta_N = followerParams.beta.^(1:N);
     % Linear and angular velocities limits
 
 [followerParams.lb, followerParams.ub] = inputBounds( ...
-    followerParams.v_max, followerParams.w_max, sys, N);
+    followerParams.v_max, followerParams.w_max, N);
 
 %% MPC loop
 
     % Loop variables
 max_iter = opt.max_iter;
 goal_reached = false;
-i = int16(i);
+i = 1;
 
     % Variables allocation and inizialization
 real_d = zeros(max_iter, 1);

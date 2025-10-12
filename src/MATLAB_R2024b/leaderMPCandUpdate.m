@@ -12,7 +12,7 @@ function [p_tp1, X_L, X_L_stacked, error, u_t, u_opt] = leaderMPCandUpdate(...
 
 %% fmincon optimization
 
-    options = optimoptions('fmincon','Algorithm','interior-point','Display','off');
+    options = optimoptions('fmincon','Algorithm','sqp','Display','off');
     [u_opt, ~, exitflag, output] = fmincon(costF, U_l_old, [], [], [], [], robotParams.lb, robotParams.ub, constraintsF, options);
     
     error.QPexitflag = exitflag;

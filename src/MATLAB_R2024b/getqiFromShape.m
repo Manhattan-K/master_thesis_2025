@@ -8,6 +8,9 @@ function [q, d] = getqiFromShape(shape, x0)
 % if " = "wall" (thing which is perpendicular to axes), shape.is_x_wall,
 % shape.wall_pos
 
+q = [0; 0];
+d = 0;
+
 switch shape.type
     case "circle"
         dist_from_center = norm(x0-shape.center);
@@ -37,9 +40,15 @@ switch shape.type
         % a good initial guess is the point intersection of ellipse and
         % C->x0 ray
         phi_init = atan2(x0y,x0x) - theta;
-        phi_opt = ND(phi_init, d1_phi, d2_phi, 100, 0.005);
-        q = q_phi_shift(phi_opt) + shape.center;
-        d = norm(x0 - q);
+
+
+        % phi_opt = ND(phi_init, d1_phi, d2_phi, 100, 0.005); % cant find
+        % the func ND
+        % q = q_phi_shift(phi_opt) + shape.center;
+        %d = norm(x0 - q);
+        q = [0; 0];
+        d = 0;
+
         return;
         
     case "general_poly"

@@ -1,8 +1,7 @@
-function [lb, ub] = inputBounds(v_max, w_max, sys, N)
+function [lb, ub] = inputBounds(v_max, w_max, N)
 
-    m = sys.m;
-    lb = repmat([0; -w_max], m*N);
-    ub = repmat([v_max; w_max], m*N);
+    lb = repmat([0; -w_max], [N, 1]);
+    ub = repmat([v_max; w_max], [N, 1]);
 
 end
 
