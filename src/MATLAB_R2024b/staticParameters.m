@@ -1,12 +1,12 @@
 %% ROBOT DYNAMICS
 
     % System parameters
-sys.n = 3;
-sys.m = 2;
+sys.n = int8(3);
+sys.m = int8(2);
 
 %% ALGORITHM PARAMETERS
 
-Px = [1 0 0; 0 1 0];
+Px = [int8(1) int8(0) int8(0); int8(0) int8(1) int8(0)];
 
 %% LEADER PARAMETERS
 

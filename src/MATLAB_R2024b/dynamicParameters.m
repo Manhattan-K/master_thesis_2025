@@ -47,7 +47,7 @@ followerParams.beta_N = followerParams.beta.^(1:N);
     % Loop variables
 max_iter = opt.max_iter;
 goal_reached = false;
-i = 1;
+i = int16(i);
 
     % Variables allocation and inizialization
 real_d = zeros(max_iter, 1);
