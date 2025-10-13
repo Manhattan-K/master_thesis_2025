@@ -9,19 +9,19 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 %--------------------------- Obstacle avoidanace matrices -------------
 
         % Evaluate the MPC only on the nearest obstacles
-    obstaclesInRange = evaluateObstacles_mex('evaluateObstacles', ...
+    obstaclesInRange = evaluateObstacles( ...
         obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, sys, N);
 
 %--------------------------- MPC for Leader and Follower -------------
 
         % MPC for the leader
-    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = evaluateObstacles_mex('leaderMPCandUpdate', ...
+    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old);
 
     X_L_plot(:,:,i) = X_L;
 
         % MPC for the follower
-    [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = evaluateObstacles_mex('followerMPCandUpdate', ...
+    [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate( ...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old);
 
     X_F_plot(:,:,i) = X_F;
@@ -34,11 +34,11 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         if any(formation_error(1:k_loose_grip) > eps_loose_grip)
 
                 % MPC for the leader using the new cost function
-            [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = evaluateObstacles_mex('leaderMPCandUpdateHalt', ...
+            [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdateHalt( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, zeros([sys.m*N,1]));
 
                 % MPC for the follower using the new leader states
-            [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = evaluateObstacles_mex('followerMPCandUpdate', ...
+            [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate( ...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, zeros([sys.m*N,1]));
         end
     end
@@ -50,8 +50,8 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
     loadTheta = atan2(fl_diff(2), fl_diff(1));
     loadTheta_p(i) = loadTheta;
 
-    leaderParams.robotShape = evaluateObstacles_mex('Rmat', loadTheta)*leaderParams.initRobotShape;
-    followerParams.robotShape = evaluateObstacles_mex('Rmat', loadTheta)*followerParams.initRobotShape;
+    leaderParams.robotShape = Rmat(loadTheta)*leaderParams.initRobotShape;
+    followerParams.robotShape = Rmat(loadTheta)*followerParams.initRobotShape;
 
         % Check if goal was reached up to desired precision
     if norm(x_l(1:2,i+1)) < delta

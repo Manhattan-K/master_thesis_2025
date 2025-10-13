@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2024a">
-  <configuration build-checksum="336859468" file="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\mexGeneration.prj" location="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" name="mexGeneration" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="2277107785" file="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\mexGeneration.prj" location="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" name="mexGeneration" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -13,12 +13,12 @@
       <param.InstructionSetExtensionsAvailableInUI>true</param.InstructionSetExtensionsAvailableInUI>
       <param.InstructionSetExtensionsConfig.FMA>false</param.InstructionSetExtensionsConfig.FMA>
       <param.ResponsivenessChecks>false</param.ResponsivenessChecks>
-      <param.ExtrinsicCalls>true</param.ExtrinsicCalls>
+      <param.ExtrinsicCalls>false</param.ExtrinsicCalls>
       <param.IntegrityChecks>false</param.IntegrityChecks>
-      <param.SaturateOnIntegerOverflow>false</param.SaturateOnIntegerOverflow>
-      <param.EnableAutoParallelization>false</param.EnableAutoParallelization>
+      <param.SaturateOnIntegerOverflow>true</param.SaturateOnIntegerOverflow>
+      <param.EnableAutoParallelization>true</param.EnableAutoParallelization>
       <param.NumberOfCpuThreads>0</param.NumberOfCpuThreads>
-      <param.OptimizeReductions>false</param.OptimizeReductions>
+      <param.OptimizeReductions>true</param.OptimizeReductions>
       <param.SIMDAcceleration>option.SIMDAcceleration.Full</param.SIMDAcceleration>
       <param.GlobalDataSyncMethod>option.GlobalDataSyncMethod.SyncAlways</param.GlobalDataSyncMethod>
       <param.EnableVariableSizing>true</param.EnableVariableSizing>
@@ -51,7 +51,7 @@
       <param.DefaultTestFile />
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
-      <param.VerificationStatus>option.VerificationStatus.FailedTest</param.VerificationStatus>
+      <param.VerificationStatus>option.VerificationStatus.Passed</param.VerificationStatus>
       <param.EnableMexProfiling>true</param.EnableMexProfiling>
       <var.BuiltWithMexProfiling>true</var.BuiltWithMexProfiling>
       <param.CustomSourceCode />
@@ -102,10 +102,8 @@
         <var.SimdQueryHardwareType />
         <param.InstructionSetExtensionsAvailableInUI />
         <param.InstructionSetExtensionsConfig.FMA />
-        <param.ExtrinsicCalls />
-        <param.EnableAutoParallelization />
+        <param.SaturateOnIntegerOverflow />
         <param.NumberOfCpuThreads />
-        <param.OptimizeReductions />
         <param.GlobalDataSyncMethod />
         <param.EnableVariableSizing />
         <param.EnableDynamicMemoryAllocation />
@@ -287,9 +285,9 @@
       <param.CustomSource />
       <param.CustomLibrary />
       <param.PostCodeGenCommand />
-      <param.TargetLangStandard>Auto</param.TargetLangStandard>
-      <param.CodeReplacementLibrary>None</param.CodeReplacementLibrary>
-      <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
+      <param.TargetLangStandard />
+      <param.CodeReplacementLibrary />
+      <param.DeprecatedCRLFlag />
       <param.SameHardware>true</param.SameHardware>
       <param.Toolchain>Automatically locate an installed toolchain</param.Toolchain>
       <param.BuildConfiguration />
@@ -607,11 +605,12 @@
     <param.objective>option.objective.c</param.objective>
     <param.WorkflowStep>generateCode</param.WorkflowStep>
     <param.TestSnippets>
+      <item>main_mexGeneration</item>
       <item>main</item>
     </param.TestSnippets>
     <param.ExternalFcnMajority>column</param.ExternalFcnMajority>
     <param.UseGlobals>option.UseGlobals.No</param.UseGlobals>
-    <param.outputfile>${PROJECT_ROOT}\evaluateObstacles_mex.mexw64</param.outputfile>
+    <param.outputfile>${PROJECT_ROOT}\mexFunctions.mexw64</param.outputfile>
     <param.version>R2012a</param.version>
     <param.HasECoderFeatures>false</param.HasECoderFeatures>
     <param.HasGpuCoder>false</param.HasGpuCoder>
@@ -626,7 +625,7 @@
     <param.AutoInferUnboundedSizeThreshold>2048</param.AutoInferUnboundedSizeThreshold>
     <param.EnableFixedPointStep>false</param.EnableFixedPointStep>
     <param.EnableScreener>true</param.EnableScreener>
-    <param.AnnotationChecksum>2350486175</param.AnnotationChecksum>
+    <param.AnnotationChecksum>2553820511</param.AnnotationChecksum>
     <var.LegacyTarget />
     <var.MirrorOnOpen>false</var.MirrorOnOpen>
     <param.FixedPointEnabled>false</param.FixedPointEnabled>
@@ -634,14 +633,14 @@
     <var.DismissScreener>false</var.DismissScreener>
     <param.unifiedParamStorage />
     <param.hdlParamStorage />
-    <var.gc.lastOutputRoot>codegen\mex\evaluateObstacles_mex</var.gc.lastOutputRoot>
+    <var.gc.lastOutputRoot>codegen\mex\mexFunctions</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>MEX_FILE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>2420720546</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>2277107785</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen\mex\evaluateObstacles_mex</var.cfi.lastOutputRoot>
-    <var.cfi.preBuildChecksum>1547080481</var.cfi.preBuildChecksum>
-    <var.lastCfiTestSnippet>main</var.lastCfiTestSnippet>
+    <var.cfi.preBuildChecksum>3192875385</var.cfi.preBuildChecksum>
+    <var.lastCfiTestSnippet>main_mexGeneration</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;989476059&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1861698956&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>
@@ -656,10 +655,10 @@
     <param.EnableStructExplosion>true</param.EnableStructExplosion>
     <param.ForceANSIC>false</param.ForceANSIC>
     <param.NumCompileJobs>1</param.NumCompileJobs>
-    <param.mex.outputfile>evaluateObstacles_mex</param.mex.outputfile>
+    <param.mex.outputfile>mexFunctions</param.mex.outputfile>
     <param.grt.outputfile>evaluateObstacles</param.grt.outputfile>
     <param.artifact>option.target.artifact.mex</param.artifact>
-    <param.outputfile>${PROJECT_ROOT}\evaluateObstacles_mex.mexw64</param.outputfile>
+    <param.outputfile>${PROJECT_ROOT}\mexFunctions.mexw64</param.outputfile>
     <param.CppNamespace />
     <param.CppPreserveNamespaces>true</param.CppPreserveNamespaces>
     <param.CppNamespaceForMathworksCode>coder</param.CppNamespaceForMathworksCode>
@@ -688,8 +687,8 @@
     <param.deeplearning.DeepLearningCustomCallback />
     <param.deeplearning.TargetLib>option.deeplearning.targetlibrary.none</param.deeplearning.TargetLib>
     <var.cfiTargetLibSuppression>false</var.cfiTargetLibSuppression>
-    <var.hasMatlabDeepLearningSupportPackage>true</var.hasMatlabDeepLearningSupportPackage>
-    <var.hasGpuDeepLearningSupportPackage>true</var.hasGpuDeepLearningSupportPackage>
+    <var.hasMatlabDeepLearningSupportPackage>false</var.hasMatlabDeepLearningSupportPackage>
+    <var.hasGpuDeepLearningSupportPackage>false</var.hasGpuDeepLearningSupportPackage>
     <param.tensorrt.DataType>option.tensorrt.datatype.fp32</param.tensorrt.DataType>
     <param.tensorrt.DataPath />
     <param.tensorrt.NumCalibrationBatches>0</param.tensorrt.NumCalibrationBatches>
@@ -791,7 +790,6 @@
       <param.EnableStructExplosion />
       <param.ForceANSIC />
       <param.NumCompileJobs />
-      <param.mex.outputfile />
       <param.grt.outputfile />
       <param.artifact />
       <param.CppNamespace />
@@ -822,8 +820,6 @@
       <param.deeplearning.DeepLearningCustomCallback />
       <param.deeplearning.TargetLib />
       <var.cfiTargetLibSuppression />
-      <var.hasMatlabDeepLearningSupportPackage />
-      <var.hasGpuDeepLearningSupportPackage />
       <param.tensorrt.DataType />
       <param.tensorrt.DataPath />
       <param.tensorrt.NumCalibrationBatches />
@@ -888,23 +884,24 @@
     </unset>
     <fileset.entrypoints>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\evaluateObstacles.m">
-        <Marker>1760298876240</Marker>
+        <Marker>1760349290870</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\followerMPCandUpdate.m">
-        <Marker>1760298298241</Marker>
+        <Marker>1760349291299</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\leaderMPCandUpdate.m">
-        <Marker>1760298298857</Marker>
+        <Marker>1760349291697</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\leaderMPCandUpdateHalt.m">
-        <Marker>1760302945065</Marker>
+        <Marker>1760351450563</Marker>
       </file>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\Rmat.m">
-        <Marker>1760296200812</Marker>
+        <Marker>1760348491175</Marker>
       </file>
     </fileset.entrypoints>
     <fileset.testbench>
       <file>${PROJECT_ROOT}\main.mlx</file>
+      <file>${PROJECT_ROOT}\main_mexGeneration.mlx</file>
     </fileset.testbench>
     <fileset.inputtypes>
       <file custom-data-expanded="false" value="${PROJECT_ROOT}\evaluateObstacles.m">
@@ -917,67 +914,67 @@
               <Field Name="center" typeId="4" />
               <Field Name="radius" typeId="5" />
               <Field Name="is_x_wall" typeId="6" />
-              <Field Name="wall_pos" typeId="7" />
-              <Field Name="a" typeId="7" />
-              <Field Name="b" typeId="7" />
-              <Field Name="theta" typeId="7" />
+              <Field Name="wall_pos" typeId="5" />
+              <Field Name="a" typeId="5" />
+              <Field Name="b" typeId="5" />
+              <Field Name="theta" typeId="5" />
             </Field>
           </Input>
           <Input Name="x_l" typeId="4" />
           <Input Name="x_f" typeId="4" />
-          <Input Name="leaderParams" typeId="8">
-            <Field Name="Px" typeId="9" />
+          <Input Name="leaderParams" typeId="1">
+            <Field Name="Px" typeId="7" />
             <Field Name="v_max" typeId="5" />
             <Field Name="w_max" typeId="5" />
             <Field Name="pos_color" typeId="2">
-              <Field Name="{1}" typeId="10" />
+              <Field Name="{1}" typeId="8" />
             </Field>
             <Field Name="pred_color" typeId="2">
-              <Field Name="{1}" typeId="11" />
+              <Field Name="{1}" typeId="9" />
             </Field>
             <Field Name="constraint_color" typeId="2">
               <Field Name="{1}" typeId="3" />
             </Field>
-            <Field Name="show_predictions" typeId="12" />
-            <Field Name="show_constraints" typeId="12" />
-            <Field Name="keep_predictions" typeId="12" />
-            <Field Name="initRobotShape" typeId="13" />
-            <Field Name="robotShape" typeId="13" />
-            <Field Name="W" typeId="14" />
-            <Field Name="Z" typeId="14" />
-            <Field Name="R" typeId="15" />
-            <Field Name="W_hat" typeId="16" />
-            <Field Name="R_hat" typeId="17" />
-            <Field Name="lb" typeId="18" />
-            <Field Name="ub" typeId="18" />
+            <Field Name="show_predictions" typeId="6" />
+            <Field Name="show_constraints" typeId="6" />
+            <Field Name="keep_predictions" typeId="6" />
+            <Field Name="initRobotShape" typeId="10" />
+            <Field Name="robotShape" typeId="10" />
+            <Field Name="W" typeId="11" />
+            <Field Name="Z" typeId="11" />
+            <Field Name="R" typeId="12" />
+            <Field Name="W_hat" typeId="13" />
+            <Field Name="R_hat" typeId="14" />
+            <Field Name="lb" typeId="15" />
+            <Field Name="ub" typeId="15" />
           </Input>
-          <Input Name="followerParams" typeId="8">
+          <Input Name="followerParams" typeId="1">
             <Field Name="d_FL" typeId="5" />
-            <Field Name="Px" typeId="9" />
+            <Field Name="Px" typeId="7" />
             <Field Name="v_max" typeId="5" />
             <Field Name="w_max" typeId="5" />
             <Field Name="pos_color" typeId="2">
-              <Field Name="{1}" typeId="19" />
+              <Field Name="{1}" typeId="16" />
             </Field>
             <Field Name="pred_color" typeId="2">
-              <Field Name="{1}" typeId="19" />
+              <Field Name="{1}" typeId="16" />
             </Field>
             <Field Name="constraint_color" typeId="2">
-              <Field Name="{1}" typeId="20" />
+              <Field Name="{1}" typeId="17" />
             </Field>
-            <Field Name="show_predictions" typeId="12" />
-            <Field Name="show_constraints" typeId="12" />
-            <Field Name="keep_predictions" typeId="12" />
-            <Field Name="initRobotShape" typeId="21" />
-            <Field Name="robotShape" typeId="21" />
-            <Field Name="d_FL_sq" typeId="22" />
+            <Field Name="show_predictions" typeId="6" />
+            <Field Name="show_constraints" typeId="6" />
+            <Field Name="keep_predictions" typeId="6" />
+            <Field Name="initRobotShape" typeId="18" />
+            <Field Name="robotShape" typeId="18" />
+            <Field Name="d_FL_sq" typeId="19" />
             <Field Name="C" typeId="5" />
             <Field Name="beta" typeId="5" />
-            <Field Name="beta_N" typeId="22" />
-            <Field Name="lb" typeId="18" />
-            <Field Name="ub" typeId="18" />
+            <Field Name="beta_N" typeId="19" />
+            <Field Name="lb" typeId="15" />
+            <Field Name="ub" typeId="15" />
           </Input>
-          <Input Name="sys" typeId="8">
+          <Input Name="sys" typeId="1">
             <Field Name="n" typeId="5" />
             <Field Name="m" typeId="5" />
             <Field Name="Ts" typeId="5" />
@@ -986,7 +983,7 @@
           <idpTable>
             <type typeId="0">
               <Class>cell</Class>
-              <Size>:1 x :24</Size>
+              <Size>1 x :24</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -997,7 +994,7 @@
               <Size>1 x 1</Size>
               <Value />
               <InitialValue />
-              <UserDefined>true</UserDefined>
+              <UserDefined>false</UserDefined>
               <TypeName />
               <Extern>false</Extern>
               <HeaderFile />
@@ -1041,30 +1038,10 @@
               <Size>1 x 1</Size>
               <Value />
               <InitialValue />
-              <UserDefined>true</UserDefined>
+              <UserDefined>false</UserDefined>
               <Sparse>false</Sparse>
             </type>
             <type typeId="7">
-              <Class>double</Class>
-              <Size>1 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>true</UserDefined>
-              <Complex>false</Complex>
-              <Sparse>false</Sparse>
-            </type>
-            <type typeId="8">
-              <Class>struct</Class>
-              <Size>1 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>false</UserDefined>
-              <TypeName />
-              <Extern>false</Extern>
-              <HeaderFile />
-              <Alignment>-1</Alignment>
-            </type>
-            <type typeId="9">
               <Class>double</Class>
               <Size>2 x 3</Size>
               <Value />
@@ -1073,29 +1050,21 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="10">
+            <type typeId="8">
               <Class>char</Class>
               <Size>1 x 3</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
             </type>
-            <type typeId="11">
+            <type typeId="9">
               <Class>char</Class>
               <Size>1 x 7</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
             </type>
-            <type typeId="12">
-              <Class>logical</Class>
-              <Size>1 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>false</UserDefined>
-              <Sparse>false</Sparse>
-            </type>
-            <type typeId="13">
+            <type typeId="10">
               <Class>double</Class>
               <Size>2 x 21</Size>
               <Value />
@@ -1104,7 +1073,7 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="14">
+            <type typeId="11">
               <Class>double</Class>
               <Size>3 x 3</Size>
               <Value />
@@ -1113,7 +1082,7 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="15">
+            <type typeId="12">
               <Class>double</Class>
               <Size>2 x 2</Size>
               <Value />
@@ -1122,7 +1091,7 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="16">
+            <type typeId="13">
               <Class>double</Class>
               <Size>60 x 60</Size>
               <Value />
@@ -1131,7 +1100,7 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="17">
+            <type typeId="14">
               <Class>double</Class>
               <Size>40 x 40</Size>
               <Value />
@@ -1140,30 +1109,30 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="18">
+            <type typeId="15">
               <Class>double</Class>
-              <Size>:80 x :40</Size>
+              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="19">
+            <type typeId="16">
               <Class>char</Class>
               <Size>1 x 4</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
             </type>
-            <type typeId="20">
+            <type typeId="17">
               <Class>char</Class>
               <Size>1 x 5</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
             </type>
-            <type typeId="21">
+            <type typeId="18">
               <Class>double</Class>
               <Size>2 x 4</Size>
               <Value />
@@ -1172,7 +1141,7 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="22">
+            <type typeId="19">
               <Class>double</Class>
               <Size>1 x 20</Size>
               <Value />
@@ -1228,7 +1197,7 @@
             <Field Name="A_bar_f" typeId="14" />
             <Field Name="B_bar_f" typeId="15" />
           </Input>
-          <Input Name="U_f_old" typeId="16" />
+          <Input Name="U_f_old" typeId="11" />
           <idpTable>
             <type typeId="0">
               <Class>struct</Class>
@@ -1327,7 +1296,7 @@
             </type>
             <type typeId="11">
               <Class>double</Class>
-              <Size>:80 x :40</Size>
+              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -1364,15 +1333,6 @@
             <type typeId="15">
               <Class>double</Class>
               <Size>:800 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>false</UserDefined>
-              <Complex>false</Complex>
-              <Sparse>false</Sparse>
-            </type>
-            <type typeId="16">
-              <Class>double</Class>
-              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -1425,7 +1385,7 @@
             <Field Name="A_bar_f" typeId="17" />
             <Field Name="B_bar_f" typeId="18" />
           </Input>
-          <Input Name="U_l_old" typeId="19" />
+          <Input Name="U_l_old" typeId="14" />
           <idpTable>
             <type typeId="0">
               <Class>struct</Class>
@@ -1549,7 +1509,7 @@
             </type>
             <type typeId="14">
               <Class>double</Class>
-              <Size>:80 x :40</Size>
+              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -1586,15 +1546,6 @@
             <type typeId="18">
               <Class>double</Class>
               <Size>:800 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>false</UserDefined>
-              <Complex>false</Complex>
-              <Sparse>false</Sparse>
-            </type>
-            <type typeId="19">
-              <Class>double</Class>
-              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -1647,7 +1598,7 @@
             <Field Name="A_bar_f" typeId="17" />
             <Field Name="B_bar_f" typeId="18" />
           </Input>
-          <Input Name="U_l_old" typeId="19" />
+          <Input Name="U_l_old" typeId="14" />
           <idpTable>
             <type typeId="0">
               <Class>struct</Class>
@@ -1771,7 +1722,7 @@
             </type>
             <type typeId="14">
               <Class>double</Class>
-              <Size>:80 x :40</Size>
+              <Size>40 x 1</Size>
               <Value />
               <InitialValue />
               <UserDefined>false</UserDefined>
@@ -1814,15 +1765,6 @@
               <Complex>false</Complex>
               <Sparse>false</Sparse>
             </type>
-            <type typeId="19">
-              <Class>double</Class>
-              <Size>40 x 1</Size>
-              <Value />
-              <InitialValue />
-              <UserDefined>false</UserDefined>
-              <Complex>false</Complex>
-              <Sparse>false</Sparse>
-            </type>
           </idpTable>
         </Inputs>
       </file>
@@ -1844,7 +1786,7 @@
       </file>
     </fileset.inputtypes>
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="evaluateObstacles_mex.mexw64" optional="false">C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles_mex.mexw64</file>
+      <file location="${PROJECT_ROOT}" name="mexFunctions.mexw64" optional="false">C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\mexFunctions.mexw64</file>
     </build-deliverables>
     <workflow />
     <matlab>
