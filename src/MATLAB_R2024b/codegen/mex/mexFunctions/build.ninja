@@ -1,35 +1,35 @@
-# CompilerName=mingw64
+# CompilerName=msvcpp170
 # Mode=optim
 ninja_required_version = 1.3
 
 # Basic folders
 root = .
-builddir = $root/build/win64
-matlabdir = C:/Program Files/MATLAB/R2024b
-startdir = C:/Users/kovac/Desktop/TESI/master_thesis_2025/src/MATLAB_R2024b
+builddir = $root\build\win64
+matlabdir = C:\Program Files\MATLAB\R2024b
+startdir = C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b
 
 # Toolchain information
-cc = C:\ProgramData\MATLAB\SupportPackages\R2024b\3P.instrset\mingw_w64.instrset\bin\gcc
-cxx = C:\ProgramData\MATLAB\SupportPackages\R2024b\3P.instrset\mingw_w64.instrset\bin\g++
-linker = C:\ProgramData\MATLAB\SupportPackages\R2024b\3P.instrset\mingw_w64.instrset\bin\gcc
-linkerxx = C:\ProgramData\MATLAB\SupportPackages\R2024b\3P.instrset\mingw_w64.instrset\bin\g++
+cc = cl
+cxx = cl
+linker = link
+linkerxx = link
 
-cflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\codegen\mex\mexFunctions" -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\codegen\mex\mexFunctions\interface" -I "C:\Program Files\MATLAB\R2024b\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
+cflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251 
 
-cxxflags =  -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\codegen\mex\mexFunctions" -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" -I "C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\codegen\mex\mexFunctions\interface" -I "C:\Program Files\MATLAB\R2024b\extern\include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp 
+cxxflags =  /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251 
 
-ldflags = mexFunctions.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2024b\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -o "mexFunctions.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
+ldflags =  /nologo    /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  /out:"mexFunctions.mexw64" /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmwblas.lib libmwlapack.lib libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib 
 
-ldxxflags = mexFunctions.def  -m64 -Wl,--no-undefined -shared -static -L"C:\Program Files\MATLAB\R2024b\extern\lib\win64\mingw64" -llibmx -llibmex -llibmat -lm -llibmwlapack -llibmwblas -llibMatlabDataArray -llibMatlabEngine  -o "mexFunctions.mexw64" -L"$matlabdir\extern\lib\win64\mingw64" -llibmwblas -llibmwlapack -llibemlrt -llibcovrt -llibut -llibmwmathutil -fopenmp
+ldxxflags =  /nologo    /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib libMatlabDataArray.lib libMatlabEngine.lib  /out:"mexFunctions.mexw64" /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmwblas.lib libmwlapack.lib libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib 
 
 linkobjs = 
 
 # Build Rules
 rule cc
-    command = $cc $cflags $in -o $out
+    command = $cc $cflags $in /Fo$out
 
 rule cxx
-    command = $cxx $cxxflags $in -o $out
+    command = $cxx $cxxflags $in /Fo$out
 
 rule link
     command = $linker @$out.rsp $linkobjs $ldflags
@@ -40,112 +40,110 @@ rule linkxx
     command = $linkerxx $in $linkobjs $ldxxflags
 
 # Build
-build $builddir/mexFunctions_data.o : cc $root/mexFunctions_data.c
-build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
-build $builddir/mexFunctions_initialize.o : cc $root/mexFunctions_initialize.c
-build $builddir/mexFunctions_terminate.o : cc $root/mexFunctions_terminate.c
-build $builddir/evaluateObstacles.o : cc $root/evaluateObstacles.c
-build $builddir/getObstacleInfo.o : cc $root/getObstacleInfo.c
-build $builddir/kron.o : cc $root/kron.c
-build $builddir/followerMPCandUpdate.o : cc $root/followerMPCandUpdate.c
-build $builddir/stateEvolution.o : cc $root/stateEvolution.c
-build $builddir/modelDynamics.o : cc $root/modelDynamics.c
-build $builddir/mtimes.o : cc $root/mtimes.c
-build $builddir/factoryConstruct.o : cc $root/factoryConstruct.c
-build $builddir/factoryConstruct1.o : cc $root/factoryConstruct1.c
-build $builddir/factoryConstruct2.o : cc $root/factoryConstruct2.c
-build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
-build $builddir/sum.o : cc $root/sum.c
-build $builddir/checkVectorNonFinite.o : cc $root/checkVectorNonFinite.c
-build $builddir/computeDualFeasError.o : cc $root/computeDualFeasError.c
-build $builddir/computeComplError.o : cc $root/computeComplError.c
-build $builddir/xdot.o : cc $root/xdot.c
-build $builddir/xnrm2.o : cc $root/xnrm2.c
-build $builddir/maxConstraintViolation.o : cc $root/maxConstraintViolation.c
-build $builddir/xasum.o : cc $root/xasum.c
-build $builddir/fillOutputStruct.o : cc $root/fillOutputStruct.c
-build $builddir/leaderMPCandUpdate.o : cc $root/leaderMPCandUpdate.c
-build $builddir/constraints.o : cc $root/constraints.c
-build $builddir/leaderMPCandUpdateHalt.o : cc $root/leaderMPCandUpdateHalt.c
-build $builddir/Rmat.o : cc $root/Rmat.c
-build $builddir/_coder_mexFunctions_api.o : cc $root/interface/_coder_mexFunctions_api.c
-build $builddir/_coder_mexFunctions_mex.o : cc $root/interface/_coder_mexFunctions_mex.c
-build $builddir/factoryConstruct3.o : cc $root/factoryConstruct3.c
-build $builddir/computePrimalFeasError.o : cc $root/computePrimalFeasError.c
-build $builddir/strcmp.o : cc $root/strcmp.c
-build $builddir/fmincon.o : cc $root/fmincon.c
-build $builddir/loadProblem.o : cc $root/loadProblem.c
-build $builddir/fwdFinDiffInsideBnds.o : cc $root/fwdFinDiffInsideBnds.c
-build $builddir/finDiffEvalAndChkErr.o : cc $root/finDiffEvalAndChkErr.c
-build $builddir/setProblemType.o : cc $root/setProblemType.c
-build $builddir/modifyOverheadPhaseOne_.o : cc $root/modifyOverheadPhaseOne_.c
-build $builddir/xcopy.o : cc $root/xcopy.c
-build $builddir/driver.o : cc $root/driver.c
-build $builddir/test_exit.o : cc $root/test_exit.c
-build $builddir/factorQRE.o : cc $root/factorQRE.c
-build $builddir/xgeqp3.o : cc $root/xgeqp3.c
-build $builddir/computeQ_.o : cc $root/computeQ_.c
-build $builddir/sortLambdaQP.o : cc $root/sortLambdaQP.c
-build $builddir/saveState.o : cc $root/saveState.c
-build $builddir/step.o : cc $root/step.c
-build $builddir/normal.o : cc $root/normal.c
-build $builddir/driver1.o : cc $root/driver1.c
-build $builddir/PresolveWorkingSet.o : cc $root/PresolveWorkingSet.c
-build $builddir/RemoveDependentEq_.o : cc $root/RemoveDependentEq_.c
-build $builddir/countsort.o : cc $root/countsort.c
-build $builddir/removeConstr.o : cc $root/removeConstr.c
-build $builddir/RemoveDependentIneq_.o : cc $root/RemoveDependentIneq_.c
-build $builddir/feasibleX0ForWorkingSet.o : cc $root/feasibleX0ForWorkingSet.c
-build $builddir/xgemv.o : cc $root/xgemv.c
-build $builddir/xgemm.o : cc $root/xgemm.c
-build $builddir/xtrsm.o : cc $root/xtrsm.c
-build $builddir/maxConstraintViolation_AMats_regularized_.o : cc $root/maxConstraintViolation_AMats_regularized_.c
-build $builddir/maxConstraintViolation_AMats_nonregularized_.o : cc $root/maxConstraintViolation_AMats_nonregularized_.c
-build $builddir/phaseone.o : cc $root/phaseone.c
-build $builddir/iterate.o : cc $root/iterate.c
-build $builddir/computeGrad_StoreHx.o : cc $root/computeGrad_StoreHx.c
-build $builddir/xaxpy.o : cc $root/xaxpy.c
-build $builddir/computeFval_ReuseHx.o : cc $root/computeFval_ReuseHx.c
-build $builddir/squareQ_appendCol.o : cc $root/squareQ_appendCol.c
-build $builddir/deleteColMoveEnd.o : cc $root/deleteColMoveEnd.c
-build $builddir/factorQR.o : cc $root/factorQR.c
-build $builddir/compute_deltax.o : cc $root/compute_deltax.c
-build $builddir/factor.o : cc $root/factor.c
-build $builddir/solve.o : cc $root/solve.c
-build $builddir/compute_lambda.o : cc $root/compute_lambda.c
-build $builddir/addBoundToActiveSetMatrix_.o : cc $root/addBoundToActiveSetMatrix_.c
-build $builddir/checkUnboundedOrIllPosed.o : cc $root/checkUnboundedOrIllPosed.c
-build $builddir/computeFval.o : cc $root/computeFval.c
-build $builddir/linearForm_.o : cc $root/linearForm_.c
-build $builddir/relaxed.o : cc $root/relaxed.c
-build $builddir/assignResidualsToXSlack.o : cc $root/assignResidualsToXSlack.c
-build $builddir/updatePenaltyParam.o : cc $root/updatePenaltyParam.c
-build $builddir/soc.o : cc $root/soc.c
-build $builddir/updateWorkingSet.o : cc $root/updateWorkingSet.c
-build $builddir/linesearch.o : cc $root/linesearch.c
-build $builddir/revertSolution.o : cc $root/revertSolution.c
-build $builddir/BFGSUpdate.o : cc $root/BFGSUpdate.c
-build $builddir/compressBounds.o : cc $root/compressBounds.c
-build $builddir/computeFiniteDifferences.o : cc $root/computeFiniteDifferences.c
-build $builddir/updateWorkingSetForNewQP.o : cc $root/updateWorkingSetForNewQP.c
-build $builddir/initActiveSet.o : cc $root/initActiveSet.c
-build $builddir/computeConstraints_.o : cc $root/computeConstraints_.c
-build $builddir/hasFiniteBounds.o : cc $root/hasFiniteBounds.c
-build $builddir/saveJacobian.o : cc $root/saveJacobian.c
-build $builddir/computeLinearResiduals.o : cc $root/computeLinearResiduals.c
-build $builddir/computeDeltaLag.o : cc $root/computeDeltaLag.c
-build $builddir/computeGradLag.o : cc $root/computeGradLag.c
-build $builddir/checkStoppingAndUpdateFval.o : cc $root/checkStoppingAndUpdateFval.c
-build $builddir/feasibleratiotest.o : cc $root/feasibleratiotest.c
-build $builddir/partialColLDL3_.o : cc $root/partialColLDL3_.c
-build $builddir/fullColLDL2_.o : cc $root/fullColLDL2_.c
-build $builddir/evalObjAndConstrAndDerivatives.o : cc $root/evalObjAndConstrAndDerivatives.c
-build $builddir/computeForwardDifferences.o : cc $root/computeForwardDifferences.c
-build $builddir/eml_mtimes_helper.o : cc $root/eml_mtimes_helper.c
-build $builddir/followerCost.o : cc $root/followerCost.c
-build $builddir/mexFunctions_emxutil.o : cc $root/mexFunctions_emxutil.c
-build $builddir/_coder_mexFunctions_info.o : cc $root/interface/_coder_mexFunctions_info.c
-build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+build $builddir\mexFunctions_data.obj : cxx $root\mexFunctions_data.cpp
+build $builddir\rt_nonfinite.obj : cxx $root\rt_nonfinite.cpp
+build $builddir\mexFunctions_initialize.obj : cxx $root\mexFunctions_initialize.cpp
+build $builddir\mexFunctions_terminate.obj : cxx $root\mexFunctions_terminate.cpp
+build $builddir\evaluateObstacles.obj : cxx $root\evaluateObstacles.cpp
+build $builddir\getObstacleInfo.obj : cxx $root\getObstacleInfo.cpp
+build $builddir\repmat.obj : cxx $root\repmat.cpp
+build $builddir\followerMPCandUpdate.obj : cxx $root\followerMPCandUpdate.cpp
+build $builddir\stateEvolution.obj : cxx $root\stateEvolution.cpp
+build $builddir\mtimes.obj : cxx $root\mtimes.cpp
+build $builddir\factoryConstruct.obj : cxx $root\factoryConstruct.cpp
+build $builddir\factoryConstruct1.obj : cxx $root\factoryConstruct1.cpp
+build $builddir\factoryConstruct2.obj : cxx $root\factoryConstruct2.cpp
+build $builddir\sumMatrixIncludeNaN.obj : cxx $root\sumMatrixIncludeNaN.cpp
+build $builddir\sum.obj : cxx $root\sum.cpp
+build $builddir\checkVectorNonFinite.obj : cxx $root\checkVectorNonFinite.cpp
+build $builddir\computeDualFeasError.obj : cxx $root\computeDualFeasError.cpp
+build $builddir\computeComplError.obj : cxx $root\computeComplError.cpp
+build $builddir\xdot.obj : cxx $root\xdot.cpp
+build $builddir\xnrm2.obj : cxx $root\xnrm2.cpp
+build $builddir\maxConstraintViolation.obj : cxx $root\maxConstraintViolation.cpp
+build $builddir\xasum.obj : cxx $root\xasum.cpp
+build $builddir\fillOutputStruct.obj : cxx $root\fillOutputStruct.cpp
+build $builddir\leaderMPCandUpdate.obj : cxx $root\leaderMPCandUpdate.cpp
+build $builddir\leaderMPCandUpdateHalt.obj : cxx $root\leaderMPCandUpdateHalt.cpp
+build $builddir\Rmat.obj : cxx $root\Rmat.cpp
+build $builddir\_coder_mexFunctions_api.obj : cxx $root\interface\_coder_mexFunctions_api.cpp
+build $builddir\_coder_mexFunctions_mex.obj : cxx $root\interface\_coder_mexFunctions_mex.cpp
+build $builddir\factoryConstruct3.obj : cxx $root\factoryConstruct3.cpp
+build $builddir\computePrimalFeasError.obj : cxx $root\computePrimalFeasError.cpp
+build $builddir\strcmp.obj : cxx $root\strcmp.cpp
+build $builddir\fmincon.obj : cxx $root\fmincon.cpp
+build $builddir\loadProblem.obj : cxx $root\loadProblem.cpp
+build $builddir\fwdFinDiffInsideBnds.obj : cxx $root\fwdFinDiffInsideBnds.cpp
+build $builddir\finDiffEvalAndChkErr.obj : cxx $root\finDiffEvalAndChkErr.cpp
+build $builddir\setProblemType.obj : cxx $root\setProblemType.cpp
+build $builddir\modifyOverheadPhaseOne_.obj : cxx $root\modifyOverheadPhaseOne_.cpp
+build $builddir\driver.obj : cxx $root\driver.cpp
+build $builddir\test_exit.obj : cxx $root\test_exit.cpp
+build $builddir\factorQRE.obj : cxx $root\factorQRE.cpp
+build $builddir\xgeqp3.obj : cxx $root\xgeqp3.cpp
+build $builddir\computeQ_.obj : cxx $root\computeQ_.cpp
+build $builddir\sortLambdaQP.obj : cxx $root\sortLambdaQP.cpp
+build $builddir\saveState.obj : cxx $root\saveState.cpp
+build $builddir\step.obj : cxx $root\step.cpp
+build $builddir\normal.obj : cxx $root\normal.cpp
+build $builddir\driver1.obj : cxx $root\driver1.cpp
+build $builddir\PresolveWorkingSet.obj : cxx $root\PresolveWorkingSet.cpp
+build $builddir\RemoveDependentEq_.obj : cxx $root\RemoveDependentEq_.cpp
+build $builddir\countsort.obj : cxx $root\countsort.cpp
+build $builddir\removeConstr.obj : cxx $root\removeConstr.cpp
+build $builddir\RemoveDependentIneq_.obj : cxx $root\RemoveDependentIneq_.cpp
+build $builddir\feasibleX0ForWorkingSet.obj : cxx $root\feasibleX0ForWorkingSet.cpp
+build $builddir\xgemv.obj : cxx $root\xgemv.cpp
+build $builddir\xgemm.obj : cxx $root\xgemm.cpp
+build $builddir\xtrsm.obj : cxx $root\xtrsm.cpp
+build $builddir\xcopy.obj : cxx $root\xcopy.cpp
+build $builddir\maxConstraintViolation_AMats_regularized_.obj : cxx $root\maxConstraintViolation_AMats_regularized_.cpp
+build $builddir\maxConstraintViolation_AMats_nonregularized_.obj : cxx $root\maxConstraintViolation_AMats_nonregularized_.cpp
+build $builddir\phaseone.obj : cxx $root\phaseone.cpp
+build $builddir\iterate.obj : cxx $root\iterate.cpp
+build $builddir\computeGrad_StoreHx.obj : cxx $root\computeGrad_StoreHx.cpp
+build $builddir\xaxpy.obj : cxx $root\xaxpy.cpp
+build $builddir\computeFval_ReuseHx.obj : cxx $root\computeFval_ReuseHx.cpp
+build $builddir\squareQ_appendCol.obj : cxx $root\squareQ_appendCol.cpp
+build $builddir\deleteColMoveEnd.obj : cxx $root\deleteColMoveEnd.cpp
+build $builddir\factorQR.obj : cxx $root\factorQR.cpp
+build $builddir\compute_deltax.obj : cxx $root\compute_deltax.cpp
+build $builddir\factor.obj : cxx $root\factor.cpp
+build $builddir\solve.obj : cxx $root\solve.cpp
+build $builddir\compute_lambda.obj : cxx $root\compute_lambda.cpp
+build $builddir\addBoundToActiveSetMatrix_.obj : cxx $root\addBoundToActiveSetMatrix_.cpp
+build $builddir\checkUnboundedOrIllPosed.obj : cxx $root\checkUnboundedOrIllPosed.cpp
+build $builddir\computeFval.obj : cxx $root\computeFval.cpp
+build $builddir\linearForm_.obj : cxx $root\linearForm_.cpp
+build $builddir\relaxed.obj : cxx $root\relaxed.cpp
+build $builddir\assignResidualsToXSlack.obj : cxx $root\assignResidualsToXSlack.cpp
+build $builddir\updatePenaltyParam.obj : cxx $root\updatePenaltyParam.cpp
+build $builddir\soc.obj : cxx $root\soc.cpp
+build $builddir\updateWorkingSet.obj : cxx $root\updateWorkingSet.cpp
+build $builddir\linesearch.obj : cxx $root\linesearch.cpp
+build $builddir\revertSolution.obj : cxx $root\revertSolution.cpp
+build $builddir\BFGSUpdate.obj : cxx $root\BFGSUpdate.cpp
+build $builddir\compressBounds.obj : cxx $root\compressBounds.cpp
+build $builddir\computeFiniteDifferences.obj : cxx $root\computeFiniteDifferences.cpp
+build $builddir\updateWorkingSetForNewQP.obj : cxx $root\updateWorkingSetForNewQP.cpp
+build $builddir\initActiveSet.obj : cxx $root\initActiveSet.cpp
+build $builddir\computeConstraints_.obj : cxx $root\computeConstraints_.cpp
+build $builddir\hasFiniteBounds.obj : cxx $root\hasFiniteBounds.cpp
+build $builddir\saveJacobian.obj : cxx $root\saveJacobian.cpp
+build $builddir\computeLinearResiduals.obj : cxx $root\computeLinearResiduals.cpp
+build $builddir\computeDeltaLag.obj : cxx $root\computeDeltaLag.cpp
+build $builddir\computeGradLag.obj : cxx $root\computeGradLag.cpp
+build $builddir\checkStoppingAndUpdateFval.obj : cxx $root\checkStoppingAndUpdateFval.cpp
+build $builddir\feasibleratiotest.obj : cxx $root\feasibleratiotest.cpp
+build $builddir\partialColLDL3_.obj : cxx $root\partialColLDL3_.cpp
+build $builddir\fullColLDL2_.obj : cxx $root\fullColLDL2_.cpp
+build $builddir\evalObjAndConstrAndDerivatives.obj : cxx $root\evalObjAndConstrAndDerivatives.cpp
+build $builddir\computeForwardDifferences.obj : cxx $root\computeForwardDifferences.cpp
+build $builddir\constraints.obj : cxx $root\constraints.cpp
+build $builddir\eml_mtimes_helper.obj : cxx $root\eml_mtimes_helper.cpp
+build $builddir\followerCost.obj : cxx $root\followerCost.cpp
+build $builddir\_coder_mexFunctions_info.obj : cxx $root\interface\_coder_mexFunctions_info.cpp
+build $builddir\cpp_mexapi_version.obj : cxx $matlabdir\extern\version\cpp_mexapi_version.cpp
 
 # Link
-build $root\mexFunctions.mexw64 : link $builddir/mexFunctions_data.o $builddir/rt_nonfinite.o $builddir/mexFunctions_initialize.o $builddir/mexFunctions_terminate.o $builddir/evaluateObstacles.o $builddir/getObstacleInfo.o $builddir/kron.o $builddir/followerMPCandUpdate.o $builddir/stateEvolution.o $builddir/modelDynamics.o $builddir/mtimes.o $builddir/factoryConstruct.o $builddir/factoryConstruct1.o $builddir/factoryConstruct2.o $builddir/sumMatrixIncludeNaN.o $builddir/sum.o $builddir/checkVectorNonFinite.o $builddir/computeDualFeasError.o $builddir/computeComplError.o $builddir/xdot.o $builddir/xnrm2.o $builddir/maxConstraintViolation.o $builddir/xasum.o $builddir/fillOutputStruct.o $builddir/leaderMPCandUpdate.o $builddir/constraints.o $builddir/leaderMPCandUpdateHalt.o $builddir/Rmat.o $builddir/_coder_mexFunctions_api.o $builddir/_coder_mexFunctions_mex.o $builddir/factoryConstruct3.o $builddir/computePrimalFeasError.o $builddir/strcmp.o $builddir/fmincon.o $builddir/loadProblem.o $builddir/fwdFinDiffInsideBnds.o $builddir/finDiffEvalAndChkErr.o $builddir/setProblemType.o $builddir/modifyOverheadPhaseOne_.o $builddir/xcopy.o $builddir/driver.o $builddir/test_exit.o $builddir/factorQRE.o $builddir/xgeqp3.o $builddir/computeQ_.o $builddir/sortLambdaQP.o $builddir/saveState.o $builddir/step.o $builddir/normal.o $builddir/driver1.o $builddir/PresolveWorkingSet.o $builddir/RemoveDependentEq_.o $builddir/countsort.o $builddir/removeConstr.o $builddir/RemoveDependentIneq_.o $builddir/feasibleX0ForWorkingSet.o $builddir/xgemv.o $builddir/xgemm.o $builddir/xtrsm.o $builddir/maxConstraintViolation_AMats_regularized_.o $builddir/maxConstraintViolation_AMats_nonregularized_.o $builddir/phaseone.o $builddir/iterate.o $builddir/computeGrad_StoreHx.o $builddir/xaxpy.o $builddir/computeFval_ReuseHx.o $builddir/squareQ_appendCol.o $builddir/deleteColMoveEnd.o $builddir/factorQR.o $builddir/compute_deltax.o $builddir/factor.o $builddir/solve.o $builddir/compute_lambda.o $builddir/addBoundToActiveSetMatrix_.o $builddir/checkUnboundedOrIllPosed.o $builddir/computeFval.o $builddir/linearForm_.o $builddir/relaxed.o $builddir/assignResidualsToXSlack.o $builddir/updatePenaltyParam.o $builddir/soc.o $builddir/updateWorkingSet.o $builddir/linesearch.o $builddir/revertSolution.o $builddir/BFGSUpdate.o $builddir/compressBounds.o $builddir/computeFiniteDifferences.o $builddir/updateWorkingSetForNewQP.o $builddir/initActiveSet.o $builddir/computeConstraints_.o $builddir/hasFiniteBounds.o $builddir/saveJacobian.o $builddir/computeLinearResiduals.o $builddir/computeDeltaLag.o $builddir/computeGradLag.o $builddir/checkStoppingAndUpdateFval.o $builddir/feasibleratiotest.o $builddir/partialColLDL3_.o $builddir/fullColLDL2_.o $builddir/evalObjAndConstrAndDerivatives.o $builddir/computeForwardDifferences.o $builddir/eml_mtimes_helper.o $builddir/followerCost.o $builddir/mexFunctions_emxutil.o $builddir/_coder_mexFunctions_info.o $builddir/c_mexapi_version.o 
+build $root\mexFunctions.mexw64 : linkxx $builddir\mexFunctions_data.obj $builddir\rt_nonfinite.obj $builddir\mexFunctions_initialize.obj $builddir\mexFunctions_terminate.obj $builddir\evaluateObstacles.obj $builddir\getObstacleInfo.obj $builddir\repmat.obj $builddir\followerMPCandUpdate.obj $builddir\stateEvolution.obj $builddir\mtimes.obj $builddir\factoryConstruct.obj $builddir\factoryConstruct1.obj $builddir\factoryConstruct2.obj $builddir\sumMatrixIncludeNaN.obj $builddir\sum.obj $builddir\checkVectorNonFinite.obj $builddir\computeDualFeasError.obj $builddir\computeComplError.obj $builddir\xdot.obj $builddir\xnrm2.obj $builddir\maxConstraintViolation.obj $builddir\xasum.obj $builddir\fillOutputStruct.obj $builddir\leaderMPCandUpdate.obj $builddir\leaderMPCandUpdateHalt.obj $builddir\Rmat.obj $builddir\_coder_mexFunctions_api.obj $builddir\_coder_mexFunctions_mex.obj $builddir\factoryConstruct3.obj $builddir\computePrimalFeasError.obj $builddir\strcmp.obj $builddir\fmincon.obj $builddir\loadProblem.obj $builddir\fwdFinDiffInsideBnds.obj $builddir\finDiffEvalAndChkErr.obj $builddir\setProblemType.obj $builddir\modifyOverheadPhaseOne_.obj $builddir\driver.obj $builddir\test_exit.obj $builddir\factorQRE.obj $builddir\xgeqp3.obj $builddir\computeQ_.obj $builddir\sortLambdaQP.obj $builddir\saveState.obj $builddir\step.obj $builddir\normal.obj $builddir\driver1.obj $builddir\PresolveWorkingSet.obj $builddir\RemoveDependentEq_.obj $builddir\countsort.obj $builddir\removeConstr.obj $builddir\RemoveDependentIneq_.obj $builddir\feasibleX0ForWorkingSet.obj $builddir\xgemv.obj $builddir\xgemm.obj $builddir\xtrsm.obj $builddir\xcopy.obj $builddir\maxConstraintViolation_AMats_regularized_.obj $builddir\maxConstraintViolation_AMats_nonregularized_.obj $builddir\phaseone.obj $builddir\iterate.obj $builddir\computeGrad_StoreHx.obj $builddir\xaxpy.obj $builddir\computeFval_ReuseHx.obj $builddir\squareQ_appendCol.obj $builddir\deleteColMoveEnd.obj $builddir\factorQR.obj $builddir\compute_deltax.obj $builddir\factor.obj $builddir\solve.obj $builddir\compute_lambda.obj $builddir\addBoundToActiveSetMatrix_.obj $builddir\checkUnboundedOrIllPosed.obj $builddir\computeFval.obj $builddir\linearForm_.obj $builddir\relaxed.obj $builddir\assignResidualsToXSlack.obj $builddir\updatePenaltyParam.obj $builddir\soc.obj $builddir\updateWorkingSet.obj $builddir\linesearch.obj $builddir\revertSolution.obj $builddir\BFGSUpdate.obj $builddir\compressBounds.obj $builddir\computeFiniteDifferences.obj $builddir\updateWorkingSetForNewQP.obj $builddir\initActiveSet.obj $builddir\computeConstraints_.obj $builddir\hasFiniteBounds.obj $builddir\saveJacobian.obj $builddir\computeLinearResiduals.obj $builddir\computeDeltaLag.obj $builddir\computeGradLag.obj $builddir\checkStoppingAndUpdateFval.obj $builddir\feasibleratiotest.obj $builddir\partialColLDL3_.obj $builddir\fullColLDL2_.obj $builddir\evalObjAndConstrAndDerivatives.obj $builddir\computeForwardDifferences.obj $builddir\constraints.obj $builddir\eml_mtimes_helper.obj $builddir\followerCost.obj $builddir\_coder_mexFunctions_info.obj $builddir\cpp_mexapi_version.obj 

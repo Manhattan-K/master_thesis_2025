@@ -1,29 +1,42 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * saveJacobian.h
- *
- * Code generation for function 'saveJacobian'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// saveJacobian.h
+//
+// Code generation for function 'saveJacobian'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void saveJacobian(h_struct_T *obj, int32_T nVar, int32_T mIneq,
-                  const emxArray_real_T *JacCineqTrans, int32_T ineqCol0,
+// Type Declarations
+struct f_struct_T;
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace fminconsqp {
+namespace TrialState {
+void saveJacobian(f_struct_T &obj, int32_T nVar, int32_T mIneq,
+                  const array<real_T, 1U> &JacCineqTrans, int32_T ineqCol0,
                   int32_T ldJ);
 
-/* End of code generation (saveJacobian.h) */
+}
+} // namespace fminconsqp
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (saveJacobian.h)

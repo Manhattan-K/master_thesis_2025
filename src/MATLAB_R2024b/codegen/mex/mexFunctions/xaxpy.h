@@ -1,29 +1,35 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * xaxpy.h
- *
- * Code generation for function 'xaxpy'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// xaxpy.h
+//
+// Code generation for function 'xaxpy'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void b_xaxpy(int32_T n, const real_T x_data[], emxArray_real_T *y);
-
+// Function Declarations
+namespace coder {
+namespace internal {
+namespace blas {
 void xaxpy(int32_T n, real_T a, const real_T x_data[], real_T y_data[]);
 
-/* End of code generation (xaxpy.h) */
+void xaxpy(int32_T n, const real_T x_data[], array<real_T, 2U> &y);
+
+} // namespace blas
+} // namespace internal
+} // namespace coder
+
+// End of code generation (xaxpy.h)

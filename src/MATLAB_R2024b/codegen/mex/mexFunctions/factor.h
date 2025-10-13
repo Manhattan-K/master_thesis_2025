@@ -1,28 +1,37 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * factor.h
- *
- * Code generation for function 'factor'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// factor.h
+//
+// Code generation for function 'factor'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void factor(emlrtCTX aTLS, m_struct_T *obj, const real_T A[1600], int32_T ndims,
-            int32_T ldA);
+// Type Declarations
+struct e_struct_T;
 
-/* End of code generation (factor.h) */
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace CholManager {
+void factor(e_struct_T &obj, const real_T A[1600], int32_T ndims, int32_T ldA);
+
+}
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (factor.h)

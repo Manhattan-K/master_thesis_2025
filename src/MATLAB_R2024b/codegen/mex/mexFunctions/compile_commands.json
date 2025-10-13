@@ -1,638 +1,626 @@
 [
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mexFunctions_data.c -o build/win64/mexFunctions_data.o",
-    "file": "mexFunctions_data.c",
-    "output": "build/win64/mexFunctions_data.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  mexFunctions_data.cpp /Fobuild\\win64\\mexFunctions_data.obj",
+    "file": "mexFunctions_data.cpp",
+    "output": "build/win64/mexFunctions_data.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  rt_nonfinite.c -o build/win64/rt_nonfinite.o",
-    "file": "rt_nonfinite.c",
-    "output": "build/win64/rt_nonfinite.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  rt_nonfinite.cpp /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/win64/rt_nonfinite.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mexFunctions_initialize.c -o build/win64/mexFunctions_initialize.o",
-    "file": "mexFunctions_initialize.c",
-    "output": "build/win64/mexFunctions_initialize.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  mexFunctions_initialize.cpp /Fobuild\\win64\\mexFunctions_initialize.obj",
+    "file": "mexFunctions_initialize.cpp",
+    "output": "build/win64/mexFunctions_initialize.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mexFunctions_terminate.c -o build/win64/mexFunctions_terminate.o",
-    "file": "mexFunctions_terminate.c",
-    "output": "build/win64/mexFunctions_terminate.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  mexFunctions_terminate.cpp /Fobuild\\win64\\mexFunctions_terminate.obj",
+    "file": "mexFunctions_terminate.cpp",
+    "output": "build/win64/mexFunctions_terminate.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  evaluateObstacles.c -o build/win64/evaluateObstacles.o",
-    "file": "evaluateObstacles.c",
-    "output": "build/win64/evaluateObstacles.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  evaluateObstacles.cpp /Fobuild\\win64\\evaluateObstacles.obj",
+    "file": "evaluateObstacles.cpp",
+    "output": "build/win64/evaluateObstacles.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  getObstacleInfo.c -o build/win64/getObstacleInfo.o",
-    "file": "getObstacleInfo.c",
-    "output": "build/win64/getObstacleInfo.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  getObstacleInfo.cpp /Fobuild\\win64\\getObstacleInfo.obj",
+    "file": "getObstacleInfo.cpp",
+    "output": "build/win64/getObstacleInfo.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  kron.c -o build/win64/kron.o",
-    "file": "kron.c",
-    "output": "build/win64/kron.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  repmat.cpp /Fobuild\\win64\\repmat.obj",
+    "file": "repmat.cpp",
+    "output": "build/win64/repmat.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  followerMPCandUpdate.c -o build/win64/followerMPCandUpdate.o",
-    "file": "followerMPCandUpdate.c",
-    "output": "build/win64/followerMPCandUpdate.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  followerMPCandUpdate.cpp /Fobuild\\win64\\followerMPCandUpdate.obj",
+    "file": "followerMPCandUpdate.cpp",
+    "output": "build/win64/followerMPCandUpdate.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  stateEvolution.c -o build/win64/stateEvolution.o",
-    "file": "stateEvolution.c",
-    "output": "build/win64/stateEvolution.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  stateEvolution.cpp /Fobuild\\win64\\stateEvolution.obj",
+    "file": "stateEvolution.cpp",
+    "output": "build/win64/stateEvolution.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  modelDynamics.c -o build/win64/modelDynamics.o",
-    "file": "modelDynamics.c",
-    "output": "build/win64/modelDynamics.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  mtimes.cpp /Fobuild\\win64\\mtimes.obj",
+    "file": "mtimes.cpp",
+    "output": "build/win64/mtimes.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mtimes.c -o build/win64/mtimes.o",
-    "file": "mtimes.c",
-    "output": "build/win64/mtimes.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factoryConstruct.cpp /Fobuild\\win64\\factoryConstruct.obj",
+    "file": "factoryConstruct.cpp",
+    "output": "build/win64/factoryConstruct.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factoryConstruct.c -o build/win64/factoryConstruct.o",
-    "file": "factoryConstruct.c",
-    "output": "build/win64/factoryConstruct.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factoryConstruct1.cpp /Fobuild\\win64\\factoryConstruct1.obj",
+    "file": "factoryConstruct1.cpp",
+    "output": "build/win64/factoryConstruct1.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factoryConstruct1.c -o build/win64/factoryConstruct1.o",
-    "file": "factoryConstruct1.c",
-    "output": "build/win64/factoryConstruct1.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factoryConstruct2.cpp /Fobuild\\win64\\factoryConstruct2.obj",
+    "file": "factoryConstruct2.cpp",
+    "output": "build/win64/factoryConstruct2.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factoryConstruct2.c -o build/win64/factoryConstruct2.o",
-    "file": "factoryConstruct2.c",
-    "output": "build/win64/factoryConstruct2.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  sumMatrixIncludeNaN.cpp /Fobuild\\win64\\sumMatrixIncludeNaN.obj",
+    "file": "sumMatrixIncludeNaN.cpp",
+    "output": "build/win64/sumMatrixIncludeNaN.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  sumMatrixIncludeNaN.c -o build/win64/sumMatrixIncludeNaN.o",
-    "file": "sumMatrixIncludeNaN.c",
-    "output": "build/win64/sumMatrixIncludeNaN.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  sum.cpp /Fobuild\\win64\\sum.obj",
+    "file": "sum.cpp",
+    "output": "build/win64/sum.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  sum.c -o build/win64/sum.o",
-    "file": "sum.c",
-    "output": "build/win64/sum.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  checkVectorNonFinite.cpp /Fobuild\\win64\\checkVectorNonFinite.obj",
+    "file": "checkVectorNonFinite.cpp",
+    "output": "build/win64/checkVectorNonFinite.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  checkVectorNonFinite.c -o build/win64/checkVectorNonFinite.o",
-    "file": "checkVectorNonFinite.c",
-    "output": "build/win64/checkVectorNonFinite.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeDualFeasError.cpp /Fobuild\\win64\\computeDualFeasError.obj",
+    "file": "computeDualFeasError.cpp",
+    "output": "build/win64/computeDualFeasError.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeDualFeasError.c -o build/win64/computeDualFeasError.o",
-    "file": "computeDualFeasError.c",
-    "output": "build/win64/computeDualFeasError.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeComplError.cpp /Fobuild\\win64\\computeComplError.obj",
+    "file": "computeComplError.cpp",
+    "output": "build/win64/computeComplError.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeComplError.c -o build/win64/computeComplError.o",
-    "file": "computeComplError.c",
-    "output": "build/win64/computeComplError.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xdot.cpp /Fobuild\\win64\\xdot.obj",
+    "file": "xdot.cpp",
+    "output": "build/win64/xdot.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xdot.c -o build/win64/xdot.o",
-    "file": "xdot.c",
-    "output": "build/win64/xdot.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xnrm2.cpp /Fobuild\\win64\\xnrm2.obj",
+    "file": "xnrm2.cpp",
+    "output": "build/win64/xnrm2.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xnrm2.c -o build/win64/xnrm2.o",
-    "file": "xnrm2.c",
-    "output": "build/win64/xnrm2.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  maxConstraintViolation.cpp /Fobuild\\win64\\maxConstraintViolation.obj",
+    "file": "maxConstraintViolation.cpp",
+    "output": "build/win64/maxConstraintViolation.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  maxConstraintViolation.c -o build/win64/maxConstraintViolation.o",
-    "file": "maxConstraintViolation.c",
-    "output": "build/win64/maxConstraintViolation.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xasum.cpp /Fobuild\\win64\\xasum.obj",
+    "file": "xasum.cpp",
+    "output": "build/win64/xasum.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xasum.c -o build/win64/xasum.o",
-    "file": "xasum.c",
-    "output": "build/win64/xasum.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  fillOutputStruct.cpp /Fobuild\\win64\\fillOutputStruct.obj",
+    "file": "fillOutputStruct.cpp",
+    "output": "build/win64/fillOutputStruct.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  fillOutputStruct.c -o build/win64/fillOutputStruct.o",
-    "file": "fillOutputStruct.c",
-    "output": "build/win64/fillOutputStruct.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  leaderMPCandUpdate.cpp /Fobuild\\win64\\leaderMPCandUpdate.obj",
+    "file": "leaderMPCandUpdate.cpp",
+    "output": "build/win64/leaderMPCandUpdate.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  leaderMPCandUpdate.c -o build/win64/leaderMPCandUpdate.o",
-    "file": "leaderMPCandUpdate.c",
-    "output": "build/win64/leaderMPCandUpdate.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  leaderMPCandUpdateHalt.cpp /Fobuild\\win64\\leaderMPCandUpdateHalt.obj",
+    "file": "leaderMPCandUpdateHalt.cpp",
+    "output": "build/win64/leaderMPCandUpdateHalt.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  constraints.c -o build/win64/constraints.o",
-    "file": "constraints.c",
-    "output": "build/win64/constraints.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  Rmat.cpp /Fobuild\\win64\\Rmat.obj",
+    "file": "Rmat.cpp",
+    "output": "build/win64/Rmat.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  leaderMPCandUpdateHalt.c -o build/win64/leaderMPCandUpdateHalt.o",
-    "file": "leaderMPCandUpdateHalt.c",
-    "output": "build/win64/leaderMPCandUpdateHalt.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  interface\\_coder_mexFunctions_api.cpp /Fobuild\\win64\\_coder_mexFunctions_api.obj",
+    "file": "interface/_coder_mexFunctions_api.cpp",
+    "output": "build/win64/_coder_mexFunctions_api.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  Rmat.c -o build/win64/Rmat.o",
-    "file": "Rmat.c",
-    "output": "build/win64/Rmat.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  interface\\_coder_mexFunctions_mex.cpp /Fobuild\\win64\\_coder_mexFunctions_mex.obj",
+    "file": "interface/_coder_mexFunctions_mex.cpp",
+    "output": "build/win64/_coder_mexFunctions_mex.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  interface/_coder_mexFunctions_api.c -o build/win64/_coder_mexFunctions_api.o",
-    "file": "interface/_coder_mexFunctions_api.c",
-    "output": "build/win64/_coder_mexFunctions_api.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factoryConstruct3.cpp /Fobuild\\win64\\factoryConstruct3.obj",
+    "file": "factoryConstruct3.cpp",
+    "output": "build/win64/factoryConstruct3.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  interface/_coder_mexFunctions_mex.c -o build/win64/_coder_mexFunctions_mex.o",
-    "file": "interface/_coder_mexFunctions_mex.c",
-    "output": "build/win64/_coder_mexFunctions_mex.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computePrimalFeasError.cpp /Fobuild\\win64\\computePrimalFeasError.obj",
+    "file": "computePrimalFeasError.cpp",
+    "output": "build/win64/computePrimalFeasError.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factoryConstruct3.c -o build/win64/factoryConstruct3.o",
-    "file": "factoryConstruct3.c",
-    "output": "build/win64/factoryConstruct3.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  strcmp.cpp /Fobuild\\win64\\strcmp.obj",
+    "file": "strcmp.cpp",
+    "output": "build/win64/strcmp.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computePrimalFeasError.c -o build/win64/computePrimalFeasError.o",
-    "file": "computePrimalFeasError.c",
-    "output": "build/win64/computePrimalFeasError.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  fmincon.cpp /Fobuild\\win64\\fmincon.obj",
+    "file": "fmincon.cpp",
+    "output": "build/win64/fmincon.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  strcmp.c -o build/win64/strcmp.o",
-    "file": "strcmp.c",
-    "output": "build/win64/strcmp.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  loadProblem.cpp /Fobuild\\win64\\loadProblem.obj",
+    "file": "loadProblem.cpp",
+    "output": "build/win64/loadProblem.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  fmincon.c -o build/win64/fmincon.o",
-    "file": "fmincon.c",
-    "output": "build/win64/fmincon.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  fwdFinDiffInsideBnds.cpp /Fobuild\\win64\\fwdFinDiffInsideBnds.obj",
+    "file": "fwdFinDiffInsideBnds.cpp",
+    "output": "build/win64/fwdFinDiffInsideBnds.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  loadProblem.c -o build/win64/loadProblem.o",
-    "file": "loadProblem.c",
-    "output": "build/win64/loadProblem.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  finDiffEvalAndChkErr.cpp /Fobuild\\win64\\finDiffEvalAndChkErr.obj",
+    "file": "finDiffEvalAndChkErr.cpp",
+    "output": "build/win64/finDiffEvalAndChkErr.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  fwdFinDiffInsideBnds.c -o build/win64/fwdFinDiffInsideBnds.o",
-    "file": "fwdFinDiffInsideBnds.c",
-    "output": "build/win64/fwdFinDiffInsideBnds.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  setProblemType.cpp /Fobuild\\win64\\setProblemType.obj",
+    "file": "setProblemType.cpp",
+    "output": "build/win64/setProblemType.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  finDiffEvalAndChkErr.c -o build/win64/finDiffEvalAndChkErr.o",
-    "file": "finDiffEvalAndChkErr.c",
-    "output": "build/win64/finDiffEvalAndChkErr.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  modifyOverheadPhaseOne_.cpp /Fobuild\\win64\\modifyOverheadPhaseOne_.obj",
+    "file": "modifyOverheadPhaseOne_.cpp",
+    "output": "build/win64/modifyOverheadPhaseOne_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  setProblemType.c -o build/win64/setProblemType.o",
-    "file": "setProblemType.c",
-    "output": "build/win64/setProblemType.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  driver.cpp /Fobuild\\win64\\driver.obj",
+    "file": "driver.cpp",
+    "output": "build/win64/driver.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  modifyOverheadPhaseOne_.c -o build/win64/modifyOverheadPhaseOne_.o",
-    "file": "modifyOverheadPhaseOne_.c",
-    "output": "build/win64/modifyOverheadPhaseOne_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  test_exit.cpp /Fobuild\\win64\\test_exit.obj",
+    "file": "test_exit.cpp",
+    "output": "build/win64/test_exit.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xcopy.c -o build/win64/xcopy.o",
-    "file": "xcopy.c",
-    "output": "build/win64/xcopy.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factorQRE.cpp /Fobuild\\win64\\factorQRE.obj",
+    "file": "factorQRE.cpp",
+    "output": "build/win64/factorQRE.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  driver.c -o build/win64/driver.o",
-    "file": "driver.c",
-    "output": "build/win64/driver.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xgeqp3.cpp /Fobuild\\win64\\xgeqp3.obj",
+    "file": "xgeqp3.cpp",
+    "output": "build/win64/xgeqp3.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  test_exit.c -o build/win64/test_exit.o",
-    "file": "test_exit.c",
-    "output": "build/win64/test_exit.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeQ_.cpp /Fobuild\\win64\\computeQ_.obj",
+    "file": "computeQ_.cpp",
+    "output": "build/win64/computeQ_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factorQRE.c -o build/win64/factorQRE.o",
-    "file": "factorQRE.c",
-    "output": "build/win64/factorQRE.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  sortLambdaQP.cpp /Fobuild\\win64\\sortLambdaQP.obj",
+    "file": "sortLambdaQP.cpp",
+    "output": "build/win64/sortLambdaQP.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xgeqp3.c -o build/win64/xgeqp3.o",
-    "file": "xgeqp3.c",
-    "output": "build/win64/xgeqp3.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  saveState.cpp /Fobuild\\win64\\saveState.obj",
+    "file": "saveState.cpp",
+    "output": "build/win64/saveState.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeQ_.c -o build/win64/computeQ_.o",
-    "file": "computeQ_.c",
-    "output": "build/win64/computeQ_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  step.cpp /Fobuild\\win64\\step.obj",
+    "file": "step.cpp",
+    "output": "build/win64/step.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  sortLambdaQP.c -o build/win64/sortLambdaQP.o",
-    "file": "sortLambdaQP.c",
-    "output": "build/win64/sortLambdaQP.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  normal.cpp /Fobuild\\win64\\normal.obj",
+    "file": "normal.cpp",
+    "output": "build/win64/normal.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  saveState.c -o build/win64/saveState.o",
-    "file": "saveState.c",
-    "output": "build/win64/saveState.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  driver1.cpp /Fobuild\\win64\\driver1.obj",
+    "file": "driver1.cpp",
+    "output": "build/win64/driver1.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  step.c -o build/win64/step.o",
-    "file": "step.c",
-    "output": "build/win64/step.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  PresolveWorkingSet.cpp /Fobuild\\win64\\PresolveWorkingSet.obj",
+    "file": "PresolveWorkingSet.cpp",
+    "output": "build/win64/PresolveWorkingSet.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  normal.c -o build/win64/normal.o",
-    "file": "normal.c",
-    "output": "build/win64/normal.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  RemoveDependentEq_.cpp /Fobuild\\win64\\RemoveDependentEq_.obj",
+    "file": "RemoveDependentEq_.cpp",
+    "output": "build/win64/RemoveDependentEq_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  driver1.c -o build/win64/driver1.o",
-    "file": "driver1.c",
-    "output": "build/win64/driver1.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  countsort.cpp /Fobuild\\win64\\countsort.obj",
+    "file": "countsort.cpp",
+    "output": "build/win64/countsort.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  PresolveWorkingSet.c -o build/win64/PresolveWorkingSet.o",
-    "file": "PresolveWorkingSet.c",
-    "output": "build/win64/PresolveWorkingSet.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  removeConstr.cpp /Fobuild\\win64\\removeConstr.obj",
+    "file": "removeConstr.cpp",
+    "output": "build/win64/removeConstr.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  RemoveDependentEq_.c -o build/win64/RemoveDependentEq_.o",
-    "file": "RemoveDependentEq_.c",
-    "output": "build/win64/RemoveDependentEq_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  RemoveDependentIneq_.cpp /Fobuild\\win64\\RemoveDependentIneq_.obj",
+    "file": "RemoveDependentIneq_.cpp",
+    "output": "build/win64/RemoveDependentIneq_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  countsort.c -o build/win64/countsort.o",
-    "file": "countsort.c",
-    "output": "build/win64/countsort.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  feasibleX0ForWorkingSet.cpp /Fobuild\\win64\\feasibleX0ForWorkingSet.obj",
+    "file": "feasibleX0ForWorkingSet.cpp",
+    "output": "build/win64/feasibleX0ForWorkingSet.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  removeConstr.c -o build/win64/removeConstr.o",
-    "file": "removeConstr.c",
-    "output": "build/win64/removeConstr.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xgemv.cpp /Fobuild\\win64\\xgemv.obj",
+    "file": "xgemv.cpp",
+    "output": "build/win64/xgemv.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  RemoveDependentIneq_.c -o build/win64/RemoveDependentIneq_.o",
-    "file": "RemoveDependentIneq_.c",
-    "output": "build/win64/RemoveDependentIneq_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xgemm.cpp /Fobuild\\win64\\xgemm.obj",
+    "file": "xgemm.cpp",
+    "output": "build/win64/xgemm.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  feasibleX0ForWorkingSet.c -o build/win64/feasibleX0ForWorkingSet.o",
-    "file": "feasibleX0ForWorkingSet.c",
-    "output": "build/win64/feasibleX0ForWorkingSet.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xtrsm.cpp /Fobuild\\win64\\xtrsm.obj",
+    "file": "xtrsm.cpp",
+    "output": "build/win64/xtrsm.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xgemv.c -o build/win64/xgemv.o",
-    "file": "xgemv.c",
-    "output": "build/win64/xgemv.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xcopy.cpp /Fobuild\\win64\\xcopy.obj",
+    "file": "xcopy.cpp",
+    "output": "build/win64/xcopy.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xgemm.c -o build/win64/xgemm.o",
-    "file": "xgemm.c",
-    "output": "build/win64/xgemm.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  maxConstraintViolation_AMats_regularized_.cpp /Fobuild\\win64\\maxConstraintViolation_AMats_regularized_.obj",
+    "file": "maxConstraintViolation_AMats_regularized_.cpp",
+    "output": "build/win64/maxConstraintViolation_AMats_regularized_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xtrsm.c -o build/win64/xtrsm.o",
-    "file": "xtrsm.c",
-    "output": "build/win64/xtrsm.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  maxConstraintViolation_AMats_nonregularized_.cpp /Fobuild\\win64\\maxConstraintViolation_AMats_nonregularized_.obj",
+    "file": "maxConstraintViolation_AMats_nonregularized_.cpp",
+    "output": "build/win64/maxConstraintViolation_AMats_nonregularized_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  maxConstraintViolation_AMats_regularized_.c -o build/win64/maxConstraintViolation_AMats_regularized_.o",
-    "file": "maxConstraintViolation_AMats_regularized_.c",
-    "output": "build/win64/maxConstraintViolation_AMats_regularized_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  phaseone.cpp /Fobuild\\win64\\phaseone.obj",
+    "file": "phaseone.cpp",
+    "output": "build/win64/phaseone.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  maxConstraintViolation_AMats_nonregularized_.c -o build/win64/maxConstraintViolation_AMats_nonregularized_.o",
-    "file": "maxConstraintViolation_AMats_nonregularized_.c",
-    "output": "build/win64/maxConstraintViolation_AMats_nonregularized_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  iterate.cpp /Fobuild\\win64\\iterate.obj",
+    "file": "iterate.cpp",
+    "output": "build/win64/iterate.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  phaseone.c -o build/win64/phaseone.o",
-    "file": "phaseone.c",
-    "output": "build/win64/phaseone.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeGrad_StoreHx.cpp /Fobuild\\win64\\computeGrad_StoreHx.obj",
+    "file": "computeGrad_StoreHx.cpp",
+    "output": "build/win64/computeGrad_StoreHx.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  iterate.c -o build/win64/iterate.o",
-    "file": "iterate.c",
-    "output": "build/win64/iterate.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  xaxpy.cpp /Fobuild\\win64\\xaxpy.obj",
+    "file": "xaxpy.cpp",
+    "output": "build/win64/xaxpy.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeGrad_StoreHx.c -o build/win64/computeGrad_StoreHx.o",
-    "file": "computeGrad_StoreHx.c",
-    "output": "build/win64/computeGrad_StoreHx.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeFval_ReuseHx.cpp /Fobuild\\win64\\computeFval_ReuseHx.obj",
+    "file": "computeFval_ReuseHx.cpp",
+    "output": "build/win64/computeFval_ReuseHx.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  xaxpy.c -o build/win64/xaxpy.o",
-    "file": "xaxpy.c",
-    "output": "build/win64/xaxpy.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  squareQ_appendCol.cpp /Fobuild\\win64\\squareQ_appendCol.obj",
+    "file": "squareQ_appendCol.cpp",
+    "output": "build/win64/squareQ_appendCol.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeFval_ReuseHx.c -o build/win64/computeFval_ReuseHx.o",
-    "file": "computeFval_ReuseHx.c",
-    "output": "build/win64/computeFval_ReuseHx.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  deleteColMoveEnd.cpp /Fobuild\\win64\\deleteColMoveEnd.obj",
+    "file": "deleteColMoveEnd.cpp",
+    "output": "build/win64/deleteColMoveEnd.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  squareQ_appendCol.c -o build/win64/squareQ_appendCol.o",
-    "file": "squareQ_appendCol.c",
-    "output": "build/win64/squareQ_appendCol.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factorQR.cpp /Fobuild\\win64\\factorQR.obj",
+    "file": "factorQR.cpp",
+    "output": "build/win64/factorQR.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  deleteColMoveEnd.c -o build/win64/deleteColMoveEnd.o",
-    "file": "deleteColMoveEnd.c",
-    "output": "build/win64/deleteColMoveEnd.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  compute_deltax.cpp /Fobuild\\win64\\compute_deltax.obj",
+    "file": "compute_deltax.cpp",
+    "output": "build/win64/compute_deltax.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factorQR.c -o build/win64/factorQR.o",
-    "file": "factorQR.c",
-    "output": "build/win64/factorQR.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  factor.cpp /Fobuild\\win64\\factor.obj",
+    "file": "factor.cpp",
+    "output": "build/win64/factor.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  compute_deltax.c -o build/win64/compute_deltax.o",
-    "file": "compute_deltax.c",
-    "output": "build/win64/compute_deltax.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  solve.cpp /Fobuild\\win64\\solve.obj",
+    "file": "solve.cpp",
+    "output": "build/win64/solve.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  factor.c -o build/win64/factor.o",
-    "file": "factor.c",
-    "output": "build/win64/factor.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  compute_lambda.cpp /Fobuild\\win64\\compute_lambda.obj",
+    "file": "compute_lambda.cpp",
+    "output": "build/win64/compute_lambda.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  solve.c -o build/win64/solve.o",
-    "file": "solve.c",
-    "output": "build/win64/solve.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  addBoundToActiveSetMatrix_.cpp /Fobuild\\win64\\addBoundToActiveSetMatrix_.obj",
+    "file": "addBoundToActiveSetMatrix_.cpp",
+    "output": "build/win64/addBoundToActiveSetMatrix_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  compute_lambda.c -o build/win64/compute_lambda.o",
-    "file": "compute_lambda.c",
-    "output": "build/win64/compute_lambda.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  checkUnboundedOrIllPosed.cpp /Fobuild\\win64\\checkUnboundedOrIllPosed.obj",
+    "file": "checkUnboundedOrIllPosed.cpp",
+    "output": "build/win64/checkUnboundedOrIllPosed.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  addBoundToActiveSetMatrix_.c -o build/win64/addBoundToActiveSetMatrix_.o",
-    "file": "addBoundToActiveSetMatrix_.c",
-    "output": "build/win64/addBoundToActiveSetMatrix_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeFval.cpp /Fobuild\\win64\\computeFval.obj",
+    "file": "computeFval.cpp",
+    "output": "build/win64/computeFval.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  checkUnboundedOrIllPosed.c -o build/win64/checkUnboundedOrIllPosed.o",
-    "file": "checkUnboundedOrIllPosed.c",
-    "output": "build/win64/checkUnboundedOrIllPosed.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  linearForm_.cpp /Fobuild\\win64\\linearForm_.obj",
+    "file": "linearForm_.cpp",
+    "output": "build/win64/linearForm_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeFval.c -o build/win64/computeFval.o",
-    "file": "computeFval.c",
-    "output": "build/win64/computeFval.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  relaxed.cpp /Fobuild\\win64\\relaxed.obj",
+    "file": "relaxed.cpp",
+    "output": "build/win64/relaxed.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  linearForm_.c -o build/win64/linearForm_.o",
-    "file": "linearForm_.c",
-    "output": "build/win64/linearForm_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  assignResidualsToXSlack.cpp /Fobuild\\win64\\assignResidualsToXSlack.obj",
+    "file": "assignResidualsToXSlack.cpp",
+    "output": "build/win64/assignResidualsToXSlack.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  relaxed.c -o build/win64/relaxed.o",
-    "file": "relaxed.c",
-    "output": "build/win64/relaxed.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  updatePenaltyParam.cpp /Fobuild\\win64\\updatePenaltyParam.obj",
+    "file": "updatePenaltyParam.cpp",
+    "output": "build/win64/updatePenaltyParam.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  assignResidualsToXSlack.c -o build/win64/assignResidualsToXSlack.o",
-    "file": "assignResidualsToXSlack.c",
-    "output": "build/win64/assignResidualsToXSlack.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  soc.cpp /Fobuild\\win64\\soc.obj",
+    "file": "soc.cpp",
+    "output": "build/win64/soc.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  updatePenaltyParam.c -o build/win64/updatePenaltyParam.o",
-    "file": "updatePenaltyParam.c",
-    "output": "build/win64/updatePenaltyParam.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  updateWorkingSet.cpp /Fobuild\\win64\\updateWorkingSet.obj",
+    "file": "updateWorkingSet.cpp",
+    "output": "build/win64/updateWorkingSet.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  soc.c -o build/win64/soc.o",
-    "file": "soc.c",
-    "output": "build/win64/soc.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  linesearch.cpp /Fobuild\\win64\\linesearch.obj",
+    "file": "linesearch.cpp",
+    "output": "build/win64/linesearch.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  updateWorkingSet.c -o build/win64/updateWorkingSet.o",
-    "file": "updateWorkingSet.c",
-    "output": "build/win64/updateWorkingSet.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  revertSolution.cpp /Fobuild\\win64\\revertSolution.obj",
+    "file": "revertSolution.cpp",
+    "output": "build/win64/revertSolution.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  linesearch.c -o build/win64/linesearch.o",
-    "file": "linesearch.c",
-    "output": "build/win64/linesearch.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  BFGSUpdate.cpp /Fobuild\\win64\\BFGSUpdate.obj",
+    "file": "BFGSUpdate.cpp",
+    "output": "build/win64/BFGSUpdate.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  revertSolution.c -o build/win64/revertSolution.o",
-    "file": "revertSolution.c",
-    "output": "build/win64/revertSolution.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  compressBounds.cpp /Fobuild\\win64\\compressBounds.obj",
+    "file": "compressBounds.cpp",
+    "output": "build/win64/compressBounds.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  BFGSUpdate.c -o build/win64/BFGSUpdate.o",
-    "file": "BFGSUpdate.c",
-    "output": "build/win64/BFGSUpdate.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeFiniteDifferences.cpp /Fobuild\\win64\\computeFiniteDifferences.obj",
+    "file": "computeFiniteDifferences.cpp",
+    "output": "build/win64/computeFiniteDifferences.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  compressBounds.c -o build/win64/compressBounds.o",
-    "file": "compressBounds.c",
-    "output": "build/win64/compressBounds.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  updateWorkingSetForNewQP.cpp /Fobuild\\win64\\updateWorkingSetForNewQP.obj",
+    "file": "updateWorkingSetForNewQP.cpp",
+    "output": "build/win64/updateWorkingSetForNewQP.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeFiniteDifferences.c -o build/win64/computeFiniteDifferences.o",
-    "file": "computeFiniteDifferences.c",
-    "output": "build/win64/computeFiniteDifferences.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  initActiveSet.cpp /Fobuild\\win64\\initActiveSet.obj",
+    "file": "initActiveSet.cpp",
+    "output": "build/win64/initActiveSet.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  updateWorkingSetForNewQP.c -o build/win64/updateWorkingSetForNewQP.o",
-    "file": "updateWorkingSetForNewQP.c",
-    "output": "build/win64/updateWorkingSetForNewQP.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeConstraints_.cpp /Fobuild\\win64\\computeConstraints_.obj",
+    "file": "computeConstraints_.cpp",
+    "output": "build/win64/computeConstraints_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  initActiveSet.c -o build/win64/initActiveSet.o",
-    "file": "initActiveSet.c",
-    "output": "build/win64/initActiveSet.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  hasFiniteBounds.cpp /Fobuild\\win64\\hasFiniteBounds.obj",
+    "file": "hasFiniteBounds.cpp",
+    "output": "build/win64/hasFiniteBounds.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeConstraints_.c -o build/win64/computeConstraints_.o",
-    "file": "computeConstraints_.c",
-    "output": "build/win64/computeConstraints_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  saveJacobian.cpp /Fobuild\\win64\\saveJacobian.obj",
+    "file": "saveJacobian.cpp",
+    "output": "build/win64/saveJacobian.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  hasFiniteBounds.c -o build/win64/hasFiniteBounds.o",
-    "file": "hasFiniteBounds.c",
-    "output": "build/win64/hasFiniteBounds.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeLinearResiduals.cpp /Fobuild\\win64\\computeLinearResiduals.obj",
+    "file": "computeLinearResiduals.cpp",
+    "output": "build/win64/computeLinearResiduals.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  saveJacobian.c -o build/win64/saveJacobian.o",
-    "file": "saveJacobian.c",
-    "output": "build/win64/saveJacobian.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeDeltaLag.cpp /Fobuild\\win64\\computeDeltaLag.obj",
+    "file": "computeDeltaLag.cpp",
+    "output": "build/win64/computeDeltaLag.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeLinearResiduals.c -o build/win64/computeLinearResiduals.o",
-    "file": "computeLinearResiduals.c",
-    "output": "build/win64/computeLinearResiduals.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeGradLag.cpp /Fobuild\\win64\\computeGradLag.obj",
+    "file": "computeGradLag.cpp",
+    "output": "build/win64/computeGradLag.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeDeltaLag.c -o build/win64/computeDeltaLag.o",
-    "file": "computeDeltaLag.c",
-    "output": "build/win64/computeDeltaLag.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  checkStoppingAndUpdateFval.cpp /Fobuild\\win64\\checkStoppingAndUpdateFval.obj",
+    "file": "checkStoppingAndUpdateFval.cpp",
+    "output": "build/win64/checkStoppingAndUpdateFval.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeGradLag.c -o build/win64/computeGradLag.o",
-    "file": "computeGradLag.c",
-    "output": "build/win64/computeGradLag.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  feasibleratiotest.cpp /Fobuild\\win64\\feasibleratiotest.obj",
+    "file": "feasibleratiotest.cpp",
+    "output": "build/win64/feasibleratiotest.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  checkStoppingAndUpdateFval.c -o build/win64/checkStoppingAndUpdateFval.o",
-    "file": "checkStoppingAndUpdateFval.c",
-    "output": "build/win64/checkStoppingAndUpdateFval.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  partialColLDL3_.cpp /Fobuild\\win64\\partialColLDL3_.obj",
+    "file": "partialColLDL3_.cpp",
+    "output": "build/win64/partialColLDL3_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  feasibleratiotest.c -o build/win64/feasibleratiotest.o",
-    "file": "feasibleratiotest.c",
-    "output": "build/win64/feasibleratiotest.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  fullColLDL2_.cpp /Fobuild\\win64\\fullColLDL2_.obj",
+    "file": "fullColLDL2_.cpp",
+    "output": "build/win64/fullColLDL2_.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  partialColLDL3_.c -o build/win64/partialColLDL3_.o",
-    "file": "partialColLDL3_.c",
-    "output": "build/win64/partialColLDL3_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  evalObjAndConstrAndDerivatives.cpp /Fobuild\\win64\\evalObjAndConstrAndDerivatives.obj",
+    "file": "evalObjAndConstrAndDerivatives.cpp",
+    "output": "build/win64/evalObjAndConstrAndDerivatives.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  fullColLDL2_.c -o build/win64/fullColLDL2_.o",
-    "file": "fullColLDL2_.c",
-    "output": "build/win64/fullColLDL2_.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  computeForwardDifferences.cpp /Fobuild\\win64\\computeForwardDifferences.obj",
+    "file": "computeForwardDifferences.cpp",
+    "output": "build/win64/computeForwardDifferences.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  evalObjAndConstrAndDerivatives.c -o build/win64/evalObjAndConstrAndDerivatives.o",
-    "file": "evalObjAndConstrAndDerivatives.c",
-    "output": "build/win64/evalObjAndConstrAndDerivatives.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  constraints.cpp /Fobuild\\win64\\constraints.obj",
+    "file": "constraints.cpp",
+    "output": "build/win64/constraints.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  computeForwardDifferences.c -o build/win64/computeForwardDifferences.o",
-    "file": "computeForwardDifferences.c",
-    "output": "build/win64/computeForwardDifferences.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  eml_mtimes_helper.cpp /Fobuild\\win64\\eml_mtimes_helper.obj",
+    "file": "eml_mtimes_helper.cpp",
+    "output": "build/win64/eml_mtimes_helper.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  eml_mtimes_helper.c -o build/win64/eml_mtimes_helper.o",
-    "file": "eml_mtimes_helper.c",
-    "output": "build/win64/eml_mtimes_helper.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  followerCost.cpp /Fobuild\\win64\\followerCost.obj",
+    "file": "followerCost.cpp",
+    "output": "build/win64/followerCost.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  followerCost.c -o build/win64/followerCost.o",
-    "file": "followerCost.c",
-    "output": "build/win64/followerCost.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  interface\\_coder_mexFunctions_info.cpp /Fobuild\\win64\\_coder_mexFunctions_info.obj",
+    "file": "interface/_coder_mexFunctions_info.cpp",
+    "output": "build/win64/_coder_mexFunctions_info.obj"
   },
   {
     "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  mexFunctions_emxutil.c -o build/win64/mexFunctions_emxutil.o",
-    "file": "mexFunctions_emxutil.c",
-    "output": "build/win64/mexFunctions_emxutil.o"
-  },
-  {
-    "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  interface/_coder_mexFunctions_info.c -o build/win64/_coder_mexFunctions_info.o",
-    "file": "interface/_coder_mexFunctions_info.c",
-    "output": "build/win64/_coder_mexFunctions_info.o"
-  },
-  {
-    "directory": "C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions",
-    "command": "C:\\ProgramData\\MATLAB\\SupportPackages\\R2024b\\3P.instrset\\mingw_w64.instrset\\bin\\gcc -c -fexceptions -fno-omit-frame-pointer -m64 -DMATLAB_MEX_FILE  -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" -I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\\codegen\\mex\\mexFunctions\\interface\" -I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -D__USE_MINGW_ANSI_STDIO=1 -mavx2 -Wno-stringop-overflow -Wno-maybe-uninitialized -fopenmp  \"C:/Program Files/MATLAB/R2024b/extern/version/c_mexapi_version.c\" -o build/win64/c_mexapi_version.o",
-    "file": "C:/Program Files/MATLAB/R2024b/extern/version/c_mexapi_version.c",
-    "output": "build/win64/c_mexapi_version.o"
+    "command": "cl /c /Zc:__cplusplus /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\kovac\\Desktop\\TESI\\master_thesis_2025\\src\\MATLAB_R2024b\" /I \".\\interface\" /I \"C:\\Program Files\\MATLAB\\R2024b\\extern\\include\" /I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=mexFunctions -DMW_NEEDS_VERSION_H /wd4251  \"C:\\Program Files\\MATLAB\\R2024b\\extern\\version\\cpp_mexapi_version.cpp\" /Fobuild\\win64\\cpp_mexapi_version.obj",
+    "file": "C:/Program Files/MATLAB/R2024b/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/win64/cpp_mexapi_version.obj"
   }
 ]

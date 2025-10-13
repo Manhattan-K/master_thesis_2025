@@ -1,33 +1,58 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * relaxed.h
- *
- * Code generation for function 'relaxed'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// relaxed.h
+//
+// Code generation for function 'relaxed'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_internal_types.h"
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void relaxed(emlrtCTX aTLS, const real_T Hessian[1600],
-             const real_T grad_data[], h_struct_T *TrialState,
-             j_struct_T *MeritFunction, f_struct_T *memspace,
-             i_struct_T *WorkingSet, g_struct_T *QRManager,
-             m_struct_T *CholManager, e_struct_T *QPObjective,
-             n_struct_T *qpoptions);
+// Type Declarations
+struct f_struct_T;
 
-/* End of code generation (relaxed.h) */
+struct h_struct_T;
+
+struct c_struct_T;
+
+struct g_struct_T;
+
+struct d_struct_T;
+
+struct e_struct_T;
+
+struct b_struct_T;
+
+struct i_struct_T;
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace fminconsqp {
+namespace step {
+void b_relaxed(const real_T Hessian[1600], const real_T grad_data[],
+               int32_T grad_size, f_struct_T &b_TrialState,
+               h_struct_T &b_MeritFunction, c_struct_T &memspace,
+               g_struct_T &WorkingSet, d_struct_T &b_QRManager,
+               e_struct_T &b_CholManager, b_struct_T &QPObjective,
+               i_struct_T &qpoptions);
+
+}
+} // namespace fminconsqp
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (relaxed.h)

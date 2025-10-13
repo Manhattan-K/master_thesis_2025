@@ -1,28 +1,40 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * factoryConstruct2.h
- *
- * Code generation for function 'factoryConstruct2'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// factoryConstruct2.h
+//
+// Code generation for function 'factoryConstruct2'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void c_factoryConstruct(int32_T mIneqMax, int32_T nVarMax, int32_T mConstrMax,
-                        i_struct_T *obj);
+// Type Declarations
+struct g_struct_T;
 
-/* End of code generation (factoryConstruct2.h) */
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace qpactiveset {
+namespace WorkingSet {
+void factoryConstruct(int32_T mIneqMax, int32_T nVarMax, int32_T mConstrMax,
+                      g_struct_T &obj);
+
+}
+} // namespace qpactiveset
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (factoryConstruct2.h)

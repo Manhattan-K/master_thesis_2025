@@ -1,28 +1,27 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * followerCost.h
- *
- * Code generation for function 'followerCost'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// followerCost.h
+//
+// Code generation for function 'followerCost'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void binary_expand_op_2(real_T in1[20], const emxArray_real_T *in2,
+// Function Declarations
+void binary_expand_op_2(real_T in1[20], const coder::array<real_T, 2U> &in2,
                         const real_T in3[20]);
 
-/* End of code generation (followerCost.h) */
+// End of code generation (followerCost.h)

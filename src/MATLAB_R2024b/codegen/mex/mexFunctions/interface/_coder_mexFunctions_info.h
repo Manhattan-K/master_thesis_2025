@@ -1,20 +1,19 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * _coder_mexFunctions_info.h
- *
- * Code generation for function 'evaluateObstacles'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// _coder_mexFunctions_info.h
+//
+// Code generation for function 'evaluateObstacles'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "mex.h"
 
-/* Function Declarations */
-MEXFUNCTION_LINKAGE mxArray *emlrtMexFcnProperties(void);
+// Function Declarations
+MEXFUNCTION_LINKAGE mxArray *emlrtMexFcnProperties();
 
-/* End of code generation (_coder_mexFunctions_info.h) */
+// End of code generation (_coder_mexFunctions_info.h)

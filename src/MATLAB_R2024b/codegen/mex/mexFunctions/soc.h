@@ -1,32 +1,55 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * soc.h
- *
- * Code generation for function 'soc'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// soc.h
+//
+// Code generation for function 'soc'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_internal_types.h"
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-boolean_T soc(emlrtCTX aTLS, const real_T Hessian[1600],
-              const real_T grad_data[], h_struct_T *TrialState,
-              f_struct_T *memspace, i_struct_T *WorkingSet,
-              g_struct_T *QRManager, m_struct_T *CholManager,
-              e_struct_T *QPObjective, const n_struct_T *qpoptions);
+// Type Declarations
+struct f_struct_T;
 
-/* End of code generation (soc.h) */
+struct c_struct_T;
+
+struct g_struct_T;
+
+struct d_struct_T;
+
+struct e_struct_T;
+
+struct b_struct_T;
+
+struct i_struct_T;
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace fminconsqp {
+namespace step {
+boolean_T b_soc(const real_T Hessian[1600], const real_T grad_data[],
+                f_struct_T &b_TrialState, c_struct_T &memspace,
+                g_struct_T &WorkingSet, d_struct_T &b_QRManager,
+                e_struct_T &b_CholManager, b_struct_T &QPObjective,
+                const i_struct_T &qpoptions);
+
+}
+} // namespace fminconsqp
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (soc.h)

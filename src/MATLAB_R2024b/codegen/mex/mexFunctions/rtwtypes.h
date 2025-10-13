@@ -1,17 +1,16 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * rtwtypes.h
- *
- * Code generation for function 'evaluateObstacles'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// rtwtypes.h
+//
+// Code generation for function 'evaluateObstacles'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "tmwtypes.h"
 
 /*
@@ -24,4 +23,4 @@
 #define FALSE (0U)
 #endif
 
-/* End of code generation (rtwtypes.h) */
+// End of code generation (rtwtypes.h)

@@ -1,31 +1,47 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * RemoveDependentIneq_.h
- *
- * Code generation for function 'RemoveDependentIneq_'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// RemoveDependentIneq_.h
+//
+// Code generation for function 'RemoveDependentIneq_'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void RemoveDependentIneq_(emlrtCTX aTLS, i_struct_T *workingset,
-                          g_struct_T *qrmanager, f_struct_T *memspace);
+// Type Declarations
+struct g_struct_T;
 
-void b_RemoveDependentIneq_(emlrtCTX aTLS, i_struct_T *workingset,
-                            g_struct_T *qrmanager, f_struct_T *memspace);
+struct d_struct_T;
 
-/* End of code generation (RemoveDependentIneq_.h) */
+struct c_struct_T;
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace qpactiveset {
+namespace initialize {
+void RemoveDependentIneq_(g_struct_T &workingset, d_struct_T &qrmanager,
+                          c_struct_T &memspace);
+
+void b_RemoveDependentIneq_(g_struct_T &workingset, d_struct_T &qrmanager,
+                            c_struct_T &memspace);
+
+} // namespace initialize
+} // namespace qpactiveset
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (RemoveDependentIneq_.h)

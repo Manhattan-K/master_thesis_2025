@@ -1,30 +1,37 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * mtimes.h
- *
- * Code generation for function 'mtimes'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// mtimes.h
+//
+// Code generation for function 'mtimes'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void b_mtimes(const real_T A[6], const emxArray_real_T *B, emxArray_real_T *C);
+// Function Declarations
+namespace coder {
+namespace internal {
+namespace blas {
+void mtimes(const real_T A[6], const array<real_T, 2U> &B,
+            array<real_T, 2U> &C);
 
-int32_T mtimes(const emxArray_real_T *A, const emxArray_real_T *B,
+int32_T mtimes(const array<real_T, 2U> &A, const array<real_T, 1U> &B,
                real_T C_data[]);
 
-/* End of code generation (mtimes.h) */
+} // namespace blas
+} // namespace internal
+} // namespace coder
+
+// End of code generation (mtimes.h)

@@ -1,45 +1,54 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * evalObjAndConstrAndDerivatives.h
- *
- * Code generation for function 'evalObjAndConstrAndDerivatives'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// evalObjAndConstrAndDerivatives.h
+//
+// Code generation for function 'evalObjAndConstrAndDerivatives'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-real_T b_evalObjAndConstrAndDerivative(
-    emlrtCTX aTLS, int32_T c_obj_next_next_next_next_next_,
-    const real_T d_obj_next_next_next_next_next_[3],
-    const struct5_T *e_obj_next_next_next_next_next_,
-    real_T f_obj_next_next_next_next_next_,
-    const struct3_T g_obj_next_next_next_next_next_,
-    const d_struct_T *h_obj_next_next_next_next_next_, const real_T x[40],
-    real_T Cineq_workspace_data[], const int32_T *Cineq_workspace_size,
-    int32_T ineq0, int32_T *status);
+// Type Declarations
+namespace coder {
+namespace internal {
+class i_stickyStruct;
+
+class r_stickyStruct;
+
+} // namespace internal
+} // namespace coder
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace utils {
+namespace ObjNonlinEvaluator {
+real_T evalObjAndConstrAndDerivatives(
+    const ::coder::internal::r_stickyStruct &obj, const real_T x[40],
+    real_T Cineq_workspace_data[], const int32_T &Cineq_workspace_size,
+    int32_T ineq0, int32_T &status);
 
 real_T evalObjAndConstrAndDerivatives(
-    emlrtCTX aTLS, int32_T c_obj_next_next_next_next_next_,
-    const real_T d_obj_next_next_next_next_next_[3],
-    const struct5_T *e_obj_next_next_next_next_next_,
-    real_T f_obj_next_next_next_next_next_,
-    const struct3_T g_obj_next_next_next_next_next_,
-    const c_struct_T *h_obj_next_next_next_next_next_, const real_T x[40],
-    real_T Cineq_workspace_data[], const int32_T *Cineq_workspace_size,
-    int32_T ineq0, int32_T *status);
+    const ::coder::internal::i_stickyStruct &obj, const real_T x[40],
+    real_T Cineq_workspace_data[], const int32_T &Cineq_workspace_size,
+    int32_T ineq0, int32_T &status);
 
-/* End of code generation (evalObjAndConstrAndDerivatives.h) */
+} // namespace ObjNonlinEvaluator
+} // namespace utils
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (evalObjAndConstrAndDerivatives.h)

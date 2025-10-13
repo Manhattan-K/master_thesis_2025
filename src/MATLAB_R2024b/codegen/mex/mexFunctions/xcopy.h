@@ -1,31 +1,35 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * xcopy.h
- *
- * Code generation for function 'xcopy'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// xcopy.h
+//
+// Code generation for function 'xcopy'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void b_xcopy(int32_T n, const emxArray_real_T *x, real_T y_data[]);
+// Function Declarations
+namespace coder {
+namespace internal {
+namespace blas {
+void xcopy(int32_T n, const array<real_T, 2U> &x, int32_T ix0, real_T y_data[]);
 
-void c_xcopy(int32_T n, const emxArray_real_T *x, int32_T ix0, real_T y_data[]);
+void xcopy(int32_T n, const array<real_T, 2U> &x, real_T y_data[]);
 
-void xcopy(int32_T n, const emxArray_real_T *x, emxArray_real_T *y);
+} // namespace blas
+} // namespace internal
+} // namespace coder
 
-/* End of code generation (xcopy.h) */
+// End of code generation (xcopy.h)

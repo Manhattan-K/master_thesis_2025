@@ -1,34 +1,68 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * constraints.h
- *
- * Code generation for function 'constraints'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// constraints.h
+//
+// Code generation for function 'constraints'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void binary_expand_op(emlrtCTX aTLS, emxArray_real_T *in1,
-                      const real_T in2_data[], const int32_T *in2_size,
-                      const real_T in3_data[], const int32_T *in3_size);
+// Type Declarations
+namespace coder {
+class b_anonymous_function;
 
-int32_T constraints(emlrtCTX aTLS, const real_T U[40], const real_T x0[3],
-                    real_T M, const emxArray_real_T *A_bar,
-                    const real_T B_bar_data[], int32_T B_bar_size, real_T N,
-                    real_T sys_n, real_T sys_Ts, real_T c_data[]);
+class d_anonymous_function;
 
-/* End of code generation (constraints.h) */
+namespace internal {
+class bb_stickyStruct;
+
+class i_stickyStruct;
+
+class r_stickyStruct;
+
+} // namespace internal
+} // namespace coder
+
+// Function Declarations
+void binary_expand_op(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                      const int32_T &in2_size, const real_T in3_data[],
+                      const int32_T &in3_size);
+
+void binary_expand_op_10(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                         const int32_T &in2_size,
+                         const coder::internal::i_stickyStruct &in3);
+
+void binary_expand_op_11(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                         const int32_T &in2_size,
+                         const coder::internal::r_stickyStruct &in3);
+
+void binary_expand_op_6(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                        const int32_T &in2_size,
+                        const coder::b_anonymous_function &in3);
+
+void binary_expand_op_7(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                        const int32_T &in2_size,
+                        const coder::d_anonymous_function &in3);
+
+void binary_expand_op_8(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                        const int32_T &in2_size,
+                        const coder::d_anonymous_function &in3);
+
+void binary_expand_op_9(coder::array<real_T, 1U> &in1, const real_T in2_data[],
+                        const int32_T &in2_size,
+                        const coder::internal::bb_stickyStruct &in3);
+
+// End of code generation (constraints.h)

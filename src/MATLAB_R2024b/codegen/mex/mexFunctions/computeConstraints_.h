@@ -1,52 +1,58 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * computeConstraints_.h
- *
- * Code generation for function 'computeConstraints_'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// computeConstraints_.h
+//
+// Code generation for function 'computeConstraints_'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-int32_T b_computeConstraints_(emlrtCTX aTLS,
-                              int32_T c_obj_next_next_next_next_next_,
-                              const real_T d_obj_next_next_next_next_next_[3],
-                              const struct5_T *e_obj_next_next_next_next_next_,
-                              real_T f_obj_next_next_next_next_next_,
-                              const struct3_T g_obj_next_next_next_next_next_,
-                              const real_T x[40], real_T Cineq_workspace_data[],
-                              int32_T ineq0);
+// Type Declarations
+namespace coder {
+namespace internal {
+class bb_stickyStruct;
 
-int32_T c_computeConstraints_(emlrtCTX aTLS,
-                              int32_T c_obj_next_next_next_next_next_,
-                              const real_T d_obj_next_next_next_next_next_[3],
-                              const struct5_T *e_obj_next_next_next_next_next_,
-                              real_T f_obj_next_next_next_next_next_,
-                              const struct3_T g_obj_next_next_next_next_next_,
-                              const real_T x[40], real_T Cineq_workspace_data[],
-                              int32_T ineq0);
+class i_stickyStruct;
 
-int32_T computeConstraints_(emlrtCTX aTLS,
-                            int32_T c_obj_next_next_next_next_next_,
-                            const real_T d_obj_next_next_next_next_next_[3],
-                            const struct5_T *e_obj_next_next_next_next_next_,
-                            real_T f_obj_next_next_next_next_next_,
-                            const struct3_T g_obj_next_next_next_next_next_,
+class r_stickyStruct;
+
+} // namespace internal
+} // namespace coder
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace utils {
+namespace ObjNonlinEvaluator {
+int32_T computeConstraints_(const ::coder::internal::r_stickyStruct &obj,
                             const real_T x[40], real_T Cineq_workspace_data[],
                             int32_T ineq0);
 
-/* End of code generation (computeConstraints_.h) */
+int32_T computeConstraints_(const ::coder::internal::i_stickyStruct &obj,
+                            const real_T x[40], real_T Cineq_workspace_data[],
+                            int32_T ineq0);
+
+int32_T computeConstraints_(const ::coder::internal::bb_stickyStruct &obj,
+                            const real_T x[40], real_T Cineq_workspace_data[],
+                            int32_T ineq0);
+
+} // namespace ObjNonlinEvaluator
+} // namespace utils
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (computeConstraints_.h)

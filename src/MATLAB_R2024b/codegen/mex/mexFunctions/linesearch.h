@@ -1,67 +1,74 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * linesearch.h
- *
- * Code generation for function 'linesearch'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// linesearch.h
+//
+// Code generation for function 'linesearch'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
+#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-real_T b_linesearch(emlrtCTX aTLS, boolean_T *evalWellDefined,
-                    int32_T WorkingSet_nVar, int32_T WorkingSet_ldA,
-                    const emxArray_real_T *WorkingSet_Aineq,
-                    h_struct_T *TrialState, real_T MeritFunction_penaltyParam,
+// Type Declarations
+struct f_struct_T;
+
+namespace coder {
+namespace internal {
+class bb_stickyStruct;
+
+class i_stickyStruct;
+
+class r_stickyStruct;
+
+} // namespace internal
+} // namespace coder
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace fminconsqp {
+real_T b_linesearch(boolean_T &evalWellDefined, int32_T WorkingSet_nVar,
+                    int32_T WorkingSet_ldA,
+                    const array<real_T, 1U> &WorkingSet_Aineq,
+                    f_struct_T &b_TrialState, real_T MeritFunction_penaltyParam,
                     real_T MeritFunction_phi, real_T MeritFunction_phiPrimePlus,
                     real_T MeritFunction_phiFullStep,
-                    int32_T c_FcnEvaluator_next_next_next_n,
-                    const real_T d_FcnEvaluator_next_next_next_n[3],
-                    const struct5_T *e_FcnEvaluator_next_next_next_n,
-                    real_T f_FcnEvaluator_next_next_next_n,
-                    const struct3_T g_FcnEvaluator_next_next_next_n,
-                    const c_struct_T *h_FcnEvaluator_next_next_next_n,
-                    boolean_T socTaken, int32_T *exitflag);
+                    const ::coder::internal::i_stickyStruct &FcnEvaluator,
+                    boolean_T socTaken, int32_T &exitflag);
 
-real_T c_linesearch(emlrtCTX aTLS, boolean_T *evalWellDefined,
-                    int32_T WorkingSet_nVar, int32_T WorkingSet_ldA,
-                    const emxArray_real_T *WorkingSet_Aineq,
-                    h_struct_T *TrialState, real_T MeritFunction_penaltyParam,
+real_T c_linesearch(boolean_T &evalWellDefined, int32_T WorkingSet_nVar,
+                    int32_T WorkingSet_ldA,
+                    const array<real_T, 1U> &WorkingSet_Aineq,
+                    f_struct_T &b_TrialState, real_T MeritFunction_penaltyParam,
                     real_T MeritFunction_phi, real_T MeritFunction_phiPrimePlus,
                     real_T MeritFunction_phiFullStep,
-                    int32_T c_FcnEvaluator_next_next_next_n,
-                    const real_T d_FcnEvaluator_next_next_next_n[3],
-                    const struct5_T *e_FcnEvaluator_next_next_next_n,
-                    real_T f_FcnEvaluator_next_next_next_n,
-                    const struct3_T g_FcnEvaluator_next_next_next_n,
-                    const d_struct_T *h_FcnEvaluator_next_next_next_n,
-                    boolean_T socTaken, int32_T *exitflag);
+                    const ::coder::internal::r_stickyStruct &FcnEvaluator,
+                    boolean_T socTaken, int32_T &exitflag);
 
-real_T linesearch(emlrtCTX aTLS, boolean_T *evalWellDefined,
-                  int32_T WorkingSet_nVar, int32_T WorkingSet_ldA,
-                  const emxArray_real_T *WorkingSet_Aineq,
-                  h_struct_T *TrialState, real_T MeritFunction_penaltyParam,
+real_T linesearch(boolean_T &evalWellDefined, int32_T WorkingSet_nVar,
+                  int32_T WorkingSet_ldA,
+                  const array<real_T, 1U> &WorkingSet_Aineq,
+                  f_struct_T &b_TrialState, real_T MeritFunction_penaltyParam,
                   real_T MeritFunction_phi, real_T MeritFunction_phiPrimePlus,
                   real_T MeritFunction_phiFullStep,
-                  int32_T c_FcnEvaluator_next_next_next_n,
-                  const real_T d_FcnEvaluator_next_next_next_n[3],
-                  const struct5_T *e_FcnEvaluator_next_next_next_n,
-                  real_T f_FcnEvaluator_next_next_next_n,
-                  const struct3_T g_FcnEvaluator_next_next_next_n,
-                  const b_struct_T *h_FcnEvaluator_next_next_next_n,
-                  boolean_T socTaken, int32_T *exitflag);
+                  const ::coder::internal::bb_stickyStruct &FcnEvaluator,
+                  boolean_T socTaken, int32_T &exitflag);
 
-/* End of code generation (linesearch.h) */
+} // namespace fminconsqp
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (linesearch.h)

@@ -1,30 +1,48 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * compute_deltax.h
- *
- * Code generation for function 'compute_deltax'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// compute_deltax.h
+//
+// Code generation for function 'compute_deltax'
+//
 
 #pragma once
 
-/* Include files */
-#include "mexFunctions_types.h"
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void compute_deltax(emlrtCTX aTLS, const real_T H[1600], h_struct_T *solution,
-                    f_struct_T *memspace, const g_struct_T *qrmanager,
-                    m_struct_T *cholmanager, const e_struct_T *objective,
+// Type Declarations
+struct f_struct_T;
+
+struct c_struct_T;
+
+struct d_struct_T;
+
+struct e_struct_T;
+
+struct b_struct_T;
+
+// Function Declarations
+namespace coder {
+namespace optim {
+namespace coder {
+namespace qpactiveset {
+void compute_deltax(const real_T H[1600], f_struct_T &solution,
+                    c_struct_T &memspace, const d_struct_T &qrmanager,
+                    e_struct_T &cholmanager, const b_struct_T &objective,
                     boolean_T alwaysPositiveDef);
 
-/* End of code generation (compute_deltax.h) */
+}
+} // namespace coder
+} // namespace optim
+} // namespace coder
+
+// End of code generation (compute_deltax.h)

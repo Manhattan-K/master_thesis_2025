@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2024a">
-  <configuration build-checksum="2277107785" file="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\mexGeneration.prj" location="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" name="mexGeneration" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="862563354" file="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\mexGeneration.prj" location="C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b" name="mexGeneration" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -13,13 +13,13 @@
       <param.InstructionSetExtensionsAvailableInUI>true</param.InstructionSetExtensionsAvailableInUI>
       <param.InstructionSetExtensionsConfig.FMA>false</param.InstructionSetExtensionsConfig.FMA>
       <param.ResponsivenessChecks>false</param.ResponsivenessChecks>
-      <param.ExtrinsicCalls>false</param.ExtrinsicCalls>
+      <param.ExtrinsicCalls>true</param.ExtrinsicCalls>
       <param.IntegrityChecks>false</param.IntegrityChecks>
       <param.SaturateOnIntegerOverflow>true</param.SaturateOnIntegerOverflow>
-      <param.EnableAutoParallelization>true</param.EnableAutoParallelization>
+      <param.EnableAutoParallelization>false</param.EnableAutoParallelization>
       <param.NumberOfCpuThreads>0</param.NumberOfCpuThreads>
-      <param.OptimizeReductions>true</param.OptimizeReductions>
-      <param.SIMDAcceleration>option.SIMDAcceleration.Full</param.SIMDAcceleration>
+      <param.OptimizeReductions>false</param.OptimizeReductions>
+      <param.SIMDAcceleration>option.SIMDAcceleration.None</param.SIMDAcceleration>
       <param.GlobalDataSyncMethod>option.GlobalDataSyncMethod.SyncAlways</param.GlobalDataSyncMethod>
       <param.EnableVariableSizing>true</param.EnableVariableSizing>
       <param.EnableDynamicMemoryAllocation>true</param.EnableDynamicMemoryAllocation>
@@ -52,8 +52,8 @@
       <param.MergeInstrumentationResults>false</param.MergeInstrumentationResults>
       <param.VerificationMode>option.VerificationMode.None</param.VerificationMode>
       <param.VerificationStatus>option.VerificationStatus.Passed</param.VerificationStatus>
-      <param.EnableMexProfiling>true</param.EnableMexProfiling>
-      <var.BuiltWithMexProfiling>true</var.BuiltWithMexProfiling>
+      <param.EnableMexProfiling>false</param.EnableMexProfiling>
+      <var.BuiltWithMexProfiling>false</var.BuiltWithMexProfiling>
       <param.CustomSourceCode />
       <param.CustomHeaderCode />
       <param.CustomInitializer />
@@ -102,8 +102,11 @@
         <var.SimdQueryHardwareType />
         <param.InstructionSetExtensionsAvailableInUI />
         <param.InstructionSetExtensionsConfig.FMA />
+        <param.ExtrinsicCalls />
         <param.SaturateOnIntegerOverflow />
+        <param.EnableAutoParallelization />
         <param.NumberOfCpuThreads />
+        <param.OptimizeReductions />
         <param.GlobalDataSyncMethod />
         <param.EnableVariableSizing />
         <param.EnableDynamicMemoryAllocation />
@@ -135,6 +138,8 @@
         <param.DefaultTestFile />
         <param.MergeInstrumentationResults />
         <param.VerificationMode />
+        <param.EnableMexProfiling />
+        <var.BuiltWithMexProfiling />
         <param.CustomSourceCode />
         <param.CustomHeaderCode />
         <param.CustomInitializer />
@@ -223,7 +228,7 @@
       <param.CodeFormattingTool>option.CodeFormattingTool.Auto</param.CodeFormattingTool>
       <param.ClangFormatFile />
       <param.DataTypeReplacement />
-      <param.EnableCustomReplacementTypes />
+      <param.EnableCustomReplacementTypes>false</param.EnableCustomReplacementTypes>
       <param.ReplacementTypes.double />
       <param.ReplacementTypes.single />
       <param.ReplacementTypes.uint8 />
@@ -236,7 +241,7 @@
       <param.ReplacementTypes.int64 />
       <param.ReplacementTypes.char />
       <param.ReplacementTypes.logical />
-      <param.ReplacementTypes.ImportCustomTypes />
+      <param.ReplacementTypes.ImportCustomTypes>false</param.ReplacementTypes.ImportCustomTypes>
       <param.ReplacementTypes.HeaderFiles />
       <param.CppInterfaceStyle>option.CppInterfaceStyle.Functions</param.CppInterfaceStyle>
       <param.CppInterfaceClassName />
@@ -635,12 +640,12 @@
     <param.hdlParamStorage />
     <var.gc.lastOutputRoot>codegen\mex\mexFunctions</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>MEX_FILE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>2277107785</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>862563354</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen\mex\evaluateObstacles_mex</var.cfi.lastOutputRoot>
     <var.cfi.preBuildChecksum>3192875385</var.cfi.preBuildChecksum>
     <var.lastCfiTestSnippet>main_mexGeneration</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1861698956&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;699951351&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constMatrices.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\constraints.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\evaluateObstacles.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\followerMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getObstacleInfo.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\getqiFromShape.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCost.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderCostHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdate.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\leaderMPCandUpdateHalt.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\modelDynamics.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\Rmat.m&lt;/file&gt;&lt;file&gt;C:\Users\kovac\Desktop\TESI\master_thesis_2025\src\MATLAB_R2024b\stateEvolution.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>
@@ -687,8 +692,8 @@
     <param.deeplearning.DeepLearningCustomCallback />
     <param.deeplearning.TargetLib>option.deeplearning.targetlibrary.none</param.deeplearning.TargetLib>
     <var.cfiTargetLibSuppression>false</var.cfiTargetLibSuppression>
-    <var.hasMatlabDeepLearningSupportPackage>false</var.hasMatlabDeepLearningSupportPackage>
-    <var.hasGpuDeepLearningSupportPackage>false</var.hasGpuDeepLearningSupportPackage>
+    <var.hasMatlabDeepLearningSupportPackage>true</var.hasMatlabDeepLearningSupportPackage>
+    <var.hasGpuDeepLearningSupportPackage>true</var.hasGpuDeepLearningSupportPackage>
     <param.tensorrt.DataType>option.tensorrt.datatype.fp32</param.tensorrt.DataType>
     <param.tensorrt.DataPath />
     <param.tensorrt.NumCalibrationBatches>0</param.tensorrt.NumCalibrationBatches>
@@ -703,7 +708,7 @@
     <param.cmsis-nn.CalibrationResultFile />
     <param.none.LearnablesCompression>option.none.LearnablesCompression.None</param.none.LearnablesCompression>
     <var.ToolchainCanRunBuildArtifact>true</var.ToolchainCanRunBuildArtifact>
-    <param.TargetLang>option.TargetLang.C</param.TargetLang>
+    <param.TargetLang>option.TargetLang.CPP</param.TargetLang>
     <param.EnableAutoExtrinsicCalls>true</param.EnableAutoExtrinsicCalls>
     <param.EnableImplicitExpansion>true</param.EnableImplicitExpansion>
     <param.UsePreconditions>false</param.UsePreconditions>
@@ -820,6 +825,8 @@
       <param.deeplearning.DeepLearningCustomCallback />
       <param.deeplearning.TargetLib />
       <var.cfiTargetLibSuppression />
+      <var.hasMatlabDeepLearningSupportPackage />
+      <var.hasGpuDeepLearningSupportPackage />
       <param.tensorrt.DataType />
       <param.tensorrt.DataPath />
       <param.tensorrt.NumCalibrationBatches />
@@ -834,7 +841,6 @@
       <param.cmsis-nn.CalibrationResultFile />
       <param.none.LearnablesCompression />
       <var.ToolchainCanRunBuildArtifact />
-      <param.TargetLang />
       <param.EnableAutoExtrinsicCalls />
       <param.EnableImplicitExpansion />
       <param.UsePreconditions />

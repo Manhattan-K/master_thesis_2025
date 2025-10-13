@@ -1,26 +1,30 @@
-/*
- * Academic License - for use in teaching, academic research, and meeting
- * course requirements at degree granting institutions only.  Not for
- * government, commercial, or other organizational use.
- *
- * strcmp.h
- *
- * Code generation for function 'strcmp'
- *
- */
+//
+// Academic License - for use in teaching, academic research, and meeting
+// course requirements at degree granting institutions only.  Not for
+// government, commercial, or other organizational use.
+//
+// strcmp.h
+//
+// Code generation for function 'strcmp'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
+// Function Declarations
+namespace coder {
+namespace internal {
 boolean_T b_strcmp(const char_T a[7]);
 
-/* End of code generation (strcmp.h) */
+}
+} // namespace coder
+
+// End of code generation (strcmp.h)
