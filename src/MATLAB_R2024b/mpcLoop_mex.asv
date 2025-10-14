@@ -1,13 +1,12 @@
 function [x_l, x_f, u_l, u_f, i, X_L_plot, X_F_plot, loadTheta_p, step_time, real_d] = mpcLoop_mex( ...
         goal_reached, max_iter, i, sys, step_time, leaderParams, followerParams, obstacles, ...
-        x_l, x_f, u_l, u_f, X_F_plot, X_L_plot, N, U_l_old, U_f_old, policy_halt, delta, loadTheta_p, real_d, ...
-        eps_loose_grip, k_loose_grip)
+        x_l, x_f, u_l, u_f, X_F_plot, X_L_plot, N, U_l_old, U_f_old, policy_halt, delta, loadTheta_p, real_d)
 
     tic
 
     while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
     
-        %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+        disp("Starting iteration: " + spri(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
     
     %--------------------------- Obstacle avoidanace matrices -------------
     
@@ -33,7 +32,7 @@ function [x_l, x_f, u_l, u_f, i, X_L_plot, X_F_plot, loadTheta_p, step_time, rea
     
         if policy_halt == true
                 % Check if trajectory does not loose the load
-            formation_error = abs(vecnorm(leaderParams.Px*(X_L-X_F))-followerParams.d_FL);
+            formation_error = abs(vecnorm(Px*(X_L-X_F))-followerParams.d_FL);
             if any(formation_error(1:k_loose_grip) > eps_loose_grip)
     
                     % MPC for the leader using the new cost function

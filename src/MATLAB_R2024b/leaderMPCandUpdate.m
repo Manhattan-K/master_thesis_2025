@@ -3,6 +3,7 @@ function [p_tp1, X_L, X_L_stacked, error, u_t, u_opt] = leaderMPCandUpdate(...
 %% Variables definitions
 
     n = sys.n;
+    u_opt = zeros(sys.m*N, 1);
     
         % Get cost function
     costF = @(U) leaderCost(U, x0, sys, robotParams.W, robotParams.W_hat, robotParams.R_hat, N);

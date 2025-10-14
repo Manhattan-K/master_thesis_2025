@@ -3,6 +3,7 @@ function [p_tp1, X_F, error, u_t, u_opt] = followerMPCandUpdate(...
 %% Variables definitions
 
     n = sys.n;
+    u_opt = zeros(sys.m*N, 1);
     
         % Get cost function
     costF = @(U) followerCost(U, x0, sys, N, X_L_stacked, robotParams);
