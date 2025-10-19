@@ -4,6 +4,13 @@ function [x0, obstacles] = setupEnvironment(setupString)
             % Setup 01: No obstacles and p(0) = (20, 20)
             x0 = [20; 10; -pi/2];
             obstacles = {};
+
+        case "test"
+            x0 = [0; 10; -pi/2];
+            obstacle1.type = "circle";
+            obstacle1.center = [0.5, 9]';
+            obstacle1.radius = 0.1;
+            obstacles = {obstacle1};
             
         case "one_obs"
             %Setup 02 one obstacles and p(0) = (10, 14)

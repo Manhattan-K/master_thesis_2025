@@ -1,5 +1,5 @@
-function [obstaclesInRange] = evaluateObstacles(obstacles, x_l, x_f, leaderParams, followerParams, sys, N)
-
+function [obstaclesInRange] = evaluateObstacles(obstacles, x_l, x_f, ...
+                    leaderParams, followerParams, loadParams, sys, N)
 %% Select the obstacles closer to the leader 
 
     predictionDist = N * leaderParams.v_max / 7.5;
@@ -31,7 +31,8 @@ function [obstaclesInRange] = evaluateObstacles(obstacles, x_l, x_f, leaderParam
     [~,obstaclesInRange.M_f] = size(qi_f);
 
         % A_bar and B_bar for leader
-    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, leaderParams.robotShape, sys);
+    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, ...
+                                [leaderParams.robotShape, loadParams.loadShape], sys);
 
         % A_bar and B_bar for follower
     [obstaclesInRange.A_bar_f, obstaclesInRange.B_bar_f] = constMatrices(x_f, qi_f, N, followerParams.robotShape, sys);

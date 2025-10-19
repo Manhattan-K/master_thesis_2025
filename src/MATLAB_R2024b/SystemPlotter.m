@@ -4,6 +4,7 @@ classdef SystemPlotter
         goalPos
         leaderPos
         followerPos
+        loadPos
         leaderPred
         followerPred
         leaderParams
@@ -11,16 +12,18 @@ classdef SystemPlotter
         obstaclesPos
         leaderLoadPos
         followerLoadPos
+        loadParams
     end
     
     methods
         
         function obj = SystemPlotter(...
-                leader_params, follower_params, x0_l, x0_f, N, obstacles)
+                leader_params, follower_params, load_params, x0_l, x0_f, N, obstacles)
             % eventually set to def parameters
             if nargin ~= 4
                 obj.leaderParams = leader_params;
                 obj.followerParams = follower_params;
+                obj.loadParams = load_params;
             else
                 obj.leaderParams.pos_color = "red";
                 obj.leaderParams.pred_color = "magenta";
@@ -36,6 +39,7 @@ classdef SystemPlotter
                 obj.followerParams.keep_predictions = false;
                 obj.leaderParams.robotShape = [];
                 obj.followerParams.robotShape = [];
+                obj.loadParams.color = "black";
             end
             
             
@@ -51,6 +55,10 @@ classdef SystemPlotter
                 obj.followerPos = plot(x0_f(1), x0_f(2), ...
                     "Marker", "o", "Color", obj.followerParams.pos_color);
             end
+            obj.loadPos = plot(...
+                    polyshape(x0_l(1)+obj.loadParams.vertices(1,:),...
+                              x0_l(2)+obj.loadParams.vertices(2,:)),...
+                    'FaceColor',obj.loadParams.color,'FaceAlpha',0.5);
             
             % eventually create robot predictions plot
             if obj.leaderParams.show_predictions
@@ -129,7 +137,10 @@ classdef SystemPlotter
                 (x_now_l(1:2) + Rmat(loadTheta)*obj.leaderParams.robotShape)';
             obj.followerLoadPos.Shape.Vertices = ...
                  (x_now_f(1:2) + Rmat(loadTheta)*obj.followerParams.robotShape)';
+            obj.loadPos.Shape.Vertices = ...
+                   (x_now_l(1:2) + Rmat(loadTheta)*obj.loadParams.vertices)';
         end
+
         
         function updateObstacles(obj, obstacles, to_redraw)
             for i = to_redraw

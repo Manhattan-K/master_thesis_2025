@@ -8,6 +8,16 @@ sys.m = 2;
 
 Px = [1 0 0; 0 1 0];
 
+%% ROBOT DEFINITION
+
+robot.diameter = 0.35;
+robot.radius = robot.diameter/2;
+robot.sides = 8;
+
+robot.shape = nsidedpoly(robot.sides, 'Center', [0,0], ...
+                        'Radius', robot.radius / cos(pi / robot.sides));
+robot.vertices = robot.shape.Vertices';
+
 %% LEADER PARAMETERS
 
 leaderParams.Px = Px; % Px in the paper
@@ -25,13 +35,24 @@ leaderParams.show_constraints = true;
 leaderParams.keep_predictions = false;
 
     % Initial shape of leader
-th = 0:0.3:2*pi;
-leaderParams.initRobotShape = 0.32*[cos(th); sin(th)];
+leaderParams.initRobotShape = robot.vertices;
 leaderParams.robotShape = leaderParams.initRobotShape;
+
+%% LOAD PARAMETERS
+
+loadParams.d_FL = 1;
+loadParams.width = 0.3;
+loadParams.vertices = [-loadParams.width/2, loadParams.d_FL/2, loadParams.d_FL + loadParams.width/2, ...
+                           loadParams.d_FL + loadParams.width/2, loadParams.d_FL/2, -loadParams.width/2; ...
+                           -loadParams.width/2, -loadParams.width/2, -loadParams.width/2, ...
+                           loadParams.width/2, loadParams.width/2, loadParams.width/2];
+
+loadParams.color = "black";
+loadParams.loadShape = loadParams.vertices;
 
 %% FOLLOWER PARAMETERS
 
-followerParams.d_FL = 1;
+followerParams.d_FL = loadParams.d_FL;
 
 followerParams.Px = Px; % Px in the paper
 
@@ -46,6 +67,5 @@ followerParams.constraint_color = "green";
 followerParams.show_predictions = true;
 followerParams.show_constraints = false;
 followerParams.keep_predictions = false;
-followerParams.initRobotShape = (0.2*[-1, 1, 1, -1; -1, -1, 1, 1]...
-                            +followerParams.d_FL*[-1,0, 0, -1; 0,0,0,0]);
+followerParams.initRobotShape = robot.vertices;
 followerParams.robotShape =followerParams.initRobotShape;

@@ -10,7 +10,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
         % Evaluate the MPC only on the nearest obstacles
     obstaclesInRange = evaluateObstacles( ...
-        obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, sys, N);
+        obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, loadParams, sys, N);
 
 %--------------------------- MPC for Leader and Follower -------------
 
@@ -52,6 +52,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
     leaderParams.robotShape = Rmat(loadTheta)*leaderParams.initRobotShape;
     followerParams.robotShape = Rmat(loadTheta)*followerParams.initRobotShape;
+    loadParams.loadShape = Rmat(loadTheta)*loadParams.vertices;
 
         % Check if goal was reached up to desired precision
     if norm(x_l(1:2,i+1)) < delta

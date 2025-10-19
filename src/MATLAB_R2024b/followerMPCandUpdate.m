@@ -12,7 +12,7 @@ function [p_tp1, X_F, error, u_t, u_opt] = followerMPCandUpdate(...
 
 %% fmincon optimization
 
-    options = optimoptions('fmincon','Algorithm','interior-point','Display','off');
+    options = optimoptions('fmincon','Algorithm', robotParams.alg,'Display','off');
     [u_opt, ~, exitflag, output] = fmincon(costF, U_f_old, [], [], [], [], robotParams.lb, robotParams.ub, constraintsF, options);
     
     error.QPexitflag = exitflag;

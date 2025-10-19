@@ -23,6 +23,8 @@ leaderParams.R = diag([opt.R_lin, opt.R_ang]);
 [leaderParams.W_hat, leaderParams.R_hat] = costWeights( ...
                      sys, leaderParams.W, leaderParams.R, leaderParams.Z, N);
 
+leaderParams.alg = opt.alg;
+
     % Linear and angular velocities limits
 [leaderParams.lb, leaderParams.ub] = inputBounds( ...
     leaderParams.v_max, leaderParams.w_max, sys, N);
@@ -37,8 +39,9 @@ followerParams.C = opt.C;
 followerParams.beta = opt.beta;
 followerParams.beta_N = followerParams.beta.^(1:N);
 
-    % Linear and angular velocities limits
+followerParams.alg = opt.alg;
 
+    % Linear and angular velocities limits
 [followerParams.lb, followerParams.ub] = inputBounds( ...
     followerParams.v_max, followerParams.w_max, sys, N);
 
