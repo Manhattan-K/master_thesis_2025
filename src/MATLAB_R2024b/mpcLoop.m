@@ -16,7 +16,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
         % MPC for the leader
     [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
-                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old);
+                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, x_f(:,i));
 
     X_L_plot(:,:,i) = X_L;
 
@@ -60,7 +60,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
     end
 
         % Distance between the 2 robots
-    real_d(i) = norm(x_l(1:2,i) - x_f(1:2,i));
+    real_d(i + 1) = norm(x_l(1:2,i) - x_f(1:2,i));
 
         % Obstacle dynamics 
     if size(obstacles, 2) >= 20

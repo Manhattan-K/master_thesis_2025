@@ -1,6 +1,7 @@
 %% System parameters
 
 sys.Ts = opt.Ts;
+sys.d_fl = loadParams.d_FL;
 
 %% ALGORITHM PARAMETERS
 
@@ -19,6 +20,7 @@ eps_loose_grip = opt.eps_loose_grip;
 leaderParams.W = diag([opt.W_pos, opt.W_pos, opt.W_angle]);      
 leaderParams.Z = diag([opt.Z_pos, opt.Z_pos, opt.W_angle]); 
 leaderParams.R = diag([opt.R_lin, opt.R_ang]);
+leaderParams.K = opt.K;
 
 [leaderParams.W_hat, leaderParams.R_hat] = costWeights( ...
                      sys, leaderParams.W, leaderParams.R, leaderParams.Z, N);
@@ -27,7 +29,7 @@ leaderParams.alg = opt.alg;
 
     % Linear and angular velocities limits
 [leaderParams.lb, leaderParams.ub] = inputBounds( ...
-    leaderParams.v_max, leaderParams.w_max, sys, N);
+    leaderParams.v_max, leaderParams.w_max, N);
 
 %% FOLLOWER PARAMETERS
 
@@ -43,7 +45,7 @@ followerParams.alg = opt.alg;
 
     % Linear and angular velocities limits
 [followerParams.lb, followerParams.ub] = inputBounds( ...
-    followerParams.v_max, followerParams.w_max, sys, N);
+    followerParams.v_max, followerParams.w_max, N);
 
 %% MPC loop
 
@@ -53,7 +55,8 @@ goal_reached = false;
 i = 1;
 
     % Variables allocation and inizialization
-real_d = zeros(max_iter, 1);
+real_d = zeros(max_iter + 1, 1);
+real_d(1) = loadParams.d_FL;
 step_time = zeros(max_iter, 1);
 
     % Initialization of the leader and follower STATES and INPUTS

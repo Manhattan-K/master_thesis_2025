@@ -7,10 +7,19 @@ function [x0, obstacles] = setupEnvironment(setupString)
 
         case "test"
             x0 = [0; 10; -pi/2];
-            obstacle1.type = "circle";
-            obstacle1.center = [0.5, 9]';
-            obstacle1.radius = 0.1;
-            obstacles = {obstacle1};
+
+            obstacle.type = "wall";
+            obstacle.center = [0, 4]';
+            obstacle.length = 3;
+            obstacle.width = 0.5;
+            obstacle.theta = pi/4;
+            obstacle.radius = norm([obstacle.length; obstacle.width]) / 2;
+
+            obstacle.vertices = repmat([obstacle.center(1); obstacle.center(2)], [1 4]) + ...
+                        Rmat(obstacle.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obstacle.length/2; obstacle.width/2], [1 4]));
+
+            obstacles = {obstacle};
             
         case "one_obs"
             %Setup 02 one obstacles and p(0) = (10, 14)

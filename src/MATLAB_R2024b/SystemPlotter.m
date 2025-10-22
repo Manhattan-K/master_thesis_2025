@@ -41,8 +41,7 @@ classdef SystemPlotter
                 obj.followerParams.robotShape = [];
                 obj.loadParams.color = "black";
             end
-            
-            
+
             % create goal plot
             x_goal = [0;0];
             obj.goalPos = plot(x_goal(1), x_goal(2), ...
@@ -58,7 +57,7 @@ classdef SystemPlotter
             obj.loadPos = plot(...
                     polyshape(x0_l(1)+obj.loadParams.vertices(1,:),...
                               x0_l(2)+obj.loadParams.vertices(2,:)),...
-                    'FaceColor',obj.loadParams.color,'FaceAlpha',0.5);
+                    'FaceColor',obj.loadParams.color,'FaceAlpha',0.75);
             
             % eventually create robot predictions plot
             if obj.leaderParams.show_predictions
@@ -105,8 +104,6 @@ classdef SystemPlotter
         end
         
         function updateLeaderPath(obj, x_now, x_pred)
-            obj.leaderPos.XData = [obj.leaderPos.XData, x_now(1)];
-            obj.leaderPos.YData = [obj.leaderPos.YData, x_now(2)];
             if obj.leaderParams.show_predictions
                 if obj.leaderParams.keep_predictions
                     obj.leaderPred.XData = [obj.leaderPred.XData, x_pred(1, :)];
@@ -116,11 +113,11 @@ classdef SystemPlotter
                     obj.leaderPred.YData = x_pred(2, :);
                 end
             end
+            obj.leaderPos.XData = [obj.leaderPos.XData, x_now(1)];
+            obj.leaderPos.YData = [obj.leaderPos.YData, x_now(2)];
         end
         
         function updateFollowerPath(obj, x_now, x_pred)
-            obj.followerPos.XData = [obj.followerPos.XData, x_now(1)];
-            obj.followerPos.YData = [obj.followerPos.YData, x_now(2)];
             if obj.followerParams.show_predictions
                 if obj.followerParams.keep_predictions
                     obj.followerPred.XData = [obj.followerPred.XData, x_pred(1, :)];
@@ -130,6 +127,8 @@ classdef SystemPlotter
                     obj.followerPred.YData = x_pred(2, :);
                 end
             end
+            obj.followerPos.XData = [obj.followerPos.XData, x_now(1)];
+            obj.followerPos.YData = [obj.followerPos.YData, x_now(2)];
         end
         
         function updateLoadPos(obj, x_now_l, x_now_f, loadTheta)
