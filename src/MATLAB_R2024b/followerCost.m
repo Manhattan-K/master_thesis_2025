@@ -14,7 +14,6 @@ function [cost] = followerCost(U, x0_f, sys, N, X_L_stacked, robotParams)
     projDiff = robotParams.Px * stateDiff;
 
         % Cost evaluation
-    % J_1 = sum((robotParams.beta_N) .* (sum(projDiff.^2, 1) - robotParams.d_FL_sq) .^ 2);
     J_1 = robotParams.beta_N * ((sum(projDiff.^2, 1) - robotParams.d_FL_sq) .^ 2)';
     
 

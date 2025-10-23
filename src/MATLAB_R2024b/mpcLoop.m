@@ -15,8 +15,8 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 %--------------------------- MPC for Leader and Follower -------------
 
         % MPC for the leader
-    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
-                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, x_f(:,i));
+    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old, avoid_policy] = leaderMPCandUpdate( ...
+                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, x_f(:,i), avoid_policy);
 
     X_L_plot(:,:,i) = X_L;
 
@@ -55,7 +55,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
     loadParams.loadShape = Rmat(loadTheta)*loadParams.vertices;
 
         % Check if goal was reached up to desired precision
-    if norm(x_l(1:2,i+1)) < delta
+    if norm(x_l(1:2,i+1) - goal.single(1:2)) < delta
         goal_reached = true;
     end
 

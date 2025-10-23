@@ -38,6 +38,11 @@ switch shape.type
             end
         end
 
+        if norm(x0 - q) < 0.2
+            q = [0; 0];
+            d = 0;
+        end
+
     case "inf_wall"
         if shape.is_x_wall % meaning it is along x axis
             q = [x0(1); shape.wall_pos];

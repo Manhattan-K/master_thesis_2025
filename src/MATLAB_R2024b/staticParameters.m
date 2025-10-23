@@ -6,6 +6,8 @@ sys.m = 2;
 
 %% ALGORITHM PARAMETERS
 
+goal.single = [0; 0; 0];
+
 Px = [1 0 0; 0 1 0];
 
 %% ROBOT DEFINITION

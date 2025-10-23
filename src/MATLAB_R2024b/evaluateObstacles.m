@@ -1,4 +1,4 @@
-function [obstaclesInRange] = evaluateObstacles(obstacles, x_l, x_f, ...
+function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
                     leaderParams, followerParams, loadParams, sys, N)
 %% Select the obstacles closer to the leader 
 
@@ -23,6 +23,9 @@ function [obstaclesInRange] = evaluateObstacles(obstacles, x_l, x_f, ...
 
         % Get q points of follower from obstacles
     [qi_f, ~] = getObstacleInfo(obstacles, selector, obsNum, x_f);
+
+    obstaclesInRange.qi_l = qi_l;
+    obstaclesInRange.qi_f = qi_f;
 
 %% Create A_bar and B_bar matrices
 

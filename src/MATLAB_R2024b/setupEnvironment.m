@@ -5,22 +5,26 @@ function [x0, obstacles] = setupEnvironment(setupString)
             x0 = [20; 10; -pi/2];
             obstacles = {};
 
+%----------------------------------------------------------------------------------------------------------------%
+
         case "test"
             x0 = [0; 10; -pi/2];
 
-            obstacle.type = "wall";
-            obstacle.center = [0, 4]';
-            obstacle.length = 3;
-            obstacle.width = 0.5;
-            obstacle.theta = pi/4;
-            obstacle.radius = norm([obstacle.length; obstacle.width]) / 2;
+            obs.type = "wall";
+            obs.center = [0, 4]';
+            obs.length = 3;
+            obs.width = 0.5;
+            obs.theta = pi/4;
+            obs.radius = norm([obs.length; obs.width]) / 2;
 
-            obstacle.vertices = repmat([obstacle.center(1); obstacle.center(2)], [1 4]) + ...
-                        Rmat(obstacle.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
-                        repmat([obstacle.length/2; obstacle.width/2], [1 4]));
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
+                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs.length/2; obs.width/2], [1 4]));
 
-            obstacles = {obstacle};
+            obstacles = {obs};
             
+%----------------------------------------------------------------------------------------------------------------%
+
         case "one_obs"
             %Setup 02 one obstacles and p(0) = (10, 14)
             x0 = [10; 14; -pi/2];
@@ -29,6 +33,8 @@ function [x0, obstacles] = setupEnvironment(setupString)
             obstacle1.radius = 3;
             obstacles = {obstacle1};
             
+%----------------------------------------------------------------------------------------------------------------%
+
         case "two_obs"
             % Setup 03 LF one obstacles and p(0) = (10, 14)
             x0 = [10; 14; -pi/2];
@@ -42,6 +48,8 @@ function [x0, obstacles] = setupEnvironment(setupString)
             
             obstacles = {obstacle1,obstacle2};
             
+%----------------------------------------------------------------------------------------------------------------%
+
         case "three_obs"
             % Setup 03 one obstacles and p(0) = (10, 14)
             x0 = [10; 14; -pi/2];
@@ -58,7 +66,9 @@ function [x0, obstacles] = setupEnvironment(setupString)
             obstacle3.radius = 1;
 
             obstacles = {obstacle1,obstacle2,obstacle3};
-            
+
+%----------------------------------------------------------------------------------------------------------------%
+
         case "pathological"
             % Pathological cases
             x0 = [10; 10; -pi/2];
@@ -66,7 +76,9 @@ function [x0, obstacles] = setupEnvironment(setupString)
             obstacle1.center = [5, 5]';
             obstacle1.radius = 2;
             obstacles = {obstacle1};
-            
+
+%----------------------------------------------------------------------------------------------------------------%
+
         case "six_obs"
             % Complex Map, six obstacles
             x0 = [40; 5; -pi/2];
@@ -95,6 +107,8 @@ function [x0, obstacles] = setupEnvironment(setupString)
             obstacle6.radius = 3;
             
             obstacles = {obstacle1, obstacle2, obstacle3, obstacle4, obstacle5, obstacle6};
+
+%----------------------------------------------------------------------------------------------------------------%
 
         case "valzer"
             % Complex Map-variable
@@ -188,6 +202,133 @@ function [x0, obstacles] = setupEnvironment(setupString)
                 obstacle8, obstacle9,obstacle10, obstacle11, obstacle12, obstacle13, obstacle14,...
                 obstacle15, obstacle16, obstacle17, obstacle18, obstacle19, obstacle20, obstacle21,...
                 obstacle22, obstacle23, obstacle24};
+        
+%----------------------------------------------------------------------------------------------------------------%
+
+        case "ec_direct_obs"
+            x0 = [0; 10; -pi/2];
+
+            obs.type = "circle";
+            obs.center = [0, 5]';
+            obs.radius = 1;
+
+            obstacles = {obs};
+
+%----------------------------------------------------------------------------------------------------------------%
+
+
+        case "ec_direct_wall"
+            x0 = [0; 10; -pi/2];
+
+            obs.type = "wall";
+            obs.center = [0, 5]';
+            obs.length = 5;
+            obs.width = 0.5;
+            obs.theta = 0;
+            obs.radius = norm([obs.length; obs.width]) / 2;
+
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
+                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs.length/2; obs.width/2], [1 4]));
+
+            obstacles = {obs};
+
+%----------------------------------------------------------------------------------------------------------------%
+
+        case "ec_elbow"
+            x0 = [10; 10; -pi/2];
+
+            obs1.type = "wall";
+            obs1.center = [10.5, 10.5]';
+            obs1.length = 2;
+            obs1.width = 0.1;
+            obs1.theta = 0;
+            obs1.radius = norm([obs1.length; obs1.width]) / 2;
+            obs1.vertices = repmat([obs1.center(1); obs1.center(2)], [1 4]) + ...
+                        Rmat(obs1.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs1.length/2; obs1.width/2], [1 4]));
+
+            obs2.type = "wall";
+            obs2.center = [9.5, 5.775]';
+            obs2.length = 9.55;
+            obs2.width = 0.1;
+            obs2.theta = pi/2;
+            obs2.radius = norm([obs2.length; obs2.width]) / 2;
+            obs2.vertices = repmat([obs2.center(1); obs2.center(2)], [1 4]) + ...
+                        Rmat(obs2.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs2.length/2; obs2.width/2], [1 4]));
+
+            obs3.type = "wall";
+            obs3.center = [11.5, 4.75]';
+            obs3.length = 11.5;
+            obs3.width = 0.1;
+            obs3.theta = pi/2;
+            obs3.radius = norm([obs3.length; obs3.width]) / 2;
+            obs3.vertices = repmat([obs3.center(1); obs3.center(2)], [1 4]) + ...
+                        Rmat(obs3.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs3.length/2; obs3.width/2], [1 4]));
+
+            obs4.type = "wall";
+            obs4.center = [4.2, 1]';
+            obs4.length = 10.35;
+            obs4.width = 0.1;
+            obs4.theta = 0;
+            obs4.radius = norm([obs4.length; obs4.width]) / 2;
+            obs4.vertices = repmat([obs4.center(1); obs4.center(2)], [1 4]) + ...
+                        Rmat(obs4.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs4.length/2; obs4.width/2], [1 4]));
+
+            obs5.type = "wall";
+            obs5.center = [5.275, -1]';
+            obs5.length = 12.55;
+            obs5.width = 0.1;
+            obs5.theta = 0;
+            obs5.radius = norm([obs5.length; obs5.width]) / 2;
+            obs5.vertices = repmat([obs5.center(1); obs5.center(2)], [1 4]) + ...
+                        Rmat(obs5.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs5.length/2; obs5.width/2], [1 4]));
+
+
+            obstacles = {obs1, obs2, obs3, obs4, obs5};
+
+%----------------------------------------------------------------------------------------------------------------%
+
+        case "ec_load_center"
+            x0 = [0; 10; -pi/2];
+
+            obs.type = "wall";
+            obs.center = [0, 4]';
+            obs.length = 3;
+            obs.width = 0.5;
+            obs.theta = pi/4;
+            obs.radius = norm([obs.length; obs.width]) / 2;
+
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
+                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs.length/2; obs.width/2], [1 4]));
+
+            obstacles = {obs};
+
+%----------------------------------------------------------------------------------------------------------------%
+
+        case "ec_goal_boxed" 
+            x0 = [0; 10; -pi/2];
+
+            obs.type = "wall";
+            obs.center = [0, 4]';
+            obs.length = 3;
+            obs.width = 0.5;
+            obs.theta = pi/4;
+            obs.radius = norm([obs.length; obs.width]) / 2;
+
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
+                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs.length/2; obs.width/2], [1 4]));
+
+            obstacles = {obs};
+
+%----------------------------------------------------------------------------------------------------------------%
+
         otherwise
             x0 = [0 0 -pi/2]';
             obstacles = {};
