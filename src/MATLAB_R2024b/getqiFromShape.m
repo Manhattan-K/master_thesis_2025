@@ -22,10 +22,10 @@ switch shape.type
         d = inf;
         q = [0; 0];
         
-        for i = 1:4
+        for i = 1:size(v, 2)
             p1 = v(:, i);
             
-            if i < 4
+            if i < size(v, 2)
                 p2 = v(:, i+1);
             else
                 p2 = v(:, 1); 

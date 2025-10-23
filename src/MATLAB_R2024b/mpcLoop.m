@@ -15,7 +15,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 %--------------------------- MPC for Leader and Follower -------------
 
         % MPC for the leader
-    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old, avoid_policy] = leaderMPCandUpdate( ...
+    [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, x_f(:,i), avoid_policy);
 
     X_L_plot(:,:,i) = X_L;
@@ -40,6 +40,16 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
                 % MPC for the follower using the new leader states
             [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate(...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, zeros([sys.m*N,1]));
+        end
+    end
+
+%--------------------------- Avoidance Policy ------------------------------
+
+    if policy_avoid == true
+        if avoid_policy.on == true || ...                               % If the policy is on
+           norm(X_L(1:2,N) - avoid_policy.goal(1:2)) >= 0.5 && ...   % If we are away from the goal
+           norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10             % If we have a obstruction
+            avoid_policy = avoidPolicyFunction(avoid_policy, X_L, N, obstaclesInRange);
         end
     end
 

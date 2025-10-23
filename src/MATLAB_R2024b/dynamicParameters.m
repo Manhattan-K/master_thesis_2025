@@ -13,9 +13,31 @@ N = opt.N;
 
 goal.N = repmat(goal.single, [N, 1]);
 
+
+%% Feasibility-Aware Recovery Policy
+
 policy_halt = opt.policy_halt;
 k_loose_grip = opt.k_loose_grip;
 eps_loose_grip = opt.eps_loose_grip;
+
+%% Avoidance Policy 
+
+policy_avoid = opt.policy_avoid;
+
+avoid_policy.goal = goal.single;
+avoid_policy.goal_N = goal.N;
+avoid_policy.single = goal.single;
+avoid_policy.N = goal.N;
+
+avoid_policy.on = false;
+avoid_policy.d = 0;
+avoid_policy.theta = 0;
+avoid_policy.cos = 0;
+avoid_policy.sin = 0;
+
+avoid_policy.margin = opt.margin;
+avoid_policy.dev_ang = opt.dev_ang;
+avoid_policy.k_block = opt.k_block;
 
 %% LEADER PARAMETERS
 
@@ -80,13 +102,3 @@ U_f_old = zeros([sys.m*N,1]);
 X_L_plot = zeros(sys.n,N,max_iter);
 X_F_plot = zeros(sys.n,N,max_iter);
 loadTheta_p = zeros(max_iter, 1);
-
-    % Avoid policy
-avoid_policy.goal = goal.single;
-avoid_policy.goal_N = goal.N;
-avoid_policy.single = goal.single;
-avoid_policy.N = goal.N;
-avoid_policy.on = false;
-avoid_policy.d = 0;
-avoid_policy.margin = 2;
-avoid_policy.theta = 0;
