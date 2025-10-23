@@ -10,12 +10,14 @@ function [cost] = leaderCost(U, x0, x_f, sys, W, W_hat, R_hat, K, N, goal)
     cost_state = (x_pred - goal.N)' * W_hat * (x_pred - goal.N);
     cost_input = U' * R_hat * U;
 
+    cost = cost_ic + cost_state + cost_input;
+
 %%
         % q_L - q_F
-    projDiff = x0(1:2) - x_f(1:2);
-    cost_dist = K*(sum(projDiff.^2, 1) - sys.d_fl) .^ 2;
-
-    cost = cost_ic + cost_state + cost_input + cost_dist;
+    % projDiff = x_pred(1:2) - x_f(1:2);
+    % cost_dist = K*(sum(projDiff.^2, 1) - sys.d_fl) .^ 2;
+    % 
+    % cost = cost_ic + cost_state + cost_input + cost_dist;
 
 end
 

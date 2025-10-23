@@ -97,7 +97,7 @@ u_f(:,i) = zeros(sys.m, 1);
     % Initial guesses for optimal inputs
 X_L = zeros(sys.n, N);
 X_F = zeros(sys.n, N);
-X_F(:,2) = x_f(:,i);
+X_F(:,2) = 
 U_l_old = zeros([sys.m*N,1]);
 U_f_old = zeros([sys.m*N,1]);
 
