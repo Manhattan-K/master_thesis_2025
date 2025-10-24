@@ -72,6 +72,9 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         % Distance between the 2 robots
     real_d(i + 1) = norm(x_l(1:2,i) - x_f(1:2,i));
 
+        % Error
+    dist_error(i + 1) = real_d(i + 1) - followerParams.d_FL;
+
         % Obstacle dynamics 
     if size(obstacles, 2) >= 20
         obstacles{20}.center = obstacles{20}.center - [0, 0.1]'; 

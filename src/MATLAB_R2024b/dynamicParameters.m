@@ -30,6 +30,8 @@ avoid_policy.single = goal.single;
 avoid_policy.N = goal.N;
 
 avoid_policy.on = false;
+avoid_policy.used = false;
+avoid_policy.times = 0;
 avoid_policy.d = 0;
 avoid_policy.theta = 0;
 avoid_policy.cos = 0;
@@ -82,6 +84,7 @@ i = 1;
 real_d = zeros(max_iter + 1, 1);
 real_d(1) = loadParams.d_FL;
 step_time = zeros(max_iter, 1);
+dist_error = zeros(max_iter + 1, 1);
 
     % Initialization of the leader and follower STATES and INPUTS
 x_l = zeros(sys.n, max_iter);
