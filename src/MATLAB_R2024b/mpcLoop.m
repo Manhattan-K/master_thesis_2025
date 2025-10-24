@@ -46,9 +46,10 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 %--------------------------- Avoidance Policy ------------------------------
 
     if policy_avoid == true
-        if avoid_policy.on == true || ...                               % If the policy is on
-           norm(X_L(1:2,N) - avoid_policy.goal(1:2)) >= 0.5 && ...   % If we are away from the goal
-           norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10             % If we have a obstruction
+        if avoid_policy.on == true || ...                                   % If the policy is on
+           size(obstaclesInRange.qi_l, 1) ~= 0 && ...                       % If there are obstacles
+           norm(X_L(1:2,N) - avoid_policy.goal(1:2)) >= 0.5 && ...          % If we are away from the goal
+           norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10             % If we have an obstruction
             avoid_policy = avoidPolicyFunction(avoid_policy, X_L, N, obstaclesInRange);
         end
     end
