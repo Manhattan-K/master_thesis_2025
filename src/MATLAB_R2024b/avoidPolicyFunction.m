@@ -2,7 +2,7 @@ function [avoid_policy] = avoidPolicyFunction(avoid_policy, x_pred, N,obstacles)
 
     if avoid_policy.on == true
         if size(obstacles.qi_l, 1) ~= 0 && ...
-                min(norm(obstacles.qi_l - x_pred(1:2,N))) < avoid_policy.d
+                min(norm(obstacles.qi_l - x_pred(1:2,N - avoid_policy.k_block))) < avoid_policy.d
             avoid_policy.single = [avoid_policy.single(1:2) + [avoid_policy.cos; avoid_policy.sin]; 0];
             avoid_policy.N = repmat(avoid_policy.single, [N, 1]);
 

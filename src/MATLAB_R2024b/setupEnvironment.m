@@ -222,7 +222,7 @@ function [x0, obstacles] = setupEnvironment(setupString)
 
             obs.type = "wall";
             obs.center = [0, 0.5]';
-            obs.length = 5;
+            obs.length = 3;
             obs.width = 0.1;
             obs.theta = 0;
             obs.radius = norm([obs.length; obs.width]) / 2;
