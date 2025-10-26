@@ -19,13 +19,15 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
 %% Get the qi points for leader and follower
 
         % Get q points of leader from obstacles
-    [qi_l, ~] = getObstacleInfo(obstacles, selector, obsNum, x_l);
+    [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l);
 
         % Get q points of follower from obstacles
-    [qi_f, ~] = getObstacleInfo(obstacles, selector, obsNum, x_f);
+    [qi_f, d_f] = getObstacleInfo(obstacles, selector, obsNum, x_f);
 
     obstaclesInRange.qi_l = qi_l;
     obstaclesInRange.qi_f = qi_f;
+    obstaclesInRange.d_l = d_l;
+    obstaclesInRange.d_f = d_f;
 
 %% Create A_bar and B_bar matrices
 

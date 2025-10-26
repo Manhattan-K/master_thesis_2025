@@ -1,4 +1,4 @@
-function [cost] = leaderCost(U, x0, x_f, sys, W, W_hat, R_hat, K, N, goal)
+function [cost] = leaderCost(U, x0, x_f, sys, W, W_hat, R_hat, K, N, goal, obs)
 
     % LEADER COST FUNCTION as 
     %   J = q(0)'Wq(0) + q_staked' W_hat q_stacked + ...

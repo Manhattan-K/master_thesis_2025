@@ -16,6 +16,11 @@ switch shape.type
         q = x0 + (shape.center-x0)*lambda;
         return;
     
+    case "line"
+        v = shape.vertices;
+        
+        [q, d] = closestPoint(v(:,1), v(:,2), x0);
+
     case "wall"
         v = shape.vertices;
 
@@ -36,11 +41,6 @@ switch shape.type
                 d = d_curr;
                 q = q_curr;
             end
-        end
-
-        if norm(x0 - q) < 0.2
-            q = [0; 0];
-            d = 0;
         end
 
     case "inf_wall"

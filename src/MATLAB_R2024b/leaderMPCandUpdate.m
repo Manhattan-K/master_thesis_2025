@@ -5,7 +5,7 @@ function [p_tp1, X_L, X_L_stacked, error, u_t, u_opt] = leaderMPCandUpdate(...
     n = sys.n;
     
         % Get cost function
-    costF = @(U) leaderCost(U, x0, x_f, sys, robotParams.W, robotParams.W_hat, robotParams.R_hat, robotParams.K, N, avoid_policy);
+    costF = @(U) leaderCost(U, x0, x_f, sys, robotParams.W, robotParams.W_hat, robotParams.R_hat, robotParams.K, N, avoid_policy, obstacles);
 
         % Get constraints function
     constraintsF = @(U) constraints(U, x0, obstacles.M_l, obstacles.A_bar_l, obstacles.B_bar_l, N, robotParams.robotShape, sys);

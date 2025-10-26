@@ -32,7 +32,11 @@ avoid_policy.N = goal.N;
 avoid_policy.on = false;
 avoid_policy.used = false;
 avoid_policy.times = 0;
-avoid_policy.d = 0;
+
+avoid_policy.pos = 0;
+avoid_policy.dir = 0;
+avoid_policy.n = 0;
+
 avoid_policy.theta = 0;
 avoid_policy.cos = 0;
 avoid_policy.sin = 0;

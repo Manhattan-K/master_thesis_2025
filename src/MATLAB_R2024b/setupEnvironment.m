@@ -10,15 +10,14 @@ function [x0, obstacles] = setupEnvironment(setupString)
         case "test"
             x0 = [0; 10; -pi/2];
 
-            obs.type = "wall";
+            obs.type = "line";
             obs.center = [0, 3]';
             obs.length = 3;
-            obs.width = 0.5;
+            obs.radius = obs.length/2;
             obs.theta = 0;
-            obs.radius = 4;
 
-            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 5]) + ...
-                        Rmat(obs.theta)*([-0.5, 0.5, 1, 0, -1; -1,-1,0,1,0]);
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 2]) + ...
+                        Rmat(obs.theta)*([-obs.radius, obs.radius; 0,0]);
 
             obstacles = {obs};
             
