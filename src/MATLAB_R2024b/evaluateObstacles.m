@@ -24,10 +24,27 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
         % Get q points of follower from obstacles
     [qi_f, d_f] = getObstacleInfo(obstacles, selector, obsNum, x_f);
 
+%% qi evaluations for the use in costs
+
     obstaclesInRange.qi_l = qi_l;
     obstaclesInRange.qi_f = qi_f;
     obstaclesInRange.d_l = d_l;
     obstaclesInRange.d_f = d_f;
+
+    % obstaclesInRange.L = obsNum;
+    % 
+    % obstaclesInRange.qi_l_stack = zeros(obsNum*N*2, 1);
+    % for l = 1:obsNum
+    %     obstaclesInRange.qi_l_stack((l-1)*2*N+1 : l*2*N, 1) = repmat(qi_l(:,l), [N, 1]);
+    % end
+    % 
+    % if obsNum ~= 0
+    %     max_d = max(d_l);
+    %     max_d_s = max_d(1)^2;
+    %     obstaclesInRange.relative = repmat(-leaderParams.D/max_d_s, [1, obsNum*N]);
+    % else
+    %     obstaclesInRange.relative = 0;
+    % end
 
 %% Create A_bar and B_bar matrices
 

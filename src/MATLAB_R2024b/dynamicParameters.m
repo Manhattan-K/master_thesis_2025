@@ -50,12 +50,15 @@ avoid_policy.k_block = opt.k_block;
 leaderParams.W = diag([opt.W_pos, opt.W_pos, opt.W_angle]);      
 leaderParams.Z = diag([opt.Z_pos, opt.Z_pos, opt.W_angle]); 
 leaderParams.R = diag([opt.R_lin, opt.R_ang]);
+leaderParams.D = opt.D;
 leaderParams.K = opt.K;
 
 [leaderParams.W_hat, leaderParams.R_hat] = costWeights( ...
                      sys, leaderParams.W, leaderParams.R, leaderParams.Z, N);
 
 leaderParams.alg = opt.alg;
+
+leaderParams.Px_N = kron(eye(N), Px);
 
     % Linear and angular velocities limits
 [leaderParams.lb, leaderParams.ub] = inputBounds( ...

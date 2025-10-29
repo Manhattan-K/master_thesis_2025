@@ -8,12 +8,11 @@ function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys)
 
 %% Obstacle avoidance
 % c(x) = A_bar * x_h - B_bar s.t    c(x) <= 0
-    
-    c_obst_av = zeros([N*M*L, 1]);
 
     if M >= 1
     
         x_pred = stateEvolution(U, x0, sys, N);
+        % margin = 0.05*ones([size(B_bar,1), 1]);
         c_obst_av = A_bar * x_pred - B_bar;
 
     else % If there are no constraints

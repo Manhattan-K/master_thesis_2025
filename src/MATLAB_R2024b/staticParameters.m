@@ -69,5 +69,7 @@ followerParams.constraint_color = "green";
 followerParams.show_predictions = true;
 followerParams.show_constraints = false;
 followerParams.keep_predictions = false;
+
+    % Initial shape of follower
 followerParams.initRobotShape = robot.vertices;
 followerParams.robotShape =followerParams.initRobotShape;
