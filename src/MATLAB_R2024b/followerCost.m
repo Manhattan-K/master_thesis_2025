@@ -32,7 +32,7 @@ function [cost] = followerCost(U, x0_f, sys, N, X_L_stacked, robotParams)
 
 %% Final cost
 
-    cost = robotParams.C * J_1 + J_2;
+    cost = robotParams.C*J_1 + robotParams.Q*J_2;
     
 end
 

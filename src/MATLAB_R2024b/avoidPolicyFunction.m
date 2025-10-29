@@ -20,10 +20,17 @@ function [avoid_policy] = avoidPolicyFunction(avoid_policy, x_pred, N, obs)
         x_N_ang = x_pred(3,N);
         diff = avoid_policy.goal(1:2) - x_N_pos;
         x_N_dir = atan2(diff(2), diff(1));
+        ang_diff = x_N_dir - x_N_ang;
 
-        if abs(x_N_dir - x_N_ang) > pi/4
-            x_N_dir = x_N_ang;
+        if abs(ang_diff) > pi/4
+            dir = x_N_ang;
+        else
+            dir = x_N_dir;
         end
+
+        % if norm(diff) <= 2
+        %     dir = x_N_dir;
+        % end
 
         avoid_policy.on = true;
         avoid_policy.used = true;
@@ -31,17 +38,17 @@ function [avoid_policy] = avoidPolicyFunction(avoid_policy, x_pred, N, obs)
 
         
 
-        avoid_policy.n(:,:) = [cos(x_N_dir); sin(x_N_dir)];
+        avoid_policy.n(:,:) = [cos(dir); sin(dir)];
         avoid_policy.pos = x_N_pos + avoid_policy.margin * avoid_policy.n; 
-        avoid_policy.dir = x_N_dir;
+        avoid_policy.dir = dir;
 
-            % find theta +- pi/2
-        t1 = x_N_dir + avoid_policy.dev_ang;
+            % find theta +- dev_ang
+        t1 = dir + avoid_policy.dev_ang;
         c1 = cos(t1);
         s1 = sin(t1); 
         g1 = x_N_pos + [c1; s1];
 
-        t2 = x_N_dir - avoid_policy.dev_ang;
+        t2 = dir - avoid_policy.dev_ang;
         c2 = cos(t2);
         s2 = sin(t2); 
         g2 = x_N_pos + [c2; s2];
@@ -59,6 +66,9 @@ function [avoid_policy] = avoidPolicyFunction(avoid_policy, x_pred, N, obs)
             avoid_policy.cos = c2;
             avoid_policy.sin = s2;
         end
+
+        
+
     end
 
 end

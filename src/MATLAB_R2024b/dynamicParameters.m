@@ -78,6 +78,8 @@ followerParams.C = opt.C;
 followerParams.beta = opt.beta;
 followerParams.beta_N = followerParams.beta.^(1:N);
 
+followerParams.Q = opt.Q;
+
 followerParams.alg = opt.alg;
 
     % Linear and angular velocities limits
