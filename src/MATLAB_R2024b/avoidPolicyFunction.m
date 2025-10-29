@@ -31,7 +31,7 @@ function [avoid_policy] = avoidPolicyFunction(avoid_policy, x_pred, N, obs)
 
         
 
-        avoid_policy.n = [cos(x_N_dir); sin(x_N_dir)];
+        avoid_policy.n(:,:) = [cos(x_N_dir); sin(x_N_dir)];
         avoid_policy.pos = x_N_pos + avoid_policy.margin * avoid_policy.n; 
         avoid_policy.dir = x_N_dir;
 

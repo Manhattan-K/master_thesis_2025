@@ -1,4 +1,4 @@
-function [p_tp1, X_F, error, u_t, u_opt] = followerMPCandUpdate(...
+function [p_tp1, X_F, X_F_stacked, error, u_t, u_opt] = followerMPCandUpdate(...
                             sys, x0, X_L_stacked, N, robotParams, obstacles, U_f_old)
 %% Variables definitions
 
@@ -23,21 +23,10 @@ function [p_tp1, X_F, error, u_t, u_opt] = followerMPCandUpdate(...
     x_pred_stacked = stateEvolution(u_opt, x0, sys, N);
     x_pred = reshape(x_pred_stacked,[n,N]);
     
-    % Update the state and input with the first one predicted
+        % Update the state and input with the first one predicted
     p_tp1 = x_pred(:,1);
     X_F = x_pred;
+    X_F_stacked = x_pred_stacked;
     u_t = u_opt(1:2);
 
-    % error = 0;
-
 end
-
-    %% With Gradient
-
-    % options = optimoptions('fmincon','Algorithm','interior-point',...
-    %     'OptimalityTolerance',1e-1, 'SpecifyObjectiveGradient',true,...
-    %     'Display', 'none'); 
-    % [u_opt] = fmincon(...
-    %      @(U) followerCostGradientHessian(U,x0,h, pe),...
-    %      U_f_old, G, W + S*x0, [], [], [], [], [], options);
-    %  u_opt_reshaped = reshape(u_opt,[2,N]);

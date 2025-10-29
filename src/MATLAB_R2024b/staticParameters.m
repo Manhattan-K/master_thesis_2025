@@ -4,6 +4,8 @@
 sys.n = 3;
 sys.m = 2;
 
+sys.obs_margin = 0.05;
+
 %% ALGORITHM PARAMETERS
 
 goal.single = [0; 0; 0];

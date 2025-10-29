@@ -16,12 +16,12 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
         % MPC for the leader
     [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
-                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, x_f(:,i), avoid_policy);
+                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, X_F_stacked, avoid_policy);
 
     X_L_plot(:,:,i) = X_L;
 
         % MPC for the follower
-    [x_f(:,i+1), X_F, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate(...
+    [x_f(:,i+1), X_F, X_F_stacked, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate(...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old);
 
     X_F_plot(:,:,i) = X_F;

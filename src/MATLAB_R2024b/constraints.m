@@ -12,8 +12,7 @@ function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys)
     if M >= 1
     
         x_pred = stateEvolution(U, x0, sys, N);
-        % margin = 0.05*ones([size(B_bar,1), 1]);
-        c_obst_av = A_bar * x_pred - B_bar;
+        c_obst_av = A_bar * x_pred - B_bar + sys.obs_margin*ones([size(B_bar,1), 1]);
 
     else % If there are no constraints
         c_obst_av = [];

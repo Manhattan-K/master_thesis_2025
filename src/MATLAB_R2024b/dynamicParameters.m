@@ -35,13 +35,13 @@ avoid_policy.times = 0;
 
 avoid_policy.pos = 0;
 avoid_policy.dir = 0;
-avoid_policy.n = 0;
+avoid_policy.n = [0;0];
 
 avoid_policy.theta = 0;
 avoid_policy.cos = 0;
 avoid_policy.sin = 0;
 
-avoid_policy.margin = opt.margin;
+avoid_policy.margin = opt.margin + sys.obs_margin;
 avoid_policy.dev_ang = opt.dev_ang;
 avoid_policy.k_block = opt.k_block;
 
@@ -52,6 +52,10 @@ leaderParams.Z = diag([opt.Z_pos, opt.Z_pos, opt.W_angle]);
 leaderParams.R = diag([opt.R_lin, opt.R_ang]);
 leaderParams.D = opt.D;
 leaderParams.K = opt.K;
+
+leaderParams.d_FL_sq = repmat(followerParams.d_FL^2, [1,N-1]);
+leaderParams.beta = opt.beta;
+leaderParams.beta_N = leaderParams.beta.^(1:N-1);
 
 [leaderParams.W_hat, leaderParams.R_hat] = costWeights( ...
                      sys, leaderParams.W, leaderParams.R, leaderParams.Z, N);
@@ -107,7 +111,8 @@ u_f(:,i) = zeros(sys.m, 1);
     % Initial guesses for optimal inputs
 X_L = zeros(sys.n, N);
 X_F = zeros(sys.n, N);
-X_F(:,2) = x_f(:,i);
+X_L_stacked = zeros(sys.n*N, 1);
+X_F_stacked = repmat(x_f(:,i), [N, 1]);
 U_l_old = zeros([sys.m*N,1]);
 U_f_old = zeros([sys.m*N,1]);
 

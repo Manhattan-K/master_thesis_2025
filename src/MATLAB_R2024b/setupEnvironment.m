@@ -110,7 +110,7 @@ function [x0, obstacles] = setupEnvironment(setupString)
 
         case "valzer"
             % Complex Map-variable
-            x0 = [40; 25; -pi/2];
+            x0 = [40; 22; -pi/2];
 
             %corridor circle 1st wall
             obstacle1.type = "circle";

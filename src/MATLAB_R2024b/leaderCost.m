@@ -35,9 +35,9 @@ function [cost] = leaderCost(U, x0, x_f, sys, params, N, goal, obs)
     %     diff_sum = sum(diff_reshape, 1);
     % 
     %         % Cost evaluation
-    %     cost_dist = params.D*dim + obs.relative*diff_sum';
+    %     cost_obs = params.D*dim + obs.relative*diff_sum';
     % else
-    %     cost_dist = 0;
+    %     cost_obs = 0;
     % end
 
 %% Cost to keep the two robots at distance d_fl
@@ -48,10 +48,19 @@ function [cost] = leaderCost(U, x0, x_f, sys, params, N, goal, obs)
     % 
     % cost = cost_ic + cost_state + cost_input + cost_dist;
 
+            % q_L - q_F
+    stateDiff_stacked = x_pred(1:(N-1)*sys.n) - x_f(sys.n+1:sys.n*N);
+    stateDiff = reshape(stateDiff_stacked, [sys.n, N - 1]);
+
+        % Px * stateDiff
+    projDiff = params.Px * stateDiff;
+
+        % Cost evaluation
+    cost_dist = params.beta_N * ((sum(projDiff.^2, 1) - params.d_FL_sq) .^ 2)';
+
 %%  FINAL COST
 
-    % cost = cost_ic + cost_state + cost_input + cost_dist;
-    cost = cost_ic + cost_state + cost_input;
+    cost = cost_ic + cost_state + cost_input + params.K * cost_dist;
 
 end
 
