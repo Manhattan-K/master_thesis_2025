@@ -1,4 +1,4 @@
-function [cost] = leaderCost(U, x0, x_f, sys, params, N, goal, obs)
+function [cost] = leaderCost(U, x0, use_lf_dist, x_f, sys, params, N, goal, obs)
 
     % LEADER COST FUNCTION as 
     %   J = q(0)'Wq(0) + q_staked' W_hat q_stacked + ...
@@ -42,21 +42,19 @@ function [cost] = leaderCost(U, x0, x_f, sys, params, N, goal, obs)
 
 %% Cost to keep the two robots at distance d_fl
 
-        % q_L - q_F
-    % projDiff = x_pred(1:2) - x_f(1:2);
-    % cost_dist = params.K*(sum(projDiff.^2, 1) - sys.d_fl) .^ 2;
-    % 
-    % cost = cost_ic + cost_state + cost_input + cost_dist;
-
-            % q_L - q_F
-    stateDiff_stacked = x_pred(1:(N-1)*sys.n) - x_f(sys.n+1:sys.n*N);
-    stateDiff = reshape(stateDiff_stacked, [sys.n, N - 1]);
-
-        % Px * stateDiff
-    projDiff = params.Px * stateDiff;
-
-        % Cost evaluation
-    cost_dist = params.beta_N * ((sum(projDiff.^2, 1) - params.d_FL_sq) .^ 2)';
+    if use_lf_dist == true
+                % q_L - q_F
+        stateDiff_stacked = x_pred(1:(N-1)*sys.n) - x_f(sys.n+1:sys.n*N);
+        stateDiff = reshape(stateDiff_stacked, [sys.n, N - 1]);
+    
+            % Px * stateDiff
+        projDiff = params.Px * stateDiff;
+    
+            % Cost evaluation
+        cost_dist = params.beta_N * ((sum(projDiff.^2, 1) - params.d_FL_sq) .^ 2)';
+    else
+        cost_dist = 0;
+    end
 
 %%  FINAL COST
 

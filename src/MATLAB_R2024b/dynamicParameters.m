@@ -22,25 +22,38 @@ eps_loose_grip = opt.eps_loose_grip;
 
 %% Avoidance Policy 
 
+    % Policy variables
 policy_avoid = opt.policy_avoid;
+avoid_policy.obstruction = false;
 
+    % Setting temp and final goal
 avoid_policy.goal = goal.single;
 avoid_policy.goal_N = goal.N;
 avoid_policy.single = goal.single;
 avoid_policy.N = goal.N;
 
+    % Metrics evaluation
 avoid_policy.on = false;
-avoid_policy.used = false;
+avoid_policy.used = 0;
 avoid_policy.times = 0;
 
+    % Reset zone parameters
 avoid_policy.pos = 0;
 avoid_policy.dir = 0;
 avoid_policy.n = [0;0];
 
+    % Goal movement data
 avoid_policy.theta = 0;
 avoid_policy.cos = 0;
 avoid_policy.sin = 0;
 
+    % Prediction parameters
+avoid_policy.pred.N = N;
+avoid_policy.pred.p_max = 1;
+avoid_policy.pred.dist = leaderParams.v_max * ...
+            avoid_policy.pred.N * avoid_policy.pred.p_max + 0.5;
+
+    % Optimization parameters
 avoid_policy.margin = opt.margin + sys.obs_margin;
 avoid_policy.dev_ang = opt.dev_ang;
 avoid_policy.k_block = opt.k_block;
