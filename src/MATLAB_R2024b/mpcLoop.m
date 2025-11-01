@@ -4,7 +4,7 @@ tic
 
 while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
 
-    disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+    %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
 
 %--------------------------- Obstacle avoidanace matrices -------------
 
@@ -16,7 +16,8 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
         % MPC for the leader
     [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
-                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, true, X_F_stacked, avoid_policy);
+                        sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, ...
+                        true, X_F_stacked, avoid_policy.stack(avoid_policy.pointer));
 
     X_L_plot(:,:,i) = X_L;
 
@@ -52,6 +53,15 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
            norm(X_L(1:2,N) - avoid_policy.goal(1:2)) >= 0.5 && ...          % If we are away from the goal
            norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10             % If we have an obstruction
             avoid_policy.obstruction = true;
+
+            policy = avoid_policy.stack(avoid_policy.pointer);
+            if avoid_policy.used > 0 && ...
+                norm(policy.pos(1:2) - X_L(1:2, N)) >= 0.25
+                avoid_policy.moved = true;
+            else
+                avoid_policy.moved = false;
+            end
+
         else
             avoid_policy.obstruction = false;
         end

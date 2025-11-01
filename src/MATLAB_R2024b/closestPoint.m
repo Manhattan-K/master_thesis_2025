@@ -4,7 +4,7 @@ function [q, d] = closestPoint(A, B, x)
     t = (AP' * AB) / (AB' * AB);
     %t = max(0, min(1, t));
     
-    if t >= 0 && t <= 1
+    if t >= 0 && t < 1
         q = A + t * AB;
         d = norm(x - q);
     elseif t < 0

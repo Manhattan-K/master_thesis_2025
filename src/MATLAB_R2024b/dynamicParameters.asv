@@ -26,9 +26,24 @@ eps_loose_grip = opt.eps_loose_grip;
 policy_avoid = opt.policy_avoid;
 avoid_policy.obstruction = false;
 
-    % Setting temp and final goal
+    % Setting final goal
 avoid_policy.goal = goal.single;
 avoid_policy.goal_N = goal.N;
+
+    % Policy data definition
+policy.single = goal.single;
+policy.N = goal.N;
+policy.pos = 0;
+policy.dir = 0;
+policy.n = [0;0];
+policy.theta = 0;
+policy.cos = 0;
+policy.sin = 0;
+
+    % Policies stack
+avoid_policy.pointer = 1;
+avoid_policy.stack = repmat(policy, [1, 5]);
+
 avoid_policy.single = goal.single;
 avoid_policy.N = goal.N;
 
@@ -36,16 +51,6 @@ avoid_policy.N = goal.N;
 avoid_policy.on = false;
 avoid_policy.used = 0;
 avoid_policy.times = 0;
-
-    % Reset zone parameters
-avoid_policy.pos = 0;
-avoid_policy.dir = 0;
-avoid_policy.n = [0;0];
-
-    % Goal movement data
-avoid_policy.theta = 0;
-avoid_policy.cos = 0;
-avoid_policy.sin = 0;
 
     % Prediction parameters
 avoid_policy.pred.N = N;
