@@ -27,8 +27,8 @@ robot.vertices = robot.shape.Vertices';
 leaderParams.Px = Px; % Px in the paper
 
     % Linear and angular velocities limits
-leaderParams.v_max = 1; %0.3
-leaderParams.w_max = pi/2;
+leaderParams.v_max = 0.2; %0.3
+leaderParams.w_max = pi*0.6;
 
     % Plotting parameters
 leaderParams.pos_color = "red";
@@ -46,10 +46,16 @@ leaderParams.robotShape = leaderParams.initRobotShape;
 
 loadParams.d_FL = 1;
 loadParams.width = 0.3;
-loadParams.vertices = [-loadParams.width/2, loadParams.d_FL/2, loadParams.d_FL + loadParams.width/2, ...
-                           loadParams.d_FL + loadParams.width/2, loadParams.d_FL/2, -loadParams.width/2; ...
-                           -loadParams.width/2, -loadParams.width/2, -loadParams.width/2, ...
-                           loadParams.width/2, loadParams.width/2, loadParams.width/2];
+loadParams.vertices = [-loadParams.width/2, loadParams.d_FL + loadParams.width/2, ...
+                           loadParams.d_FL + loadParams.width/2, -loadParams.width/2; ...
+                           -loadParams.width/2, -loadParams.width/2, ...
+                           loadParams.width/2, loadParams.width/2];
+
+% loadParams.center = [loadParams.d_FL/2, -loadParams.d_FL/4, loadParams.d_FL/4, loadParams.d_FL/4, -loadParams.d_FL/4;
+%                      0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
+loadParams.center = [loadParams.d_FL/2, loadParams.d_FL/4, 3*loadParams.d_FL/4, 3*loadParams.d_FL/4, loadParams.d_FL/4;
+                     0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
+loadParams.centerShape = loadParams.center;
 
 loadParams.color = "black";
 loadParams.loadShape = loadParams.vertices;
@@ -61,8 +67,8 @@ followerParams.d_FL = loadParams.d_FL;
 followerParams.Px = Px; % Px in the paper
 
     % Linear and angular velocities limits
-followerParams.v_max = 1.5; %0.4
-followerParams.w_max = pi; 
+followerParams.v_max = 0.3; %0.4
+followerParams.w_max = pi*0.9; 
 
     % Plotting parameters
 followerParams.pos_color = "blue";

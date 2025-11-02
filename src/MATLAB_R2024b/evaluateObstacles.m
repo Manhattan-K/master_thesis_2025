@@ -2,7 +2,7 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
                     leaderParams, followerParams, loadParams, sys, N)
 %% Select the obstacles closer to the leader 
 
-    predictionDist = N * leaderParams.v_max / 7.5;
+    predictionDist = N * leaderParams.v_max;
     selector = zeros(size(obstacles, 2));
     obsNum = 0;
         
@@ -18,18 +18,25 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
 
 %% Get the qi points for leader and follower
 
+    x_load = x_l + loadParams.centerShape(:,1);
+
         % Get q points of leader from obstacles
     [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l);
 
         % Get q points of follower from obstacles
     [qi_f, d_f] = getObstacleInfo(obstacles, selector, obsNum, x_f);
 
+        % Get q points of load from obstacles
+    [qi_load, d_load] = getObstacleInfo(obstacles, selector, obsNum, x_load);
+
 %% qi evaluations for the use in costs
 
     obstaclesInRange.qi_l = qi_l;
     obstaclesInRange.qi_f = qi_f;
+    obstaclesInRange.qi_load = qi_load;
     obstaclesInRange.d_l = d_l;
     obstaclesInRange.d_f = d_f;
+    obstaclesInRange.d_load = d_load;
 
     % obstaclesInRange.L = obsNum;
     % 
@@ -51,13 +58,16 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
         % Obtain the number of constraints
     [~,obstaclesInRange.M_l] = size(qi_l);
     [~,obstaclesInRange.M_f] = size(qi_f);
+    [~,obstaclesInRange.M_load] = size(qi_load);
 
         % A_bar and B_bar for leader
-    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, ...
-                                [leaderParams.robotShape, loadParams.loadShape], sys);
+    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, [leaderParams.robotShape, loadParams.centerShape(:,2:end)], sys);
 
         % A_bar and B_bar for follower
     [obstaclesInRange.A_bar_f, obstaclesInRange.B_bar_f] = constMatrices(x_f, qi_f, N, followerParams.robotShape, sys);
+
+        % A_bar and B_bar for load
+    [obstaclesInRange.A_bar_load, obstaclesInRange.B_bar_load] = constMatrices(x_load, qi_load, N, loadParams.centerShape(:,2:end), sys);
 
 end
 

@@ -21,8 +21,12 @@ function [avoid_policy] = avoidPolicyFunction( ...
         x_N_pos = x_pred(1:2,N);
         x_N_ang = x_pred(3,N);
 
+            % Direction to nearest qi
+        [~, ind] = min(vecnorm(obs.qi_l - x_N_pos));
+        diff = obs.qi_l(:,ind) - x_pred(1:2,1);
+
             % Direction to the goal
-        diff = avoid_policy.goal(1:2) - x_N_pos;
+        % diff = avoid_policy.goal(1:2) - x_N_pos;
         goal_dir = atan2(diff(2), diff(1));
         ang_diff = goal_dir - x_N_ang;
 
@@ -34,7 +38,7 @@ function [avoid_policy] = avoidPolicyFunction( ...
         end
 
             % If we are in the edge case "CAN BE REMOVED"
-        if norm(diff) <= 2
+        if norm(diff) <= 1.5
             dir = goal_dir;
         end
 
@@ -62,17 +66,18 @@ function [avoid_policy] = avoidPolicyFunction( ...
         
         U_left = U_center;
         X_left = x_pred;
-            
+        
+        p.centerShape = 0;
             % MPC for the leader with left direction
         [~, X_left, ~, ~, ~, U_left] = leaderMPCandUpdate( ...
-                        sys, X_left(:,1), N, leaderParams, obs, U_left, false, [], g1);
+                        sys, X_left(:,1), N, leaderParams, obs, U_left, false, [], g1, false, p);
 
         U_right = U_center;
         X_right = x_pred;
 
             % MPC for the leader with right direction
         [~, X_right, ~, ~, ~, U_right] = leaderMPCandUpdate( ...
-                        sys, X_right(:,1), N, leaderParams, obs, U_right, false, [], g2);
+                        sys, X_right(:,1), N, leaderParams, obs, U_right, false, [], g2, false, p);
         
             % Check for obstructions in the prediction
         done = false;

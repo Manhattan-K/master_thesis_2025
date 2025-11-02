@@ -4,7 +4,7 @@ tic
 
 while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
 
-    %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+    disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
 
 %--------------------------- Obstacle avoidanace matrices -------------
 
@@ -17,13 +17,15 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         % MPC for the leader
     [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, ...
-                        true, X_F_stacked, avoid_policy.stack(avoid_policy.pointer));
+                        true, X_F_stacked, avoid_policy.stack(avoid_policy.pointer), ...
+                        false, loadParams);
 
     X_L_plot(:,:,i) = X_L;
 
         % MPC for the follower
     [x_f(:,i+1), X_F, X_F_stacked, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate(...
-                        sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old);
+                        sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old, ...
+                        false, loadParams);
 
     X_F_plot(:,:,i) = X_F;
 
@@ -51,7 +53,8 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
             % Conditions to activate the policy
         if size(obstaclesInRange.qi_l, 1) ~= 0 && ...                       % If there are obstacles
            norm(X_L(1:2,N) - avoid_policy.goal(1:2)) >= 0.5 && ...          % If we are away from the goal
-           norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10             % If we have an obstruction
+           norm(X_L(1:2,N - avoid_policy.k_block) - X_L(1:2,N)) <= 1e-10 && ...             % If we have an obstruction
+           min(vecnorm(X_L(1:2,N) - obstaclesInRange.qi_l)) <= 0.5             % If we are near an obstacle
             avoid_policy.obstruction = true;
 
             policy = avoid_policy.stack(avoid_policy.pointer);
@@ -83,6 +86,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
     leaderParams.robotShape = Rmat(loadTheta)*leaderParams.initRobotShape;
     followerParams.robotShape = Rmat(loadTheta)*followerParams.initRobotShape;
     loadParams.loadShape = Rmat(loadTheta)*loadParams.vertices;
+    loadParams.centerShape = Rmat(loadTheta)*loadParams.center;
 
         % Check if goal was reached up to desired precision
     if norm(x_l(1:2,i+1) - goal.single(1:2)) < delta

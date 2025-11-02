@@ -1,4 +1,5 @@
-function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys)
+function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys, ...
+                    use_load, M_load, A_bar_load, B_bar_load, loadShape)
     
         % Obtain the number of vertices
     [~, L] = size(robotShape);
@@ -13,6 +14,12 @@ function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys)
     
         x_pred = stateEvolution(U, x0, sys, N);
         c_obst_av = A_bar * x_pred - B_bar + sys.obs_margin*ones([size(B_bar,1), 1]);
+        
+        if use_load == true
+            load_pred = x_pred(1:3*N,1) + repmat([loadShape(:,1); 0], [N, 1]);
+            c_load = A_bar_load(1:3*N,1:3*N) * load_pred - B_bar_load(1:3*N,1);
+            c_obst_av(end+1:end+size(c_load, 1)) = c_load;
+        end
 
     else % If there are no constraints
         c_obst_av = [];

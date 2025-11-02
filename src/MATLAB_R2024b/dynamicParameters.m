@@ -125,9 +125,13 @@ u_l = zeros(sys.m, max_iter);
 u_f = zeros(sys.m, max_iter);
 
 x_l(:,i) = x0;
-x_f(:,i) = x0 + [followerParams.d_FL; 0; 0];
+x_f(:,i) = x0 + followerParams.d_FL*[cos(x0(3) - pi); sin(x0(3) - pi); 0];
 u_l(:,i) = zeros(sys.m, 1);
 u_f(:,i) = zeros(sys.m, 1);
+
+    % Rotatate load to correct position
+loadParams.loadShape = Rmat(x0(3) - pi)*loadParams.vertices;
+loadParams.centerShape = Rmat(x0(3) - pi)*loadParams.center;
 
     % Initial guesses for optimal inputs
 X_L = zeros(sys.n, N);
