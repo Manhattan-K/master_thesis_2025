@@ -55,7 +55,7 @@ avoid_policy.times = 0;
 
     % Prediction parameters
 avoid_policy.pred.N = N;
-avoid_policy.pred.p_max = 1;
+avoid_policy.pred.p_max = 2;
 avoid_policy.pred.dist = leaderParams.v_max * ...
             avoid_policy.pred.N * avoid_policy.pred.p_max + 10;
 

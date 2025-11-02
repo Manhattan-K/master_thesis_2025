@@ -55,8 +55,15 @@ loadParams.vertices = [ -loadParams.d_FL - loadParams.width/2, loadParams.width/
                         -loadParams.width/2, -loadParams.width/2, ...
                            loadParams.width/2, loadParams.width/2];
 
+    % Shape on the follower side 
+% loadParams.center = [-loadParams.d_FL/2, -3*loadParams.d_FL/4, -loadParams.d_FL/4, -loadParams.d_FL/4, -3*loadParams.d_FL/4;
+%                      0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
+    % Right shape on the load side - 4 vertices
+% loadParams.center = [-loadParams.d_FL/2, -loadParams.d_FL/4, loadParams.d_FL/4, loadParams.d_FL/4, -loadParams.d_FL/4;
+%                      0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
 
-loadParams.center = [-loadParams.d_FL/2, -3*loadParams.d_FL/4, -loadParams.d_FL/4, -loadParams.d_FL/4, -3*loadParams.d_FL/4;
+    % Right shape on the load side but 4 vertices
+loadParams.center = [-loadParams.d_FL/2, -loadParams.d_FL/4, loadParams.d_FL/4, loadParams.d_FL/4, -loadParams.d_FL/4;
                      0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
 loadParams.centerShape = loadParams.center;
 

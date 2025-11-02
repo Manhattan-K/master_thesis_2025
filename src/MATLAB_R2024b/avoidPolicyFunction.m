@@ -64,44 +64,62 @@ function [avoid_policy] = avoidPolicyFunction( ...
         g2.N = repmat(g2.single, [N, 1]);
         g2.lenght = 0;
         
+            % MPC data
         U_left = U_center;
         X_left = x_pred;
-        
-        p.center = 0;
-            % MPC for the leader with left direction
-        [~, X_left, ~, ~, ~, U_left] = leaderMPCandUpdate( ...
-                        sys, X_left(:,1), N, leaderParams, obs, U_left, false, [], g1, false, p);
-
         U_right = U_center;
         X_right = x_pred;
 
-            % MPC for the leader with right direction
-        [~, X_right, ~, ~, ~, U_right] = leaderMPCandUpdate( ...
-                        sys, X_right(:,1), N, leaderParams, obs, U_right, false, [], g2, false, p);
-        
-            % Check for obstructions in the prediction
-        done = false;
-        
-        for j = 1:N - 1
+        for loop = 1:avoid_policy.pred.p_max 
             
-                % Left prediction
-            if norm(X_left(1:2, j) - X_left(1:2, j + 1)) < 1e-5 
-                done = true;
+            if loop == 1
+                left_x = X_left(:,1);
+                right_x = X_right(:,1);
             else
-                g1.lenght = g1.lenght + 1;
+                left_x = X_left(:,N/2);
+                right_x = X_right(:,N/2);
             end
+
+                    % MPC for the leader with left direction
+            [~, X_left, ~, ~, ~, U_left] = leaderMPCandUpdate( ...
+                            sys, left_x, N, leaderParams, obs, U_left, false, [], g1);
             
-                % Right prediction
-            if norm(X_right(1:2, j) - X_right(1:2, j + 1)) < 1e-5 
-                done = true;
-            else
-                g2.lenght = g2.lenght + 1;
+    
+                % MPC for the leader with right direction
+            [~, X_right, ~, ~, ~, U_right] = leaderMPCandUpdate( ...
+                            sys, right_x, N, leaderParams, obs, U_right, false, [], g2);
+            
+                % Check for obstructions in the prediction
+            done = false;
+            
+            for j = 1:N - 1
+                
+                    % Left prediction
+                if norm(X_left(1:2, j) - X_left(1:2, j + 1)) < 1e-5 
+                    done = true;
+                else
+                    g1.lenght = g1.lenght + 1;
+                end
+                
+                    % Right prediction
+                if norm(X_right(1:2, j) - X_right(1:2, j + 1)) < 1e-5 
+                    done = true;
+                else
+                    g2.lenght = g2.lenght + 1;
+                end
+    
+                if done == true
+                    break;
+                end
             end
 
             if done == true
                 break;
             end
         end
+
+
+        
 
 
             

@@ -367,28 +367,49 @@ function [x0, obstacles] = setupEnvironment(setupString)
 %----------------------------------------------------------------------------------------------------------------%
 
         case "ec_block_right" 
-            x0 = [0; 3; -pi/2];
+            x0 = [0; 1.5; -pi/2];
 
             obs1.type = "wall";
-            obs1.center = [0, 0]';
+            obs1.center = [0, 0.5]';
+            obs1.length = 2.1;
+            obs1.width = 0.1;
             obs1.theta = 0;
-            obs1.radius = 1.5;
-            obs1.vertices = repmat([obs1.center(1); obs1.center(2)], [1 8]) + ...
-                        Rmat(obs1.theta)*([-1.25,-1,-1,1,1,1.25,1.25,-1.25;...
-                                           -1,-1,1,1,-1,-1,1.25,1.25]);
+            obs1.radius = 10;
+            obs1.vertices = repmat([obs1.center(1); obs1.center(2)], [1 4]) + ...
+                        Rmat(obs1.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs1.length/2; obs1.width/2], [1 4]));
 
-            obs.type = "wall";
-            obs.center = [-1.125, 2]';
-            obs.length = 1.5;
-            obs.width = 0.25;
-            obs.theta = pi/2;
-            obs.radius = norm([obs.length; obs.width]) / 2;
+            obs2.type = "wall";
+            obs2.center = [-1, 0]';
+            obs2.length = 0.9;
+            obs2.width = 0.1;
+            obs2.theta = pi/2;
+            obs2.radius = 10;
+            obs2.vertices = repmat([obs2.center(1); obs2.center(2)], [1 4]) + ...
+                        Rmat(obs2.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs2.length/2; obs2.width/2], [1 4]));
 
-            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
-                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
-                        repmat([obs.length/2; obs.width/2], [1 4]));
+            obs3.type = "wall";
+            obs3.center = [1, 0]';
+            obs3.length = 0.9;
+            obs3.width = 0.1;
+            obs3.theta = pi/2;
+            obs3.radius = 10;
+            obs3.vertices = repmat([obs3.center(1); obs3.center(2)], [1 4]) + ...
+                        Rmat(obs3.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs3.length/2; obs3.width/2], [1 4]));
 
-            obstacles = {obs1, obs};
+            obs4.type = "wall";
+            obs4.center = [-0.75, 1]';
+            obs4.length = 0.9;
+            obs4.width = 0.1;
+            obs4.theta = pi/2;
+            obs4.radius = 10;
+            obs4.vertices = repmat([obs4.center(1); obs4.center(2)], [1 4]) + ...
+                        Rmat(obs4.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs4.length/2; obs4.width/2], [1 4]));
+
+            obstacles = {obs1, obs2, obs3, obs4};
 
 %----------------------------------------------------------------------------------------------------------------%
 
@@ -513,15 +534,15 @@ function [x0, obstacles] = setupEnvironment(setupString)
 %----------------------------------------------------------------------------------------------------------------%
 %                               TESTS
         case "test_no_obs"
-            x0 = [10; 10; -pi/2];
+            x0 = [3; 3; -3*pi/4];
             obstacles = {};
 
 %----------------------------------------------------------------------------------------------------------------%
 
         case "test_one_obs"
-            x0 = [10; 10; -pi/2];
+            x0 = [5; 5; -3*pi/4];
             obstacle1.type = "circle";
-            obstacle1.center = [6, 5]';
+            obstacle1.center = [2.5, 2]';
             obstacle1.radius = 1;
             obstacles = {obstacle1};
 
@@ -529,59 +550,59 @@ function [x0, obstacles] = setupEnvironment(setupString)
 
         case "test_corridor"
 
-            x0 = [9; 12; -pi/2];
+            x0 = [9; 8; -3*pi/4];
+                %corridor circle 1st wall
+            obs1.type = "wall";
+            obs1.center = [8.25, 4.25]';
+            obs1.length = 5;
+            obs1.width = 0.1;
+            obs1.theta = pi/3;
+            obs1.radius = 10;
+            obs1.vertices = repmat([obs1.center(1); obs1.center(2)], [1 4]) + ...
+                        Rmat(obs1.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs1.length/2; obs1.width/2], [1 4]));
 
-            obstacle3.type = "circle";
-            obstacle3.center = [9, 6]'; % [9, 8 - 2]'
-            obstacle3.radius = 1;
+            obs2.type = "wall";
+            obs2.center = [4.5, 2]';
+            obs2.length = 5;
+            obs2.width = 0.1;
+            obs2.theta = 0;
+            obs2.radius = norm([obs2.length; obs2.width]) / 2;
+            obs2.vertices = repmat([obs2.center(1); obs2.center(2)], [1 4]) + ...
+                        Rmat(obs2.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs2.length/2; obs2.width/2], [1 4]));
             
-            obstacle4.type = "circle";
-            obstacle4.center = [8.5, 4.5]'; % [8.5, 6.5 - 2]'
-            obstacle4.radius = 1;
-            
-            obstacle5.type = "circle";
-            obstacle5.center = [8, 3]'; % [8, 5 - 2]'
-            obstacle5.radius = 1;
-            
-            obstacle6.type = "circle";
-            obstacle6.center = [7, 2]'; % [7, 4 - 2]'
-            obstacle6.radius = 1;
-            
-            obstacle7.type = "circle";
-            obstacle7.center = [6, 1]'; % [6, 3 - 2]'
-            obstacle7.radius = 1;
-                        
-            %---------------------------------------------------------------------
-            
-            % corridor circle 2nd wall
-            obstacle12.type = "circle";
-            obstacle12.center = [6, 9]'; % [6, 11 - 2]'
-            obstacle12.radius = 1;
-            
-            obstacle13.type = "circle";
-            obstacle13.center = [5.5, 7.5]'; % [5.5, 9.5 - 2]'
-            obstacle13.radius = 1;
-            
-            obstacle14.type = "circle";
-            obstacle14.center = [5, 6]'; % [5, 8 - 2]'
-            obstacle14.radius = 1;
-            
-            obstacle15.type = "circle";
-            obstacle15.center = [4, 5]'; % [4, 7 - 2]'
-            obstacle15.radius = 1;
+                %corridor circle 2nd wall
+            obs3.type = "wall";
+            obs3.center = [6.25, 6.25]';
+            obs3.length = 5;
+            obs3.width = 0.1;
+            obs3.theta = pi/3;
+            obs3.radius = 10;
+            obs3.vertices = repmat([obs3.center(1); obs3.center(2)], [1 4]) + ...
+                        Rmat(obs3.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs3.length/2; obs3.width/2], [1 4]));
 
-            obstacles = {obstacle3, obstacle4, obstacle5, obstacle6, obstacle7,...
-                obstacle12, obstacle13, obstacle14,...
-                obstacle15};
+            obs4.type = "wall";
+            obs4.center = [2.5, 4]';
+            obs4.length = 5;
+            obs4.width = 0.1;
+            obs4.theta = 0;
+            obs4.radius = 10;
+            obs4.vertices = repmat([obs4.center(1); obs4.center(2)], [1 4]) + ...
+                        Rmat(obs4.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs4.length/2; obs4.width/2], [1 4]));
+
+            obstacles = {obs1, obs2, obs3, obs4};
 
 %----------------------------------------------------------------------------------------------------------------%
 
         case "test_direct"
-            x0 = [10; 10; -pi/2];
+            x0 = [2.5; 2.5; -3*pi/4];
 
             obs1.type = "wall";
             obs1.center = [1, 1]';
-            obs1.length = 3;
+            obs1.length = 1.5;
             obs1.width = 0.1;
             obs1.theta = -pi/4;
             obs1.radius = norm([obs1.length; obs1.width]) / 2;

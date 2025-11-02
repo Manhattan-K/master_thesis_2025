@@ -4,7 +4,7 @@ tic
 
 while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
 
-    disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+    %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
 
 %--------------------------- Obstacle avoidanace matrices -------------
 
@@ -17,8 +17,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         % MPC for the leader
     [x_l(:,i+1), X_L, X_L_stacked, ~, u_l(:,i+1), U_l_old] = leaderMPCandUpdate( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, ...
-                        true, X_F_stacked, avoid_policy.stack(avoid_policy.pointer), ...
-                        false, loadParams);
+                        true, X_F_stacked, avoid_policy.stack(avoid_policy.pointer));
 
     X_L_plot(:,:,i) = X_L;
 

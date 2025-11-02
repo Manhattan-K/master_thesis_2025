@@ -1,5 +1,5 @@
 function [p_tp1, X_L, X_L_stacked, error, u_t, u_opt] = leaderMPCandUpdate(...
-                                          sys, x0, N, robotParams, obstacles, U_l_old, use_lf_dist, x_f, goal, use_load, loadParams)
+                                          sys, x0, N, robotParams, obstacles, U_l_old, use_lf_dist, x_f, goal)
 %% Variables definitions
 
     n = sys.n;
@@ -9,7 +9,7 @@ function [p_tp1, X_L, X_L_stacked, error, u_t, u_opt] = leaderMPCandUpdate(...
 
         % Get constraints function
     constraintsF = @(U) constraints(U, x0, obstacles.M_l, obstacles.A_bar_l, obstacles.B_bar_l, N, robotParams.robotShape, sys, ...
-                                    use_load, [], obstacles.A_bar_load, obstacles.B_bar_load, loadParams.center);
+                                    false, [], [], [], []);
 
 %% fmincon optimization
 
