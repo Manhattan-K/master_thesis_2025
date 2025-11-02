@@ -9,7 +9,7 @@ function [p_tp1, X_F, X_F_stacked, error, u_t, u_opt] = followerMPCandUpdate(...
 
         % Get constraints function
     constraintsF = @(U) constraints(U, x0, obstacles.M_f, obstacles.A_bar_f, obstacles.B_bar_f, N, robotParams.robotShape, sys, ...
-                                    use_load, obstacles.M_load, obstacles.A_bar_load, obstacles.B_bar_load, loadParams.centerShape);
+                                    use_load, X_L_stacked, obstacles.A_bar_load, obstacles.B_bar_load, loadParams.center);
 
 %% fmincon optimization
 

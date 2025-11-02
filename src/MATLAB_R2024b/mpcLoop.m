@@ -25,7 +25,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         % MPC for the follower
     [x_f(:,i+1), X_F, X_F_stacked, ~, u_f(:,i+1), U_f_old] = followerMPCandUpdate(...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old, ...
-                        false, loadParams);
+                        true, loadParams);
 
     X_F_plot(:,:,i) = X_F;
 

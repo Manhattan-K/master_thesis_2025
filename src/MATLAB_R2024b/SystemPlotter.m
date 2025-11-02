@@ -137,7 +137,7 @@ classdef SystemPlotter
             obj.followerLoadPos.Shape.Vertices = ...
                  (x_now_f(1:2) + Rmat(loadTheta)*obj.followerParams.robotShape)';
             obj.loadPos.Shape.Vertices = ...
-                   (x_now_l(1:2) + Rmat(loadTheta)*obj.loadParams.vertices)';
+                   (x_now_f(1:2) + Rmat(loadTheta)*obj.loadParams.vertices)';
         end
 
         

@@ -67,7 +67,7 @@ function [avoid_policy] = avoidPolicyFunction( ...
         U_left = U_center;
         X_left = x_pred;
         
-        p.centerShape = 0;
+        p.center = 0;
             % MPC for the leader with left direction
         [~, X_left, ~, ~, ~, U_left] = leaderMPCandUpdate( ...
                         sys, X_left(:,1), N, leaderParams, obs, U_left, false, [], g1, false, p);

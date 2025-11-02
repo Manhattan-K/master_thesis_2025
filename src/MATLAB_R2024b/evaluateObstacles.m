@@ -18,7 +18,7 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
 
 %% Get the qi points for leader and follower
 
-    x_load = x_l + loadParams.centerShape(:,1);
+    x_load = x_f + loadParams.centerShape(:,1);
 
         % Get q points of leader from obstacles
     [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l);
@@ -61,7 +61,7 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
     [~,obstaclesInRange.M_load] = size(qi_load);
 
         % A_bar and B_bar for leader
-    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, [leaderParams.robotShape, loadParams.centerShape(:,2:end)], sys);
+    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, leaderParams.robotShape, sys);
 
         % A_bar and B_bar for follower
     [obstaclesInRange.A_bar_f, obstaclesInRange.B_bar_f] = constMatrices(x_f, qi_f, N, followerParams.robotShape, sys);
