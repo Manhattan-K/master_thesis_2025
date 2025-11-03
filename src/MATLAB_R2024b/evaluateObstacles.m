@@ -2,13 +2,17 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
                     leaderParams, followerParams, loadParams, sys, N)
 %% Select the obstacles closer to the leader 
 
-    predictionDist = N * leaderParams.v_max;
+    x_load = x_f + loadParams.centerShape(:,1);
+    predictionDist = loadParams.d_FL + 0.5;
     selector = zeros(size(obstacles, 2));
+
+    %% Select the nearest obstacles
+
     obsNum = 0;
         
     for i = 1:size(obstacles, 2)
         
-        obsDistance = norm(x_l - obstacles{i}.center) - obstacles{i}.radius; 
+        obsDistance = norm(x_load - obstacles{i}.center) - obstacles{i}.radius; 
         
         if predictionDist >= obsDistance
             selector(i) = 1;
@@ -16,9 +20,30 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
         end
     end
 
-%% Get the qi points for leader and follower
+%% If there are no obstacles break
 
-    x_load = x_f + loadParams.centerShape(:,1);
+    if obsNum == 0
+        obstaclesInRange.use_load = 0;
+        obstaclesInRange.qi_l = [];
+        obstaclesInRange.qi_f = [];
+        obstaclesInRange.qi_load = [];
+        obstaclesInRange.d_l = [];
+        obstaclesInRange.d_f = [];
+        obstaclesInRange.d_load = [];
+        obstaclesInRange.M_l = 0;
+        obstaclesInRange.M_f = 0;
+        obstaclesInRange.M_load = 0;
+        obstaclesInRange.A_bar_l = [];
+        obstaclesInRange.A_bar_f = [];
+        obstaclesInRange.A_bar_load = [];
+        obstaclesInRange.B_bar_l = [];
+        obstaclesInRange.B_bar_f = [];
+        obstaclesInRange.B_bar_load = [];
+
+        return;
+    end
+
+%% Get the qi points for leader and follower
 
         % Get q points of leader from obstacles
     [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l);
@@ -29,6 +54,12 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
         % Get q points of load from obstacles
     [qi_load, d_load] = getObstacleInfo(obstacles, selector, obsNum, x_load);
 
+    if any(d_load <= followerParams.d_FL/4) 
+        obstaclesInRange.use_load = true;
+    else
+        obstaclesInRange.use_load = false;
+    end
+ 
 %% qi evaluations for the use in costs
 
     obstaclesInRange.qi_l = qi_l;
@@ -61,13 +92,13 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
     [~,obstaclesInRange.M_load] = size(qi_load);
 
         % A_bar and B_bar for leader
-    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, leaderParams.robotShape, sys);
+    [obstaclesInRange.A_bar_l, obstaclesInRange.B_bar_l] = constMatrices(x_l, qi_l, N, leaderParams.robotShape, sys, false, loadParams);
 
         % A_bar and B_bar for follower
-    [obstaclesInRange.A_bar_f, obstaclesInRange.B_bar_f] = constMatrices(x_f, qi_f, N, followerParams.robotShape, sys);
+    [obstaclesInRange.A_bar_f, obstaclesInRange.B_bar_f] = constMatrices(x_f, qi_f, N, followerParams.robotShape, sys, false, loadParams);
 
         % A_bar and B_bar for load
-    [obstaclesInRange.A_bar_load, obstaclesInRange.B_bar_load] = constMatrices(x_load, qi_load, N, loadParams.centerShape(:,2:end), sys);
+    [obstaclesInRange.A_bar_load, obstaclesInRange.B_bar_load] = constMatrices(x_load, qi_load, N, loadParams.centerShape(:,2:end), sys, true, loadParams);
 
 end
 

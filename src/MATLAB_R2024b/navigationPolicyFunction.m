@@ -1,21 +1,21 @@
-function [avoid_policy] = avoidPolicyFunction( ...
-                            avoid_policy, x_pred, N, obs, sys, leaderParams, U_center)
+function nav_policy = navigationPolicyFunction( ...
+                            nav_policy, x_pred, N, obs, sys, leaderParams, U_center)
 %%  START A NEW POLICY
 
-    if avoid_policy.on == false || ...
-       avoid_policy.on == true && avoid_policy.obstruction == true && ...   % If there is an obstraction
-       avoid_policy.moved == true                                           % If the obstaction is different
+    if nav_policy.on == false || ...
+       nav_policy.on == true && nav_policy.obstruction == true && ...   % If there is an obstraction
+       nav_policy.moved == true                                           % If the obstaction is different
        
-        if avoid_policy.on == true
-            avoid_policy.pointer = avoid_policy.pointer + 1;
+        if nav_policy.on == true
+            nav_policy.pointer = nav_policy.pointer + 1;
         end
 
-        policy = avoid_policy.stack(avoid_policy.pointer);
+        policy = nav_policy.stack(nav_policy.pointer);
 
             % Policy's metrics update
-        avoid_policy.on = true;
-        avoid_policy.used = avoid_policy.used + 1;
-        avoid_policy.times = avoid_policy.times + 1;
+        nav_policy.on = true;
+        nav_policy.used = nav_policy.used + 1;
+        nav_policy.times = nav_policy.times + 1;
         
             % Direction of the prediction
         x_N_pos = x_pred(1:2,N);
@@ -26,7 +26,7 @@ function [avoid_policy] = avoidPolicyFunction( ...
         diff = obs.qi_l(:,ind) - x_pred(1:2,1);
 
             % Direction to the goal
-        % diff = avoid_policy.goal(1:2) - x_N_pos;
+        % diff = nav_policy.goal(1:2) - x_N_pos;
         goal_dir = atan2(diff(2), diff(1));
         ang_diff = goal_dir - x_N_ang;
 
@@ -44,23 +44,23 @@ function [avoid_policy] = avoidPolicyFunction( ...
 
             % Generation of the reset zone
         policy.n(:,:) = [cos(dir); sin(dir)];
-        policy.pos = x_N_pos + avoid_policy.margin * policy.n; 
+        policy.pos = x_N_pos + nav_policy.margin * policy.n; 
         policy.dir = dir;
 
     % --- MPC prediction ---
             % Left direction
-        t1 = dir + avoid_policy.dev_ang;
+        t1 = dir + nav_policy.dev_ang;
         c1 = cos(t1);
         s1 = sin(t1); 
-        g1.single = [x_N_pos + avoid_policy.pred.dist .* [c1; s1]; 0];
+        g1.single = [x_N_pos + nav_policy.pred.dist .* [c1; s1]; 0];
         g1.N = repmat(g1.single, [N, 1]);
         g1.lenght = 0;
 
             % Right direction
-        t2 = dir - avoid_policy.dev_ang;
+        t2 = dir - nav_policy.dev_ang;
         c2 = cos(t2);
         s2 = sin(t2); 
-        g2.single = [x_N_pos + avoid_policy.pred.dist .* [c2; s2]; 0];
+        g2.single = [x_N_pos + nav_policy.pred.dist .* [c2; s2]; 0];
         g2.N = repmat(g2.single, [N, 1]);
         g2.lenght = 0;
         
@@ -69,8 +69,9 @@ function [avoid_policy] = avoidPolicyFunction( ...
         X_left = x_pred;
         U_right = U_center;
         X_right = x_pred;
+        leaderParams.alg = 'active-set';
 
-        for loop = 1:avoid_policy.pred.p_max 
+        for loop = 1:nav_policy.pred.p_max 
             
             if loop == 1
                 left_x = X_left(:,1);
@@ -81,12 +82,12 @@ function [avoid_policy] = avoidPolicyFunction( ...
             end
 
                     % MPC for the leader with left direction
-            [~, X_left, ~, ~, ~, U_left] = leaderMPCandUpdate( ...
+            [~, X_left(:,:), ~, ~, ~, U_left(:,:)] = leaderMPCandUpdate( ...
                             sys, left_x, N, leaderParams, obs, U_left, false, [], g1);
             
     
                 % MPC for the leader with right direction
-            [~, X_right, ~, ~, ~, U_right] = leaderMPCandUpdate( ...
+            [~, X_right(:,:), ~, ~, ~, U_right(:,:)] = leaderMPCandUpdate( ...
                             sys, right_x, N, leaderParams, obs, U_right, false, [], g2);
             
                 % Check for obstructions in the prediction
@@ -117,9 +118,6 @@ function [avoid_policy] = avoidPolicyFunction( ...
                 break;
             end
         end
-
-
-        
 
 
             
@@ -159,28 +157,28 @@ function [avoid_policy] = avoidPolicyFunction( ...
 
 
         end
-        avoid_policy.stack(avoid_policy.pointer) = policy;
+        nav_policy.stack(nav_policy.pointer) = policy;
 
 %% UPDATE THE POLICY GOAL
 
-    elseif avoid_policy.on == true
+    elseif nav_policy.on == true
 
-        policy = avoid_policy.stack(avoid_policy.pointer);
+        policy = nav_policy.stack(nav_policy.pointer);
         dot_prod = (policy.n)' * (x_pred(1:2, 1) - policy.pos);
         
     % --- Away from reset zone ---
         if dot_prod <= 0 
-            avoid_policy.times = avoid_policy.times + 1;
+            nav_policy.times = nav_policy.times + 1;
             
     % --- Inside reset zone ---
         else
-            if avoid_policy.pointer > 1
-                avoid_policy.pointer = avoid_policy.pointer - 1;
+            if nav_policy.pointer > 1
+                nav_policy.pointer = nav_policy.pointer - 1;
             else
-                avoid_policy.on = false;
-                policy.single = avoid_policy.goal;
-                policy.N = avoid_policy.goal_N;
-                avoid_policy.stack(avoid_policy.pointer) = policy;
+                nav_policy.on = false;
+                policy.single = nav_policy.goal;
+                policy.N = nav_policy.goal_N;
+                nav_policy.stack(nav_policy.pointer) = policy;
             end
         end
     end

@@ -20,16 +20,16 @@ policy_halt = opt.policy_halt;
 k_loose_grip = opt.k_loose_grip;
 eps_loose_grip = opt.eps_loose_grip;
 
-%% Avoidance Policy 
+%% Navigation Policy 
 
     % Policy variables
-policy_avoid = opt.policy_avoid;
-avoid_policy.obstruction = false;
-avoid_policy.moved = false;
+use_nav_policy = opt.use_nav_policy;
+nav_policy.obstruction = false;
+nav_policy.moved = false;
 
     % Setting final goal
-avoid_policy.goal = goal.single;
-avoid_policy.goal_N = goal.N;
+nav_policy.goal = goal.single;
+nav_policy.goal_N = goal.N;
 
     % Policy data definition
 policy.single = goal.single;
@@ -42,27 +42,27 @@ policy.cos = 0;
 policy.sin = 0;
 
     % Policies stack
-avoid_policy.pointer = 1;
-avoid_policy.stack = repmat(policy, [1, 5]);
+nav_policy.pointer = 1;
+nav_policy.stack = repmat(policy, [1, 5]);
 
-avoid_policy.single = goal.single;
-avoid_policy.N = goal.N;
+nav_policy.single = goal.single;
+nav_policy.N = goal.N;
 
     % Metrics evaluation
-avoid_policy.on = false;
-avoid_policy.used = 0;
-avoid_policy.times = 0;
+nav_policy.on = false;
+nav_policy.used = 0;
+nav_policy.times = 0;
 
     % Prediction parameters
-avoid_policy.pred.N = N;
-avoid_policy.pred.p_max = 2;
-avoid_policy.pred.dist = leaderParams.v_max * ...
-            avoid_policy.pred.N * avoid_policy.pred.p_max + 10;
+nav_policy.pred.N = N;
+nav_policy.pred.p_max = 2;
+nav_policy.pred.dist = leaderParams.v_max * ...
+            nav_policy.pred.N * nav_policy.pred.p_max + 10;
 
     % Optimization parameters
-avoid_policy.margin = opt.margin + sys.obs_margin;
-avoid_policy.dev_ang = opt.dev_ang;
-avoid_policy.k_block = opt.k_block;
+nav_policy.margin = opt.margin + sys.obs_margin;
+nav_policy.dev_ang = opt.dev_ang;
+nav_policy.k_block = opt.k_block;
 
 %% LEADER PARAMETERS
 

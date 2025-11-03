@@ -3,7 +3,7 @@ function [q, d] = getObstacleInfo(obstacles, selector, obsNum, x0)
 
     [~, obs_n] = size(obstacles);
     q = zeros(2, obsNum);
-    d = zeros(obsNum);
+    d = zeros(obsNum, 1);
         % Index for the selected obstacles only
     j = 1;
 

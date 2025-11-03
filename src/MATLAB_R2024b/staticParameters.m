@@ -45,7 +45,7 @@ leaderParams.robotShape = leaderParams.initRobotShape;
 %% LOAD PARAMETERS
 
 loadParams.d_FL = 1;
-loadParams.width = 0.3;
+loadParams.width = 0.15;
 % loadParams.vertices = [-loadParams.width/2, loadParams.d_FL + loadParams.width/2, ...
 %                            loadParams.d_FL + loadParams.width/2, -loadParams.width/2; ...
 %                            -loadParams.width/2, -loadParams.width/2, ...
@@ -66,6 +66,8 @@ loadParams.vertices = [ -loadParams.d_FL - loadParams.width/2, loadParams.width/
 loadParams.center = [-loadParams.d_FL/2, 0, 0;
                      0, -loadParams.width/2, loadParams.width/2];
 loadParams.centerShape = loadParams.center;
+
+loadParams.k_pred = 10;
 
 loadParams.color = "black";
 loadParams.loadShape = loadParams.vertices;
