@@ -4,7 +4,7 @@ tic
 
 while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
 
-    disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+    %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
 
 %--------------------------- Obstacle avoidanace matrices -------------
 

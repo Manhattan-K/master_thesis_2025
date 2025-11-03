@@ -55,7 +55,7 @@ nav_policy.times = 0;
 
     % Prediction parameters
 nav_policy.pred.N = N;
-nav_policy.pred.p_max = 2;
+nav_policy.pred.p_max = 3;
 nav_policy.pred.dist = leaderParams.v_max * ...
             nav_policy.pred.N * nav_policy.pred.p_max + 10;
 

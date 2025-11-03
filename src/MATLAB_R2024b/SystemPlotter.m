@@ -18,7 +18,7 @@ classdef SystemPlotter
     methods
         
         function obj = SystemPlotter(...
-                leader_params, follower_params, load_params, x0_l, x0_f, N, obstacles)
+                leader_params, follower_params, load_params, x0_l, x0_f, N, obstacles, goal)
             % eventually set to def parameters
             if nargin ~= 4
                 obj.leaderParams = leader_params;
@@ -43,7 +43,7 @@ classdef SystemPlotter
             end
 
             % create goal plot
-            x_goal = [0;0];
+            x_goal = goal.single;
             obj.goalPos = plot(x_goal(1), x_goal(2), ...
                 "Marker", "x", "Color", "black");
              
