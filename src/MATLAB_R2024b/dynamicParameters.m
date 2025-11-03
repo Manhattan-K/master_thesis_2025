@@ -20,36 +20,68 @@ policy_halt = opt.policy_halt;
 k_loose_grip = opt.k_loose_grip;
 eps_loose_grip = opt.eps_loose_grip;
 
-%% Avoidance Policy 
+%% Navigation Policy 
 
-policy_avoid = opt.policy_avoid;
+    % Policy variables
+use_nav_policy = opt.use_nav_policy;
+nav_policy.obstruction = false;
+nav_policy.moved = false;
 
-avoid_policy.goal = goal.single;
-avoid_policy.goal_N = goal.N;
-avoid_policy.single = goal.single;
-avoid_policy.N = goal.N;
+    % Setting final goal
+nav_policy.goal = goal.single;
+nav_policy.goal_N = goal.N;
 
-avoid_policy.on = false;
-avoid_policy.d = 0;
-avoid_policy.theta = 0;
-avoid_policy.cos = 0;
-avoid_policy.sin = 0;
+    % Policy data definition
+policy.single = goal.single;
+policy.N = goal.N;
+policy.pos = 0;
+policy.dir = 0;
+policy.n = [0;0];
+policy.theta = 0;
+policy.cos = 0;
+policy.sin = 0;
 
-avoid_policy.margin = opt.margin;
-avoid_policy.dev_ang = opt.dev_ang;
-avoid_policy.k_block = opt.k_block;
+    % Policies stack
+nav_policy.pointer = 1;
+nav_policy.stack = repmat(policy, [1, 5]);
+
+nav_policy.single = goal.single;
+nav_policy.N = goal.N;
+
+    % Metrics evaluation
+nav_policy.on = false;
+nav_policy.used = 0;
+nav_policy.times = 0;
+
+    % Prediction parameters
+nav_policy.pred.N = N;
+nav_policy.pred.p_max = 3;
+nav_policy.pred.dist = leaderParams.v_max * ...
+            nav_policy.pred.N * nav_policy.pred.p_max + 10;
+
+    % Optimization parameters
+nav_policy.margin = opt.margin + sys.obs_margin;
+nav_policy.dev_ang = opt.dev_ang;
+nav_policy.k_block = opt.k_block;
 
 %% LEADER PARAMETERS
 
 leaderParams.W = diag([opt.W_pos, opt.W_pos, opt.W_angle]);      
 leaderParams.Z = diag([opt.Z_pos, opt.Z_pos, opt.W_angle]); 
 leaderParams.R = diag([opt.R_lin, opt.R_ang]);
+leaderParams.D = opt.D;
 leaderParams.K = opt.K;
+
+leaderParams.d_FL_sq = repmat(followerParams.d_FL^2, [1,N-1]);
+leaderParams.beta = opt.beta;
+leaderParams.beta_N = leaderParams.beta.^(1:N-1);
 
 [leaderParams.W_hat, leaderParams.R_hat] = costWeights( ...
                      sys, leaderParams.W, leaderParams.R, leaderParams.Z, N);
 
 leaderParams.alg = opt.alg;
+
+leaderParams.Px_N = kron(eye(N), Px);
 
     % Linear and angular velocities limits
 [leaderParams.lb, leaderParams.ub] = inputBounds( ...
@@ -64,6 +96,8 @@ followerParams.C = opt.C;
     % Exponential decay of tracking quality over the prediction
 followerParams.beta = opt.beta;
 followerParams.beta_N = followerParams.beta.^(1:N);
+
+followerParams.Q = opt.Q;
 
 followerParams.alg = opt.alg;
 
@@ -82,6 +116,7 @@ i = 1;
 real_d = zeros(max_iter + 1, 1);
 real_d(1) = loadParams.d_FL;
 step_time = zeros(max_iter, 1);
+dist_error = zeros(max_iter + 1, 1);
 
     % Initialization of the leader and follower STATES and INPUTS
 x_l = zeros(sys.n, max_iter);
@@ -90,11 +125,19 @@ u_l = zeros(sys.m, max_iter);
 u_f = zeros(sys.m, max_iter);
 
 x_l(:,i) = x0;
-x_f(:,i) = x0 + [followerParams.d_FL; 0; 0];
+x_f(:,i) = x0 + followerParams.d_FL*[cos(x0(3) - pi); sin(x0(3) - pi); 0];
 u_l(:,i) = zeros(sys.m, 1);
 u_f(:,i) = zeros(sys.m, 1);
 
+    % Rotatate load to correct position
+loadParams.loadShape = Rmat(x0(3) - pi)*loadParams.vertices;
+loadParams.centerShape = Rmat(x0(3) - pi)*loadParams.center;
+
     % Initial guesses for optimal inputs
+X_L = zeros(sys.n, N);
+X_F = zeros(sys.n, N);
+X_L_stacked = zeros(sys.n*N, 1);
+X_F_stacked = repmat(x_f(:,i), [N, 1]);
 U_l_old = zeros([sys.m*N,1]);
 U_f_old = zeros([sys.m*N,1]);
 
