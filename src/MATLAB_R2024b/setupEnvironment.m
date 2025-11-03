@@ -196,10 +196,10 @@ function [x0, obstacles] = setupEnvironment(setupString)
 %                                       EDGE CASES
 
         case "ec_direct_obs"
-            x0 = [0; 6; -pi/2];
+            x0 = [0; 5; -pi/2];
 
             obs.type = "circle";
-            obs.center = [0, 3]';
+            obs.center = [0, 2.5]';
             obs.radius = 0.75;
 
             obstacles = {obs};

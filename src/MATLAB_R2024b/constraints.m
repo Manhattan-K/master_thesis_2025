@@ -21,7 +21,7 @@ function [c, ceq] = constraints(U, x0, M, A_bar, B_bar, N, robotShape, sys, ...
                 load_pred(i*n+1:i*n + 3, 1) = x_pred(i*n+1:i*n + 3, 1) + [Rmat(atan2(diff(i*n+2),diff(i*n+1)))*loadShape(:,1); 0];
             end
 
-            c_load = A_bar_load * load_pred - B_bar_load + sys.obs_margin*ones([size(B_bar_load,1), 1]);
+            c_load = A_bar_load * load_pred - B_bar_load;
             c_obst_av(end+1:end+size(c_load, 1)) = c_load;
         end
 
