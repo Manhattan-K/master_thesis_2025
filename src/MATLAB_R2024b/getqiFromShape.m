@@ -1,4 +1,4 @@
-function [q, d] = getqiFromShape(shape, x0)
+function [q, d] = getqiFromShape(shape, x0, noise)
 % GETQIFROMSHAPE is a function that tries to construct the distance and
 % position of the line tangent to the shape and perpendicular to x0 (robot pos)
 % shape is a structure holding information on the particular shape
@@ -10,10 +10,19 @@ function [q, d] = getqiFromShape(shape, x0)
 
 switch shape.type
     case "circle"
-        dist_from_center = norm(x0-shape.center);
-        lambda = 1 - shape.radius / dist_from_center;
-        d = lambda*dist_from_center;
-        q = x0 + (shape.center-x0)*lambda;
+        v_x0_to_o = shape.center-x0;
+        d_x0_to_o = norm(v_x0_to_o);
+
+        if noise.sensing.on == true
+            d_real = d_x0_to_o - shape.radius;
+            n = getDistanceNoise(d_real, noise.sensing.sigma);
+            d = d_real + n;
+        else
+            d = d_x0_to_o - shape.radius;
+        end
+
+        lambda = d / d_x0_to_o;
+        q = x0 + v_x0_to_o*lambda;
         return;
     
     case "line"
@@ -41,6 +50,15 @@ switch shape.type
                 d = d_curr;
                 q = q_curr;
             end
+        end
+        
+        if noise.sensing.on == true
+            v_x0_to_q = q-x0;
+            d_x0_to_q = norm(v_x0_to_q);
+            n = getDistanceNoise(d_x0_to_q, noise.sensing.sigma);
+            d = d_x0_to_q + n;
+            lambda = d / d_x0_to_q;
+            q = x0 + v_x0_to_q*lambda;
         end
 
     case "inf_wall"

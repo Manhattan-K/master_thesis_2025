@@ -1,4 +1,4 @@
-function [q, d] = getObstacleInfo(obstacles, selector, obsNum, x0)
+function [q, d] = getObstacleInfo(obstacles, selector, obsNum, x0, noise)
 %GETOBSTACLEINFO get qis from obstacles
 
     [~, obs_n] = size(obstacles);
@@ -12,7 +12,7 @@ function [q, d] = getObstacleInfo(obstacles, selector, obsNum, x0)
     else
         for i = 1:obs_n
             if selector(i)
-                [q(:,j), d(j)] = getqiFromShape(obstacles{i}, x0);
+                [q(:,j), d(j)] = getqiFromShape(obstacles{i}, x0, noise);
                 j = j + 1;
             end
         end

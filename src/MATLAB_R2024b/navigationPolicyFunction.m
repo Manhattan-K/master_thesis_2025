@@ -1,5 +1,5 @@
 function nav_policy = navigationPolicyFunction( ...
-                            nav_policy, x_pred, N, obs, sys, leaderParams, U_center)
+                            nav_policy, x_pred, N, obs, sys, leaderParams, U_center, noise)
 %%  START A NEW POLICY
 
     if nav_policy.on == false || ...
@@ -83,12 +83,12 @@ function nav_policy = navigationPolicyFunction( ...
 
                     % MPC for the leader with left direction
             [~, X_left(:,:), ~, ~, ~, U_left(:,:)] = leaderMPCandUpdate( ...
-                            sys, left_x, N, leaderParams, obs, U_left, false, [], g1);
+                            sys, left_x, N, leaderParams, obs, U_left, false, [], g1, false, noise);
             
     
                 % MPC for the leader with right direction
             [~, X_right(:,:), ~, ~, ~, U_right(:,:)] = leaderMPCandUpdate( ...
-                            sys, right_x, N, leaderParams, obs, U_right, false, [], g2);
+                            sys, right_x, N, leaderParams, obs, U_right, false, [], g2, false, noise);
             
                 % Check for obstructions in the prediction
             done = false;

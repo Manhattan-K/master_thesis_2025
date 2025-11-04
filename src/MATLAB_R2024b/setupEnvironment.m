@@ -655,6 +655,23 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
 %----------------------------------------------------------------------------------------------------------------%
 
+        case "test"
+            x0 = [0; 1; -pi/2];
+            goal.single = [0; 0; 0];
+
+            obs.type = "wall";
+            obs.center = [1, 1]';
+            obs.length = 1.5;
+            obs.width = 0.1;
+            obs.theta = pi/2;
+            obs.radius = norm([obs.length; obs.width]) / 2;
+
+            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
+                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
+                        repmat([obs.length/2; obs.width/2], [1 4]));
+
+            obstacles = {obs};
+
         otherwise
             x0 = [0 0 -pi/2]';
             goal.single = [0; 0; 0];
