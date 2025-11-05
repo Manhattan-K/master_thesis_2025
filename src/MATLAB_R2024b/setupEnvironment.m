@@ -305,7 +305,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
                 % All obstacles
             % obstacles = {obs1, obs2, obs3, obs4, obs5, obs6, obs7, obs8, obs9, obs10};
                 % Just the walls
-            obstacles = {obs1, obs2, obs3, obs4, obs8, obs9, obs10};
+            obstacles = {obs1, obs2, obs3, obs4,obs6, obs7, obs8, obs9, obs10};
 
 %----------------------------------------------------------------------------------------------------------------%
 

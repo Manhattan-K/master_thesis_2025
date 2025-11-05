@@ -77,8 +77,8 @@ function nav_policy = navigationPolicyFunction( ...
                 left_x = X_left(:,1);
                 right_x = X_right(:,1);
             else
-                left_x = X_left(:,N/2);
-                right_x = X_right(:,N/2);
+                left_x = X_left(:,floor(N/2));
+                right_x = X_right(:,floor(N/2));
             end
 
                     % MPC for the leader with left direction
