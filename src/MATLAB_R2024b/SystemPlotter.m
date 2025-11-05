@@ -141,18 +141,24 @@ classdef SystemPlotter
         end
 
         
-        function updateObstacles(obj, obstacles, to_redraw)
-            for i = to_redraw
-                c = obstacles{i}.center;
-                r = obstacles{i}.radius;
-                obj.obstaclesPos{2*i-1}.XData = c(1);
-                obj.obstaclesPos{2*i-1}.YData = c(2);
-                l = length(obj.obstaclesPos{2*i}.Children(1).XData);
-                th = (0:l-1)/l*2*pi;
-                obj.obstaclesPos{2*i}.Children(1).XData = c(1)+r*cos(th);
-                obj.obstaclesPos{2*i}.Children(1).YData = c(2)+r*sin(th);
-                obj.obstaclesPos{2*i}.Children(2).XData = c(1)+r*cos(th);
-                obj.obstaclesPos{2*i}.Children(2).YData = c(2)+r*sin(th);
+        function updateObstacles(obj, obstacles)
+            for i = 1:size(obstacles, 2)
+                obs = obstacles{i};
+                if obs.type == "move"
+                    
+                    c = obs.center;
+                    obj.obstaclesPos{2*i-1}.XData = c(1);
+                    obj.obstaclesPos{2*i-1}.YData = c(2);
+                    
+                    r = obs.radius;
+                    l = length(obj.obstaclesPos{2*i}.Children(1).XData);
+                    th = (0:l-1)/l*2*pi;
+                    obj.obstaclesPos{2*i}.Children(1).XData = c(1)+r*cos(th);
+                    obj.obstaclesPos{2*i}.Children(1).YData = c(2)+r*sin(th);
+                    obj.obstaclesPos{2*i}.Children(2).XData = c(1)+r*cos(th);
+                    obj.obstaclesPos{2*i}.Children(2).YData = c(2)+r*sin(th);
+
+                end
             end
         end
         

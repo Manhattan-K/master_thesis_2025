@@ -60,6 +60,23 @@ switch shape.type
             lambda = d / d_x0_to_q;
             q = x0 + v_x0_to_q*lambda;
         end
+    
+    case "move"
+        v_x0_to_o = shape.center-x0;
+        d_x0_to_o = norm(v_x0_to_o);
+
+        if noise.sensing.on == true
+            d_real = d_x0_to_o - shape.radius;
+            n = getDistanceNoise(d_real, noise.sensing.sigma);
+            d = d_real + n;
+        else
+            d = d_x0_to_o - shape.radius;
+        end
+
+        lambda = d / d_x0_to_o;
+        q = x0 + v_x0_to_o*lambda;
+        return;
+
 
     case "inf_wall"
         if shape.is_x_wall % meaning it is along x axis

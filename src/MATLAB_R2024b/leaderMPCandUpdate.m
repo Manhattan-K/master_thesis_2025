@@ -33,16 +33,7 @@ function [p_tp1, X_L, X_L_stacked, error, u_t, u_act] = leaderMPCandUpdate(...
     x_pred = reshape(x_pred_stacked,[sys.n,N]);
     
         % Update the state and input with the first one predicted
-    if noise.odometry.on == true
-        n_x = noise.odometry.sigma_pos * randn(1);
-        n_y = noise.odometry.sigma_pos * randn(1);
-        n_ang = noise.odometry.sigma_ang * randn(1);
-        
-        p_tp1 = x_pred(:,1) + [n_x; n_y; n_ang];
-    else
-        p_tp1 = x_pred(:,1);
-    end
-        
+    p_tp1 = x_pred(:,1);
     X_L = x_pred;
     X_L_stacked = x_pred_stacked;
     u_t = u_act(1:2);

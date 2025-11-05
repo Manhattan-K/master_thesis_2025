@@ -24,6 +24,13 @@ for i = 1:obst_n
             p{2*i -1} = plot(c(1), c(2), '+r');         % obstacle centers
             p{2*i} = plot(V(1,:), V(2,:), 'LineWidth', '2', 'Color', 'black');
 
+        case "move"
+            c = obstacles{i}.center;
+            r = obstacles{i}.radius;
+            p{2*i -1} = plot(c(1), c(2), '+r');         % obstacle centers
+            p{2*i} = viscircles(c', r,'LineStyle', '--', 'Color', 'black'); % obstacle safe zone
+        
+        
         case "ellipse"
             
 

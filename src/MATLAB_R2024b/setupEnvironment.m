@@ -6,6 +6,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [4; 2; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
             obstacles = {};
             
 %----------------------------------------------------------------------------------------------------------------%
@@ -14,6 +15,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [3; 4; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [1.75, 2.25]';
@@ -26,6 +28,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [3; 4; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [1, 4.5]';
@@ -43,6 +46,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [3; 4; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [1, 4.5]';
@@ -64,6 +68,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [3; 3; -3*pi/4];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [1.5, 1.5]';
@@ -76,6 +81,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [15; 1.8; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [13, 2]';
@@ -109,6 +115,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [21; 13; -3*pi/4];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
                 %corridor circle 1st wall
             obs1.type = "wall";
@@ -192,6 +199,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "lab"
             x0 = [-2; -1; pi/2];
             goal.single = [2.125; 1.5; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0.1875, -2.34]';
@@ -304,6 +312,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_direct_obs"
             x0 = [0; 5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs.type = "circle";
             obs.center = [0, 2.5]';
@@ -317,6 +326,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_direct_wall"
             x0 = [0; 5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs.type = "wall";
             obs.center = [0, 2.5]';
@@ -336,6 +346,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_elbow"
             x0 = [4.25; 3.75; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [2, -0.75]';
@@ -394,6 +405,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_goal_boxed" 
             x0 = [0; 1.5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0, 0.5]';
@@ -432,6 +444,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_block_left" 
             x0 = [0; 1.5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0, 0.5]';
@@ -480,6 +493,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_block_right" 
             x0 = [0; 1.5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0, 0.5]';
@@ -528,6 +542,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "ec_navigation" 
             x0 = [0; 2.5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0.5, 1]';
@@ -576,6 +591,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "test_no_obs"
             x0 = [3; 3; -3*pi/4];
             goal.single = [0; 0; 0];
+            goal.move = false;
             obstacles = {};
 
 %----------------------------------------------------------------------------------------------------------------%
@@ -584,6 +600,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [3; 4; -pi];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obstacle1.type = "circle";
             obstacle1.center = [1, 4.5]';
@@ -601,6 +618,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [2.5; 2.5; -3*pi/4];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [1, 1]';
@@ -620,6 +638,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
         case "test_boxed"
             x0 = [0; 1.5; -pi/2];
             goal.single = [0; 0; 0];
+            goal.move = false;
 
             obs1.type = "wall";
             obs1.center = [0, 0.5]';
@@ -656,25 +675,40 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 %----------------------------------------------------------------------------------------------------------------%
 
         case "test"
-            x0 = [0; 1; -pi/2];
+            x0 = [7; 0; -pi];
             goal.single = [0; 0; 0];
+            goal.move = true;
 
-            obs.type = "wall";
-            obs.center = [1, 1]';
-            obs.length = 1.5;
-            obs.width = 0.1;
-            obs.theta = pi/2;
-            obs.radius = norm([obs.length; obs.width]) / 2;
+            obs.type = "move";
+            obs.center = [1.5, 1]';
+            obs.radius = 0.15;
+            obs.a = [1.5; 1];
+            obs.b = [1.5; -1];
+            obs.theta = -pi/2;
+            obs.vel = 0.1/20;
 
-            obs.vertices = repmat([obs.center(1); obs.center(2)], [1 4]) + ...
-                        Rmat(obs.theta)*([-1, 1, 1, -1; -1, -1, 1, 1].*...
-                        repmat([obs.length/2; obs.width/2], [1 4]));
+            obs2.type = "move";
+            obs2.center = [2.5, -1]';
+            obs2.radius = 0.15;
+            obs2.a = [2.5; 1];
+            obs2.b = [2.5; -1];
+            obs2.theta = pi/2;
+            obs2.vel = 0.1/20;
 
-            obstacles = {obs};
+            obs3.type = "move";
+            obs3.center = [3.5, 1]';
+            obs3.radius = 0.15;
+            obs3.a = [3.5; 1];
+            obs3.b = [3.5; -1];
+            obs3.theta = -pi/2;
+            obs3.vel = 0.1/20;
+
+            obstacles = {obs, obs2, obs3};
 
         otherwise
             x0 = [0 0 -pi/2]';
             goal.single = [0; 0; 0];
+            goal.move = false;
             obstacles = {};
     end
 end
