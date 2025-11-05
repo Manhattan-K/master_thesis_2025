@@ -4,13 +4,13 @@ tic
 
 while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maximum iteration
 
-    %disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
+    disp("Starting iteration: " + num2str(i) + ", time: " + num2str(i*sys.Ts) + "s, Computational time: " + num2str(step_time(i)) + "s");
 
 %--------------------------- Obstacle avoidanace matrices -------------
 
         % Evaluate the MPC only on the nearest obstacles
     obstaclesInRange = evaluateObstacles( ...
-        obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, loadParams, sys, N);
+        obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, loadParams, sys, N, noise);
 
     if size(obstaclesInRange.qi_l, 1) == 0
         leaderParams.alg = 'active-set';
@@ -23,14 +23,14 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         % MPC for the leader
     [x_l(:,i+1), X_L(:,:), X_L_stacked(:,:), ~, u_l(:,i+1), U_l_old(:,:)] = leaderMPCandUpdate( ...
                         sys, x_l(:,i), N, leaderParams, obstaclesInRange, U_l_old, ...
-                        true, X_F_stacked, nav_policy.stack(nav_policy.pointer));
+                        true, X_F_stacked, nav_policy.stack(nav_policy.pointer), true, noise);
 
     X_L_plot(:,:,i) = X_L;
 
         % MPC for the follower
     [x_f(:,i+1), X_F(:,:), X_F_stacked(:,:), ~, u_f(:,i+1), U_f_old(:,:)] = followerMPCandUpdate(...
                         sys, x_f(:,i), X_L_stacked, N, followerParams, obstaclesInRange, U_f_old, ...
-                        obstaclesInRange.use_load, loadParams);
+                        obstaclesInRange.use_load, loadParams, true, noise);
 
     X_F_plot(:,:,i) = X_F;
 
@@ -58,7 +58,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
             % Conditions to activate the policy
         if size(obstaclesInRange.qi_l, 1) ~= 0 && ...                       % If there are obstacles
            norm(X_L(1:2,N) - nav_policy.goal(1:2)) >= 0.5 && ...          % If we are away from the goal
-           norm(X_L(1:2,N - nav_policy.k_block) - X_L(1:2,N)) <= 1e-10 && ...             % If we have an obstruction
+           norm(X_L(1:2,N - nav_policy.k_block) - X_L(1:2,N)) <= 1e-3 && ...             % If we have an obstruction
            min(vecnorm(X_L(1:2,N) - obstaclesInRange.qi_l)) <= 0.5             % If we are near an obstacle
             nav_policy.obstruction = true;
 
@@ -77,7 +77,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
         if nav_policy.on == true || ...       % If the policy is on
            nav_policy.obstruction == true     % If the policy can be used
             nav_policy = navigationPolicyFunction( ...
-                nav_policy, X_L, N, obstaclesInRange, sys, leaderParams, U_l_old);
+                nav_policy, X_L, N, obstaclesInRange, sys, leaderParams, U_l_old, noise);
         end
     end
 
@@ -105,9 +105,9 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
     dist_error(i + 1) = real_d(i + 1) - followerParams.d_FL;
 
         % Obstacle dynamics 
-    % if size(obstacles, 2) >= 20
-    %     obstacles{20}.center = obstacles{20}.center - [0, 0.1]'; 
-    % end
+    if goal.move == true
+        obstacles = updateMovingObs(obstacles);
+    end
 
     step_time(i + 1) = toc;
 

@@ -1,5 +1,5 @@
 function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
-                    leaderParams, followerParams, loadParams, sys, N)
+                    leaderParams, followerParams, loadParams, sys, N, noise)
 %% Select the obstacles closer to the leader 
 
     x_load = x_f + loadParams.centerShape(:,1);
@@ -46,13 +46,13 @@ function obstaclesInRange = evaluateObstacles(obstacles, x_l, x_f, ...
 %% Get the qi points for leader and follower
 
         % Get q points of leader from obstacles
-    [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l);
+    [qi_l, d_l] = getObstacleInfo(obstacles, selector, obsNum, x_l, noise);
 
         % Get q points of follower from obstacles
-    [qi_f, d_f] = getObstacleInfo(obstacles, selector, obsNum, x_f);
+    [qi_f, d_f] = getObstacleInfo(obstacles, selector, obsNum, x_f, noise);
 
         % Get q points of load from obstacles
-    [qi_load, d_load] = getObstacleInfo(obstacles, selector, obsNum, x_load);
+    [qi_load, d_load] = getObstacleInfo(obstacles, selector, obsNum, x_load, noise);
 
     if any(d_load <= followerParams.d_FL/4) 
         obstaclesInRange.use_load = true;
