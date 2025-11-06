@@ -14,6 +14,7 @@ Px = [1 0 0; 0 1 0];
 
 robot.diameter = 0.35;
 robot.radius = robot.diameter/2;
+robot.safe = robot.radius + sys.obs_margin;
 robot.sides = 8;
 
 robot.shape = nsidedpoly(robot.sides, 'Center', [0,0], ...
@@ -40,6 +41,8 @@ leaderParams.keep_predictions = false;
 leaderParams.initRobotShape = robot.vertices;
 leaderParams.robotShape = leaderParams.initRobotShape;
 
+leaderParams.radius = robot.radius;
+
 %% LOAD PARAMETERS
 
 loadParams.d_FL = 1;
@@ -61,14 +64,16 @@ loadParams.vertices = [ -loadParams.d_FL - loadParams.width/2, loadParams.width/
 %                      0, -loadParams.width/2, -loadParams.width/2, loadParams.width/2, loadParams.width/2];
 
     % Right shape on the load side - 2 vertices
-loadParams.center = [-loadParams.d_FL/2, 0, 0;
-                     0, -loadParams.width/2, loadParams.width/2];
+loadParams.center = [-loadParams.d_FL/2, -loadParams.d_FL, 0, -loadParams.d_FL;
+                     0, -loadParams.width/2 - 0.1, -loadParams.width/2 - 0.1, loadParams.width/2 + 0.1];
 loadParams.centerShape = loadParams.center;
 
 loadParams.k_pred = 10;
 
 loadParams.color = "black";
 loadParams.loadShape = loadParams.vertices;
+
+loadParams.radius = 0.1;
 
 %% FOLLOWER PARAMETERS
 
@@ -91,3 +96,11 @@ followerParams.keep_predictions = false;
     % Initial shape of follower
 followerParams.initRobotShape = robot.vertices;
 followerParams.robotShape =followerParams.initRobotShape;
+
+followerParams.radius = robot.radius;
+
+%% LIDAR PARAMETERS
+
+lidarParams.max_range = pi;
+lidarParams.delta = lidarParams.max_range / 12;
+lidarParams.FOV = -lidarParams.max_range:lidarParams.delta:lidarParams.max_range;

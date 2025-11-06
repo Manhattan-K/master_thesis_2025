@@ -1,4 +1,4 @@
-function [q, d] = getqiFromShape(shape, x0, noise)
+function [q, d] = getqiFromShape(shape, x0, data, noise)
 % GETQIFROMSHAPE is a function that tries to construct the distance and
 % position of the line tangent to the shape and perpendicular to x0 (robot pos)
 % shape is a structure holding information on the particular shape
@@ -10,104 +10,79 @@ function [q, d] = getqiFromShape(shape, x0, noise)
 
 switch shape.type
     case "circle"
-        v_x0_to_o = shape.center-x0;
-        d_x0_to_o = norm(v_x0_to_o);
-
-        if noise.sensing.on == true
-            d_real = d_x0_to_o - shape.radius;
-            n = getDistanceNoise(d_real, noise.sensing.sigma);
-            d = d_real + n;
+        
+        B = 2*(data.Dx*data.c+data.Dy*data.s);
+        C = (data.Dx)^2 + (data.Dy)^2 - (shape.radius)^2;
+        DELTA = B^2 - 4*C;
+        
+        if DELTA < 0
+            d = Inf;
+            q = [NaN; NaN];
         else
-            d = d_x0_to_o - shape.radius;
-        end
+            d = abs((-B + sqrt(DELTA)) / 2);
 
-        lambda = d / d_x0_to_o;
-        q = x0 + v_x0_to_o*lambda;
+            if noise.sensing.on == true
+                n = getDistanceNoise(d, noise.sensing.sigma);
+                d = d + n;
+            end
+
+            q = x0(1:2) + [data.c; data.s] .* d;
+        end
         return;
     
-    case "line"
-        v = shape.vertices;
-        
-        [q, d] = closestPoint(v(:,1), v(:,2), x0);
-
     case "wall"
-        v = shape.vertices;
+        
+        d = Inf;
+        q = [NaN; NaN];
 
-        d = inf;
-        q = [0; 0];
-        
-        for i = 1:size(v, 2)
-            p1 = v(:, i);
+        for i = 1:size(shape.vertices, 2)
             
-            if i < size(v, 2)
-                p2 = v(:, i+1);
-            else
-                p2 = v(:, 1); 
-            end
+            num = shape.A(:,i)*x0(1) + shape.B(:,i)*x0(2) + shape.C(:,i);
+            den = shape.A(:,i)*data.c + shape.B(:,i)*data.s;
+            t = - (num/den);
             
-            [q_curr, d_curr] = closestPoint(p1, p2, x0);
-            if d_curr < d
-                d = d_curr;
-                q = q_curr;
+            if t >= 0
+                
+                inter = x0(1:2) + [data.c; data.s] .* t;
+                if inter(1) >= shape.min_v(1,i) && inter(1) <= shape.max_v(1,i) && ...
+                   inter(2) >= shape.min_v(2,i) && inter(2) <= shape.max_v(2,i)
+                    
+                    if t < d
+                        d = abs(t);
+                        q = inter;
+                    end
+                end
             end
         end
-        
+
         if noise.sensing.on == true
-            v_x0_to_q = q-x0;
-            d_x0_to_q = norm(v_x0_to_q);
-            n = getDistanceNoise(d_x0_to_q, noise.sensing.sigma);
-            d = d_x0_to_q + n;
-            lambda = d / d_x0_to_q;
-            q = x0 + v_x0_to_q*lambda;
+            n = getDistanceNoise(d, noise.sensing.sigma);
+            d = d + n;
+            q = x0(1:2) + [data.c; data.s] .* d;
         end
+        return;
+        
     
     case "move"
-        v_x0_to_o = shape.center-x0;
-        d_x0_to_o = norm(v_x0_to_o);
-
-        if noise.sensing.on == true
-            d_real = d_x0_to_o - shape.radius;
-            n = getDistanceNoise(d_real, noise.sensing.sigma);
-            d = d_real + n;
-        else
-            d = d_x0_to_o - shape.radius;
-        end
-
-        lambda = d / d_x0_to_o;
-        q = x0 + v_x0_to_o*lambda;
-        return;
-
-
-    case "inf_wall"
-        if shape.is_x_wall % meaning it is along x axis
-            q = [x0(1); shape.wall_pos];
-        else
-            q = [shape.wall_pos; x0(2)];
-        end
-        d = norm(x0-q);
-        return;
         
-    case "ellipse"
-        % get parames and shift cause calculations are made for an ellipse
-        % centered at the origin
-        a = shape.a; b = shape.b; theta = shape.theta;
-        x0_shift =  x0 - shape.center;
-        x0x = x0_shift(1); x0y = x0_shift(2);
-        q_phi_shift = @(phi) [a* cos(theta)*cos(phi)-b*sin(theta)*sin(phi); a* sin(theta)*cos(phi)+b*cos(theta)*sin(phi)];
-        d1_phi = @(phi) 2*abs(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*sign(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*(a*cos(theta)*sin(phi) + b*cos(phi)*sin(theta)) + 2*abs(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*sign(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*(b*cos(phi)*cos(theta) - a*sin(phi)*sin(theta));
-        d2_phi = @(phi) 2*sign(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))^2*(b*cos(phi)*cos(theta) - a*sin(phi)*sin(theta))^2 + 2*sign(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))^2*(a*cos(theta)*sin(phi) + b*cos(phi)*sin(theta))^2 + 2*abs(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*sign(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*(a*cos(phi)*cos(theta) - b*sin(phi)*sin(theta)) + 4*abs(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*dirac(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*(b*cos(phi)*cos(theta) - a*sin(phi)*sin(theta))^2 + 4*abs(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*dirac(x0x - a*cos(phi)*cos(theta) + b*sin(phi)*sin(theta))*(a*cos(theta)*sin(phi) + b*cos(phi)*sin(theta))^2 - 2*abs(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*sign(a*cos(phi)*sin(theta) - x0y + b*cos(theta)*sin(phi))*(a*cos(phi)*sin(theta) + b*cos(theta)*sin(phi));
-        % a good initial guess is the point intersection of ellipse and
-        % C->x0 ray
-        phi_init = atan2(x0y,x0x) - theta;
-        phi_opt = ND(phi_init, d1_phi, d2_phi, 100, 0.005);
-        q = q_phi_shift(phi_opt) + shape.center;
-        d = norm(x0 - q);
-        return;
+        B = 2*(data.Dx*data.c+data.Dy*data.s);
+        C = (data.Dx)^2 + (data.Dy)^2 - (shape.radius)^2;
+        DELTA = B^2 - 4*C;
         
-    case "general_poly"
-        q = [0; 0];
-        d = 0;
+        if DELTA < 0
+            d = Inf;
+            q = [NaN; NaN];
+        else
+            d = abs((-B + sqrt(DELTA)) / 2);
+
+            if noise.sensing.on == true
+                n = getDistanceNoise(d, noise.sensing.sigma);
+                d = d + n;
+            end
+
+            q = x0(1:2) + [data.c; data.s] .* d;
+        end
         return;
-end
+
 end
 

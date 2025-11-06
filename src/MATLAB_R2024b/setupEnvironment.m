@@ -711,5 +711,42 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
             goal.move = false;
             obstacles = {};
     end
+
+    for o = 1:size(obstacles, 2)
+    
+        if obstacles{o}.type == "wall"
+                v = obstacles{o}.vertices;
+                v_num = size(v, 2);
+                
+                obstacles{o}.A = zeros(1, v_num);
+                obstacles{o}.B = zeros(1, v_num);
+                obstacles{o}.C = zeros(1, v_num);
+                obstacles{o}.min_v = zeros(2, v_num);
+                obstacles{o}.max_v = zeros(2, v_num);
+
+                for i = 1:v_num
+                    va = v(:, i);
+                    
+                    if i < v_num
+                        vb = v(:, i+1);
+                    else
+                        vb = v(:, 1); 
+                    end
+                    
+                    obstacles{o}.A(1,i) = vb(2) - va(2);
+                    obstacles{o}.B(1,i) = va(1) - vb(1);
+                    obstacles{o}.C(1,i) = (-obstacles{o}.A(:,i))*va(1) + (-obstacles{o}.B(:,i))*va(2);
+                    obstacles{o}.min_v(:,i) = [min(va(1), vb(1)); min(va(2), vb(2))];
+                    obstacles{o}.max_v(:,i) = [max(va(1), vb(1)); max(va(2), vb(2))];
+
+                end
+
+
+        end
+
+    end
+
+
+
 end
 

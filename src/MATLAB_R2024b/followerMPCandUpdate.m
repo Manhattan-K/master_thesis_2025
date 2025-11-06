@@ -6,8 +6,8 @@ function [p_tp1, X_F, X_F_stacked, error, u_t, u_act] = followerMPCandUpdate(...
     costF = @(U) followerCost(U, x0, sys, N, X_L_stacked, robotParams);
 
         % Get constraints function
-    constraintsF = @(U) constraints(U, x0, obstacles.M_f, obstacles.A_bar_f, obstacles.B_bar_f, N, sys, ...
-                                    use_load, X_L_stacked, obstacles.A_bar_load, obstacles.B_bar_load, loadParams);
+    constraintsF = @(U) constraints(U, x0, robotParams, obstacles.M_f, obstacles.qi_f_stack, obstacles.f_margin, sys, ...
+                                    use_load, X_L_stacked, obstacles.M_load, loadParams, obstacles.qi_load);
 
 %% fmincon optimization
 

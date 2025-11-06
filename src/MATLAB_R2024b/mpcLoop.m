@@ -9,8 +9,11 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 %--------------------------- Obstacle avoidanace matrices -------------
 
         % Evaluate the MPC only on the nearest obstacles
-    obstaclesInRange = evaluateObstacles( ...
-        obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, loadParams, sys, N, noise);
+    % obstaclesInRange = evaluateObstacles( ...
+    %     obstacles, x_l(1:2,i), x_f(1:2,i), leaderParams, followerParams, loadParams, sys, N, noise);
+
+    obstaclesInRange = lidar( ...
+        lidarParams, obstacles, x_l(:,i), x_f(:,i), leaderParams, followerParams, loadParams, sys, noise);
 
     if size(obstaclesInRange.qi_l, 1) == 0
         leaderParams.alg = 'active-set';
@@ -106,7 +109,7 @@ while (~goal_reached) && (i < max_iter) % terminal condition: goal reach or maxi
 
         % Obstacle dynamics 
     if goal.move == true
-        obstacles = updateMovingObs(obstacles);
+        obstacles = updateMovingObs(obstacles);   
     end
 
     step_time(i + 1) = toc;

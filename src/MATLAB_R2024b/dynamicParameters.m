@@ -1,6 +1,7 @@
 %% System parameters
 
 sys.Ts = opt.Ts;
+sys.N = opt.N;
 sys.d_fl = loadParams.d_FL;
 
 %% ALGORITHM PARAMETERS
@@ -101,9 +102,15 @@ followerParams.Q = opt.Q;
 
 followerParams.alg = opt.alg;
 
+followerParams.Px_N = kron(eye(N), Px);
+
     % Linear and angular velocities limits
 [followerParams.lb, followerParams.ub] = inputBounds( ...
     followerParams.v_max, followerParams.w_max, N);
+
+%% LOAD PARAMETERS
+
+loadParams.Px_N = kron(eye(loadParams.k_pred), Px);
 
 %% MPC loop
 
