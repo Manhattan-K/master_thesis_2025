@@ -674,7 +674,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
 %----------------------------------------------------------------------------------------------------------------%
 
-        case "test"
+        case "moving"
             x0 = [7; 0; -pi];
             goal.single = [0; 0; 0];
             goal.move = true;
