@@ -115,7 +115,7 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
 
             x0 = [21; 13; -3*pi/4];
             goal.single = [0; 0; 0];
-            goal.move = false;
+            goal.move = true;
 
                 %corridor circle 1st wall
             obs1.type = "wall";
@@ -168,10 +168,15 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
             obstacle19.type = "circle";
             obstacle19.center = [10, 2]';
             obstacle19.radius = 2;
+            
             %person
-            % obstacle20.type = "circle";
-            % obstacle20.center = [12, 23]';
-            % obstacle20.radius = 1;
+            obs20.type = "move";
+            obs20.center = [5, 7.5]';
+            obs20.radius = 0.15;
+            obs20.a = [5; 7.5];
+            obs20.b = [5; -2];
+            obs20.theta = -pi/2;
+            obs20.vel = 0.1/20;
 
             %stock 1
             obstacle21.type = "circle";
@@ -189,8 +194,11 @@ function [x0, goal, obstacles] = setupEnvironment(setupString)
             obstacle24.type = "circle";
             obstacle24.center = [0, -4]';
             obstacle24.radius = 1;
+
+            
+
             obstacles = {obs1, obs2, obs3, obs4,...
-                obstacle18, obstacle19, obstacle21,...
+                obstacle18, obstacle19, obs20, obstacle21,...
                 obstacle22, obstacle23, obstacle24};
         
 %----------------------------------------------------------------------------------------------------------------%
